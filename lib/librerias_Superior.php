@@ -14,9 +14,5 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/util.css">
 <!-- Estilo Propio -->
-<<<<<<< HEAD
-<link rel="stylesheet" href="css/roque.css">
-=======
 <link rel="stylesheet" href="css/roque.css">
 
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a

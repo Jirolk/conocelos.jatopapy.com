@@ -12,13 +12,10 @@
     color: rgb(255, 0, 0);
 }
 
-<<<<<<< HEAD
-=======
 .r3 {
     background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%);
     color: rgb(255, 255, 255);
 }
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a
 .r2:hover {
     background-color: rgba(0, 225, 255, 0.103);
     color: rgb(0, 0, 0);
@@ -27,10 +24,7 @@
 .fondocont {
     background: rgb(0, 0, 0,0);
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
-<<<<<<< HEAD
-=======
     
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a
 }
 
 .tc {
@@ -63,13 +57,10 @@
     width: 70%;
 }
 
-<<<<<<< HEAD
-=======
 #logosmll {
     width: 20%;
 }
 
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a
 .bt {
     background: rgb(0, 0, 0);
     border-color: rgba(255, 255, 255, 0.658);
@@ -101,23 +92,15 @@ textarea {
 }
 .cardGan{
   
-<<<<<<< HEAD
-    background: linear-gradient(10deg, rgba(20, 20, 20, 0.96) 20%, rgba(172, 73, 73, 0.979) 100%);
-    color: white;
-=======
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
     color: white;
     
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a
 }
 .buM:hover{
     background: rgba(0, 204, 255, 0.363);
 }
 .buE:hover{
     background: rgba(235, 34, 34, 0.747);
-<<<<<<< HEAD
-}
-=======
 }
 
 .card-horizontal {
@@ -135,4 +118,3 @@ textarea {
     opacity: 60%;
     position: relative;
 }
->>>>>>> 01f3adde224e813b5e7b03de42519b01c3644a4a
