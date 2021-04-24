@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Pagina no Encontrada</title>
+    <style media="screen">
+        body {
+            background: orange;
+            text-align: center;
+            color: red;
+        }
+        
+        #boton {
+            background: rgba(228, 144, 0, 0.84);
+            height: 30px;
+            width: 80px;
+        }
+        
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        #boton:hover {
+            background: rgba(196, 218, 58, 0.84);
+        }
+        
+        #segundos {
+            /* background: rgba(197, 54, 54, 0.493); */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <br><br><br>
+    <h1>LA PAGINA NO EXISTE</h1>
+    <h2> VUELVA AL INICIO</h2>
+    <button type="button" id="boton" name="button"><a href="/DeoCreaciones/index.php">Inicio</a> </button><br><br><br>
+    <!-- <label>o</label><br> -->
+    <!-- <label>Sera Redirigido en breve</label> <br> -->
+    <h2 id="segundos"></h2>
+
+    <script>
+        timer(11000,
+            function(seg) {
+                document.getElementById('segundos').innerHTML = "En " + seg + " segundos será redirigido...";
+
+                $("#segundos").innerHTML = "En " + seg + " segundos será redirigido...";
+            },
+            function() {
+                location.href = "/DeoCreaciones/index.php";
+            }
+        );
+
+        function timer(time, update, complete) {
+            start = new Date().getTime();
+            interval = setInterval(function() {
+                now = time - (new Date().getTime() - start);
+                if (now <= 0) {
+                    clearInterval(interval);
+                    complete();
+                } else update(Math.floor(now / 1000));
+            }, 100);
+        }
+    </script>
+
+
+</body>
+
+</html>
