@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logoDeo.png" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
   <title>CONOCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -40,7 +40,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid" height="200%" src="img/logoDeo.png" alt="logo">
+          <img class="img-fluid" height="200%" src="img/logo.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3"> CONOCELOS </div>

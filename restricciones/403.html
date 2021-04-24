@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Acceso Denegado</title>
+    <style media="screen">
+        body {
+            background: orange;
+            text-align: center;
+            color: red;
+        }
+        
+        #boton {
+            background: rgba(228, 144, 0, 0.84);
+            height: 30px;
+            width: 80px;
+        }
+        
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        #boton:hover {
+            background: rgba(86, 218, 182, 0.84);
+        }
+        
+        #segundos {
+            /* background: black; */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br>
+    <br><br><br>
+    <h1><b>NO ESTA PERMITIDO </b> su acceso!!</h1>
+    <H2>Sera Redirigido </H2> <br>
+    <label id="segundos"></label>
+
+    <script>
+        timer(11000,
+            function(seg) {
+                document.getElementById('segundos').innerHTML = "En " + seg + " segundos será redirigido...";
+            },
+            function() {
+                location.href = "/internas/index.php";
+            }
+        );
+
+        function timer(time, update, complete) {
+            start = new Date().getTime();
+            interval = setInterval(function() {
+                now = time - (new Date().getTime() - start);
+                if (now <= 0) {
+                    clearInterval(interval);
+                    complete();
+                } else update(Math.floor(now / 1000));
+            }, 100);
+        }
+    </script>
+
+
+</body>
+
+</html>

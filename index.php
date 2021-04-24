@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <meta name="theme-color" content="black"> -->
-    <link rel="icon" type="image/png" href="img/logoDeo.png" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <title>CONOCELOS</title>
 
     <?php require_once "lib/librerias_Superior.php"; ?>
@@ -24,10 +24,8 @@
   </div>
     
 
-        <img src="img/sicctema.jpeg"/>
-
-
-
+  <img src="img/sicctema.jpeg"/>
+  
 </div>
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
