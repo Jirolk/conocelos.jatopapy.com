@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logoDeo.png" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
   <title>CONOCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -22,10 +22,10 @@
   <!-- <link href="css/roque.css" rel="stylesheet"> -->
   <!-- Font-Adswesome -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  
+
   <!-- Data table -->
   <link rel="stylesheet" href="css/datatables.min.css">
- 
+
 </head>
 
 <body id="page-top">
@@ -40,7 +40,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid" height="200%" src="img/logoDeo.png" alt="logo">
+          <img class="img-fluid" height="200%" src="img/logo.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3"> CONOCELOS </div>
@@ -65,7 +65,7 @@
       </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-     
+
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
@@ -73,7 +73,7 @@
         <i class="fas fa-users"></i>
           <span>Perfiles de Candidatos</span>
         </a>
-        
+
       </li>
   <!-- nav Item Informes -->
       <li class="nav-item">
@@ -81,15 +81,15 @@
           <i class="fas fa-list fa-sm"></i>
           <span>Comparador de Perfiles</span>
         </a>
-       
+
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-search"></i>
           <span>Buscador</span>
         </a>
-       
-      </li> 
+
+      </li>
        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-scroll"></i>
@@ -100,7 +100,7 @@
         <i class="fas fa-info-circle"></i>
         <span>Conocenos</span>
         </a>
-       
+
       </li>
       </li>
       <!-- Divider -->
@@ -132,12 +132,12 @@
           <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            
+
             <!-- Nav Item - Alerts -->
-            
+
 
             <!-- Nav Item - User Information -->
-  
+
           </ul>
 
         </nav>

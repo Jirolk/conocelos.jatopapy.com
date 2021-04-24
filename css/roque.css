@@ -1,0 +1,120 @@
+.roque {
+    background: rgb(157, 207, 221);
+    background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%);
+}
+
+.roque:hover {
+    color: rgba(0, 247, 255, 0.247);
+}
+
+.r2 {
+    background-color: rgba(157, 207, 221, 0.288);
+    color: rgb(255, 0, 0);
+}
+
+.r3 {
+    background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%);
+    color: rgb(255, 255, 255);
+}
+.r2:hover {
+    background-color: rgba(0, 225, 255, 0.103);
+    color: rgb(0, 0, 0);
+}
+
+.fondocont {
+    background: rgb(0, 0, 0,0);
+    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
+    
+}
+
+.tc {
+    /* text-decoration: rgb(255, 0, 0); */
+    background-color: rgba(157, 207, 221, 0.493);
+    color: #FF0000;
+}
+
+.tc:hover {
+    background-color: rgba(220, 20, 60, 0.747);
+    color: white;
+}
+
+#panelAcceso {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 3%;
+    border: 1px solid;
+    border-color: rgba(121, 21, 21, 0.63) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: rgba(235, 15, 15, 0.288) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;
+}
+
+#logo {
+    width: 70%;
+}
+
+#logosmll {
+    width: 20%;
+}
+
+.bt {
+    background: rgb(0, 0, 0);
+    border-color: rgba(255, 255, 255, 0.658);
+    color: white;
+}
+
+.buscar:hover {
+    background-color: rgba(116, 19, 14, 0.863);
+    color: white;
+}
+
+.nProv:hover {
+    background-color: rgba(114, 116, 14, 0.863);
+    color: white;
+}
+
+.fondo {
+    background: rgba(102, 46, 46, 0.726);
+}
+
+.bt:hover {
+    background-color: rgb(127, 167, 164);
+    color: rgb(221, 221, 221);
+}
+
+textarea {
+    background-color: rgba(141, 19, 19, 0.212);
+    color: white;
+}
+.cardGan{
+  
+    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
+    color: white;
+    
+}
+.buM:hover{
+    background: rgba(0, 204, 255, 0.363);
+}
+.buE:hover{
+    background: rgba(235, 34, 34, 0.747);
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 8 2 auto;
+  }
+
+.bgrimg{
+    background-image: url("../img/LogoFinal.png");
+    /* position: absolute; */
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    /* height: 250px; */
+    background-size: contain;
+    opacity: 60%;
+    position: relative;
+}
