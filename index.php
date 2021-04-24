@@ -7,9 +7,10 @@
     <!-- <meta name="theme-color" content="black"> -->
     <link rel="icon" type="image/png" href="img/logo.png" />
     <title>CONOCELOS</title>
-
+    
     <?php require_once "lib/librerias_Superior.php"; ?>
     <?php require_once "lib/librerias_inferior.php"; ?>
+
 </head>
 <?php require_once "vistas/parte_superior.php"; ?>
 <!-- INICIO DEL  CONTENIDO PRINCIPAL -->

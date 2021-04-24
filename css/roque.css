@@ -8,7 +8,7 @@
 }
 
 .r2 {
-    background-color: rgba(157, 207, 221, 0.288);
+    background-color: rgba(31, 111, 133, 0.288);
     color: rgb(255, 0, 0);
 }
 
@@ -16,15 +16,15 @@
     background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%);
     color: rgb(255, 255, 255);
 }
+
 .r2:hover {
     background-color: rgba(0, 225, 255, 0.103);
     color: rgb(0, 0, 0);
 }
 
 .fondocont {
-    background: rgb(0, 0, 0,0);
+    background: rgb(0, 0, 0, 0);
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
-    
 }
 
 .tc {
@@ -90,25 +90,26 @@ textarea {
     background-color: rgba(141, 19, 19, 0.212);
     color: white;
 }
-.cardGan{
-  
+
+.cardGan {
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
     color: white;
-    
 }
-.buM:hover{
+
+.buM:hover {
     background: rgba(0, 204, 255, 0.363);
 }
-.buE:hover{
+
+.buE:hover {
     background: rgba(235, 34, 34, 0.747);
 }
 
 .card-horizontal {
     display: flex;
     flex: 8 2 auto;
-  }
+}
 
-.bgrimg{
+.bgrimg {
     background-image: url("../img/LogoFinal.png");
     /* position: absolute; */
     background-repeat: no-repeat;
@@ -118,7 +119,8 @@ textarea {
     opacity: 60%;
     position: relative;
 }
-#link{
+
+#link {
     color: black;
     text-decoration: none;
-  }
+}
