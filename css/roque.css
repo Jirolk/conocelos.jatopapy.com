@@ -118,3 +118,7 @@ textarea {
     opacity: 60%;
     position: relative;
 }
+#link{
+    color: black;
+    text-decoration: none;
+  }
