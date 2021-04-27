@@ -2,8 +2,10 @@
   require_once "vistas/parte_superior.php"; 
 ?>
 
-<?php require_once "lib/librerias_Superior.php"; ?>
-    <?php require_once "lib/librerias_inferior.php"; ?>
+  <?php 
+    //require_once ".././lib/librerias_Superior.php"; 
+    //require_once "../lib/librerias_inferior.php"; 
+  ?>
 <!-- INICIO DEL  CONTENIDO PRINCIPAL -->
 <!-- 
 <DIv class="container">
@@ -16,7 +18,7 @@
     <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
   </div>
   <?php
-    require_once("servicios/conexion.php");
+    require_once("../servicios/conexion.php");
     $conex = conexion();
     $sql = "SELECT * FROM partidopolitico order by  codPartido desc";
     $res = mysqli_query($conex, $sql);
@@ -41,13 +43,13 @@
         echo '
         
           <div class="col-md-6 col-xl-3 mb-4">
-            <a  href="index.php">
+            <a  href="../index.php">
               <div class="card shadow border-left-dark cardGan py-2">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="index.php">
-                                  <img class="img-fluid" href="index.php"  src="img/sicctema.jpeg" alt="logo"></div>
+                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="../index.php">
+                                  <img class="img-fluid" href="../index.php"  src="../img/sicctema.jpeg" alt="logo"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
@@ -111,7 +113,7 @@
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>
-<script src="/internas/js/demo/chart.min.js"></script>
+<script src="../js/demo/chart.min.js"></script>
 <!-- </body> -->
 
 
