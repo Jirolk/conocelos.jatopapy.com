@@ -1,3 +1,10 @@
+@media (max-width:740px) and (min-width:360px) {
+    .txto{
+       font-size: 10px;
+    }
+}
+
+
 .roque {
     background: rgb(157, 207, 221);
     background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%);

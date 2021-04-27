@@ -55,12 +55,12 @@
                         <!-- /.col-sm-6 -->
                       <div class="col-sm-8 align-items-center">
                         <div class="row align-items-center">
-                        
-                          <span class="text-justify">'.$fil['nombMov'].'</span>     
+                          <p class="text-white"> '.$fil['nombMov'].'</p>
+                          
                         </div>
 
                         <div class="row align-items-center">
-                          <h3>Lista '.$fil['codMov'].'</h3>
+                          <h6>Lista '.$fil['codMov'].'</h6>
                         </div>
                       </div>
                       <!-- /.col-sm-6 -->
@@ -80,6 +80,44 @@
     cerrarBD($conex);
   ?>
 </div>
+
+
+<!-- <div class="row">
+
+  <div class="col-md-6 col-xl-3 mb-4" href="index.php">
+          <a id="link" href="index.php">
+            <div class="card shadow border-left-dark cardGan py-2">
+              <div class="card-body">
+                
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="index.php"><img class="img-fluid"  src="img/sicctema.jpeg" alt="logo"></div>
+                  </div>
+                  <div class="col mb-1">
+          
+                  </div>  -->
+                    <!-- /.col-sm-6 -->
+                  <!-- <div class="col-sm-8 align-items-center">
+                    <div class="row align-items-center">
+                      <span class=" font-weight-bold txto">'.$fil['nombMov'].'</span>     
+                      <span class="text-justify">Movimiento infernal de pollos satanicos anti LGBT+XYZ999</span>     
+                    </div>
+
+                    <div class="row align-items-center">
+                      <h3>Lista 69</h3>
+                    </div>
+                  </div> -->
+                  <!-- /.col-sm-6 -->
+                <!-- </div> -->
+                <!-- /.row -->
+<!-- 
+              </div>
+            </div>
+          </a>
+        </div>
+
+</div> -->
+
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>
