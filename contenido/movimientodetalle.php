@@ -14,13 +14,15 @@
 
 <div class=" container-fluid ">
   <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-white mb-0">Tablero</h1>
+    <div class="aling-center">
+      <h1 class="text-center">Tablero</h1>
+    </div>
     <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
   </div>
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
-    $sql = "SELECT * FROM movimientos where codMov=9";
+    $sql = "SELECT * FROM movimientos where codMov=22";
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
@@ -51,14 +53,16 @@
                   <div class="row">
                     <div class="col-sm-3">
                         <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="../index.php">
-                                  <img class="img-fluid" href="../index.php"  src="../img/sicctema.jpeg" alt="logo"></div>
+                                  <img class="img-fluid img-thumbnail" href="../index.php"  src="../imgcandidatos/';
+                                  echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+                                  echo'" alt="logo"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
                               <p class="text-white"> '.$fil['nomApe'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6>'.$fil['descripcion'].' - Orden:'.$fil['orden'].'</h6>
+                              <h6>'.$fil['descripcion'].' - Orden: '.$fil['orden'].'</h6>
                             </div>
                                         
                           </div>
