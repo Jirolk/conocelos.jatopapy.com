@@ -9,23 +9,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="../img/logo.png" />
   <title>CONOCELOS</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link href="../css/sb-admin-2.css" rel="stylesheet">
   <!-- color roque -->
   <!-- <link href="css/roque.css" rel="stylesheet"> -->
   <!-- Font-Adswesome -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
   
   <!-- Data table -->
-  <link rel="stylesheet" href="css/datatables.min.css">
+  <link rel="stylesheet" href="../css/datatables.min.css">
  
+
+
+
+
+
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+<!-- Datatables -->
+<link rel="stylesheet" href="../css/datatables.min.css">
+<!-- Alertify -->
+<link rel="stylesheet" href="../css/alertify.min.css">
+<link rel="stylesheet" href="../css/default.min.css">
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<!-- dropzone para alzar imagenes suelta y arastra -->
+<link rel="stylesheet" href="../css/dropzone.min.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/util.css">
+<!-- Estilo Propio -->
+<link rel="stylesheet" href="../css/roque.css">
+
+
+
+
+
 </head>
 
 <body id="page-top ">
@@ -37,10 +65,10 @@
     <ul class="navbar-nav roque sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid"  src="img/logo.png" alt="logo">
+          <img class="img-fluid"  src="../img/logo.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3"> CONOCELOS </div>
@@ -51,7 +79,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="../index.php">
           <i class="fas fa-home"></i>
           <span>Home</span></a>
       </li>
@@ -69,7 +97,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="../contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-users"></i>
           <span>Perfiles de Candidatos</span>
         </a>

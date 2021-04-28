@@ -24,7 +24,7 @@
   </div>
     
 
-  <img src="img/sicctema.jpeg"/>
+  <!-- <img src="img/sicctema.jpeg"/> -->
   
 </div>
 
