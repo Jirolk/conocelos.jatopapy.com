@@ -1,7 +1,7 @@
 <?php
 function conexion(){
     $host = "localhost";
-    $dbnam = "bdelecciones";
+    $dbnam = "jattugco_candidatos";
     // $port = "3306";
     $usuario="root";
     $password="123456";
