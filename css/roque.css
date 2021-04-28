@@ -1,3 +1,10 @@
+@media (max-width:740px) and (min-width:360px) {
+    .txto{
+       font-size: 10px;
+    }
+}
+
+
 .roque {
     background: rgb(157, 207, 221);
     background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%);
@@ -114,10 +121,11 @@ textarea {
     /* position: absolute; */
     background-repeat: no-repeat;
     /* width: 100%; */
-    /* height: 250px; */
+    height: 90%;
     background-size: contain;
     opacity: 60%;
-    position: relative;
+    background-position: center;
+    /* position: relative; */
 }
 
 #link {
