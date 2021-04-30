@@ -13,12 +13,12 @@
 </DIv> -->
 
 <div class=" container-fluid ">
-  <div class="d-sm-flex justify-content-between align-items-center mb-4">
+  <!-- <div class="d-sm-flex justify-content-between align-items-center mb-4"> -->
     <div class="aling-center">
       <h1 class="text-center">Tablero</h1>
     </div>
     <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
-  </div>
+  <!-- </div> -->
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
