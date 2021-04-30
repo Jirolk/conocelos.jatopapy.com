@@ -29,7 +29,7 @@
       echo '
       <div class="aling-center">';
       echo' 
-          <img style="width: 150px; height: 150px;" class="rounded mx-auto d-block" href="../index.php"  src="../imgmovimientos/';
+          <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block" href="../index.php"  src="../imgmovimientos/';
       echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
           echo'" alt="logo">
           
@@ -42,9 +42,9 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class="text-white text-center font-weight-bold ">
-                      '. $fila["nombMov"] .' - '.$fila["siglas"].'
-                        </h4>
+                    <h5 class="text-white text-center font-weight-bold ">
+                      '. $fila["nombMov"] .' - '.$fila["siglas"].' - LISTA '.$fila["codMov"].'
+                        </h5>
                       </div>
                       </div>
                     </div>
@@ -65,16 +65,19 @@
                   <div class="row">
                     <div class="col-sm-3">
                         <div class="text-uppercase text-white font-weight-bold text-xs mb-1">
-                                  <img class="img-fluid img-thumbnail" href="../index.php"  src="../imgcandidatos/';
+                                  <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
                                   echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
                                   echo'" alt="logo"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class="text-white"> '.$fil['nomApe'].'</p>
+                              <p class="text-white text-left font-weight-bold"> '.$fil['nomApe'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6>'.$fil['descripcion'].' - Orden: '.$fil['orden'].'</h6>
+                              <h6 class="text-white text-left font-weight-bold">'.$fil['descripcion'].' </h6>
+                            </div>
+                            <div class="row align-items-center">
+                              <h6 class="text-white text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
                             </div>
                                         
                           </div>
