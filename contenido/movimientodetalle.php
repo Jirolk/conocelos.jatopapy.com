@@ -14,9 +14,9 @@
 
 <div class=" container-fluid ">
   <!-- <div class="d-sm-flex justify-content-between align-items-center mb-4"> -->
-    <div class="aling-center">
+    <!-- <div class="aling-center">
       <h1 class="text-center">Tablero</h1>
-    </div>
+    </div> -->
     <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
   <!-- </div> -->
   <?php
@@ -26,6 +26,17 @@
     $sql = "SELECT * FROM movimientos where codMov=".$id;
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
+      echo '
+      <div class="aling-center">';
+      echo' 
+          <img class="img-thumbnail" href="../index.php"  src="../imgmovimientos/';
+      echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+          echo'" alt="logo">
+          
+        <h1 class="text-center">Tablero</h1>
+      </div>
+      ';
+
       echo '
         <div class="row">
         <div class="col">
@@ -53,9 +64,9 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="../index.php">
+                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1">
                                   <img class="img-fluid img-thumbnail" href="../index.php"  src="../imgcandidatos/';
-                                  echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+                                  echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
                                   echo'" alt="logo"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
