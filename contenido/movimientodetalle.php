@@ -29,11 +29,11 @@
       echo '
       <div class="aling-center">';
       echo' 
-          <img class="img-thumbnail" href="../index.php"  src="../imgmovimientos/';
+          <img style="width: 150px; height: 150px;" class="rounded mx-auto d-block" href="../index.php"  src="../imgmovimientos/';
       echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
           echo'" alt="logo">
           
-        <h1 class="text-center">Tablero</h1>
+        <BR>
       </div>
       ';
 
