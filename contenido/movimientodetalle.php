@@ -22,7 +22,8 @@
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
-    $sql = "SELECT * FROM movimientos where codMov=22";
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM movimientos where codMov=".$id;
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
