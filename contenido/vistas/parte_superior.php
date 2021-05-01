@@ -68,7 +68,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid"  src="../img/logo.png" alt="logo">
+          <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3"> CONOCELOS </div>
