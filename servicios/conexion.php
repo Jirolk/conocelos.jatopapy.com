@@ -2,11 +2,11 @@
 function conexion(){
     $host = "localhost";
     $dbnam = "jattugco_candidatos";
-    // $port = "3306";
+    $port = "3307";
     $usuario="root";
-    $password="123456";
+    $password="";
     $conexion = null;
-    $conexion = mysqli_connect($host, $usuario, $password, $dbnam);
+    $conexion = mysqli_connect($host, $usuario, $password, $dbnam, $port);
     //("host=$host port=$port dbname=$dbnam user=$user password=$pass");
 
  
