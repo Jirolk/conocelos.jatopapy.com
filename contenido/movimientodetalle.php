@@ -59,7 +59,7 @@
         echo '
         
           <div class="col-md-6 col-xl-3 mb-4">
-            <a  href="../index.php">
+            <a  href="../contenido/perfilcandidato.php?id='.$fil['ci'].'">
               <div class="card shadow border-left-dark cardGan py-2">
                 <div class="card-body">
                   <div class="row">
