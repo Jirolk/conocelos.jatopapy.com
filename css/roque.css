@@ -118,13 +118,13 @@ textarea {
   }
 
 .bgrimg{
-    background-image: url("../img/LogoFinal.png");
+    /* background-image: url("../img/LogoFinal.png"); */
     /* position: absolute; */
     background-repeat: no-repeat;
     /* width: 100%; */
     height: 90%;
     background-size: contain;
-    opacity: 60%;
+    /* opacity: 60%; */
     background-position: center;
     /* position: relative; */
 }
