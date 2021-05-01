@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" type="image/png" href="img/logo.png" />
-  <title>CONOCELOS</title>
+  <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,10 +40,10 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid"  src="img/logo.png" alt="logo">
+          <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
-        <div class="sidebar-brand-text mx-3"> CONOCELOS </div>
+        <div class="sidebar-brand-text mx-3"> CONÓCELOS </div>
       </a>
 
       <!-- Divider -->
