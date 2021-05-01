@@ -38,7 +38,7 @@
       ';
 
       echo '
-          <h2 class="text-white text-center font-weight-bold ">
+          <h2 class="text-black text-center font-weight-bold ">
             '. $fila["nombMov"] .' - '.$fila["siglas"].' - LISTA '.$fila["codMov"].'
           </h2>
           
@@ -62,7 +62,7 @@
       $re = mysqli_query($conex, $sq);
       if(!empty($re)) {
         echo '
-              <h5 class="text-white text-center font-weight-bold ">
+              <h5 class="text-black text-center font-weight-bold ">
                 ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA
               </h5>
         <br>
