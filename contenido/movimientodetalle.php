@@ -39,11 +39,24 @@
 
       echo '
         <div class="row">
+          <div class="col">
+                    <div class="card shadow mb-4 text-dark ">
+                      <div class="card py-3 r3 align-items-center">
+                            <h5 class="text-white text-center font-weight-bold ">
+                              '. $fila["nombMov"] .' - '.$fila["siglas"].' - LISTA '.$fila["codMov"].'
+                            </h5>
+                      </div>
+                    </div>
+            </div>
+                  
+        </div>';
+        echo '
+        <div class="row">
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
                     <h5 class="text-white text-center font-weight-bold ">
-                      '. $fila["nombMov"] .' - '.$fila["siglas"].' - LISTA '.$fila["codMov"].'
+                      CANDIDATO A INTENDENTE
                         </h5>
                       </div>
                       </div>
