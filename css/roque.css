@@ -20,7 +20,8 @@
 }
 
 .r3 {
-    background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%);
+    /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
+    background:  rgb(114, 195, 218);
     color: rgb(255, 255, 255);
 }
 .r2:hover {
@@ -101,7 +102,8 @@ textarea {
 }
 .cardGan{
   
-    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
+    /* background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
+    background:  rgb(114, 195, 218);
     color: white;
     
 }
