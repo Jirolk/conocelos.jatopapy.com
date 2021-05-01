@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <meta name="theme-color" content="black"> -->
-    <link rel="icon" type="image/png" href="img/logoDeo.png" />
-    <title>CONOCELOS</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <title>CONÓCELOS</title>
 
     <?php require_once "lib/librerias_Superior.php"; ?>
     <?php require_once "lib/librerias_inferior.php"; ?>

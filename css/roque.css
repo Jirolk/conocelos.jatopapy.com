@@ -6,8 +6,12 @@
 
 
 .roque {
-    background: rgb(157, 207, 221);
-    background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%);
+    background:  rgb(114, 195, 218)
+    
+    
+    
+    ;
+    /* background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%); */
 }
 
 .roque:hover {
@@ -29,8 +33,8 @@
 }
 
 .fondocont {
-    background: rgb(0, 0, 0,0);
-    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
+    /* background: rgb(0, 0, 0,0);
+    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
     
 }
 
@@ -118,16 +122,17 @@ textarea {
   }
 
 .bgrimg{
-    /* background-image: url("../img/LogoFinal.png"); */
-    /* position: absolute; */
+    /*background-image: url("../img/LogoFinal.png");
+    /* position: absolute; 
     background-repeat: no-repeat;
-    /* width: 100%; */
+    /* width: 100%; 
     height: 90%;
     background-size: contain;
     /* opacity: 60%; */
     background-position: center;
     /* position: relative; */
 }
+
 #link{
     color: black;
     text-decoration: none;
