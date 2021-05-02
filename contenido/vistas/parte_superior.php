@@ -80,7 +80,7 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="../index.php">
-          <i class="fas fa-home"></i>
+          <i class="fas fa-home " style="color: black;"></i>
           <span class="text-black">Home</span></a>
       </li>
 
@@ -98,7 +98,7 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="fas fa-users"></i>
+        <i class="fas fa-users" style="color: black;"></i>
           <span class="text-black">Perfiles de Candidatos</span>
         </a>
         
@@ -106,26 +106,26 @@
       <!-- nav Item Informes -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm"></i>
+          <i class="fas fa-list fa-sm" style="color: black;"></i>
           <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-search"></i>
+        <i class="fas fa-search" style="color: black;"></i>
           <span class="text-black">Buscador</span>
         </a>
        
       </li> 
        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-scroll"></i>
+        <i class="fas fa-scroll" style="color: black;"></i>
         <span class="text-black">Consentimiento</span>
         </a>
         <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-info-circle"></i>
+        <i class="fas fa-info-circle" style="color: black;"></i>
         <span class="text-black">Conocenos</span>
         </a>
        
@@ -153,7 +153,7 @@
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" style="color: black;"></i>
           </button>
 
            <!-- Topbar Navbar -->
