@@ -34,7 +34,7 @@
   <div id="wrapper" class="">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav roque sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav roque  sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -43,7 +43,7 @@
           <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
-        <div class="sidebar-brand-text mx-3"> CONÓCELOS </div>
+        <div class="sidebar-brand-text text-black mx-3"> CONÓCELOS </div>
       </a>
 
       <!-- Divider -->
@@ -51,9 +51,9 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">
-          <i class="fas fa-home"></i>
-          <span>Home</span></a>
+        <a class="nav-link " href="index.php">
+          <i  class="fas fa-home icon-cog blackiconcolor"></i>
+          <span class="text-black">Home</span></a>
       </li>
 
       <!-- Divider -->
@@ -71,7 +71,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-users"></i>
-          <span>Perfiles de Candidatos</span>
+          <span class="text-black">Perfiles de Candidatos</span>
         </a>
         
       </li>
@@ -79,26 +79,26 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
           <i class="fas fa-list fa-sm"></i>
-          <span>Comparador de Perfiles</span>
+          <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-search"></i>
-          <span>Buscador</span>
+          <span class="text-black">Buscador</span>
         </a>
        
       </li> 
        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-scroll"></i>
-        <span>Consentimiento</span>
+        <span class="text-black">Consentimiento</span>
         </a>
         <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-info-circle"></i>
-        <span>Conocenos</span>
+        <span class="text-black">Conocenos</span>
         </a>
        
       </li>
