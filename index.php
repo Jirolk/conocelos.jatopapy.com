@@ -20,7 +20,7 @@
 
 <div class="container-fluid ">
   <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <!-- <h1 class="text-white mb-0">Tablero</h1> -->
+    <!-- <h1 class="text-black mb-0">Tablero</h1> -->
   </div>
     
 
