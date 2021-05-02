@@ -29,8 +29,9 @@
       echo '
       <div class="aling-center">';
       echo' 
-          <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block" href="../index.php"  src="../imgmovimientos/';
-      echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+          <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgmovimientos/';
+          
+          echo isset($fila['img']) ? $fila['img'] : 'defaultmovimiento.png'; 
           echo'" alt="logo">
           
         

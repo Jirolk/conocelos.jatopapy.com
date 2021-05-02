@@ -48,9 +48,9 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="../index.php">
-                        <img class="img-fluid" href="../index.php"  src="../imgmovimientos/';
-                        echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" >
+                        <img class="img-fluid"  style="width: 60px; height: 60px;"  src="../imgmovimientos/';
+                        echo isset($fil['img']) ? $fil['img'] : 'defaultmovimiento.png'; 
                         echo'" alt="../imgmovimientos/defaultmovimiento.png"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
