@@ -69,7 +69,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
+        <a class="nav-link " href="contenido/movimientos.php" >
         <i class="fas fa-users" style="color: black;"></i>
           <span class="text-black">Perfiles de Candidatos</span>
         </a>
@@ -77,31 +77,31 @@
       </li>
       <!-- nav Item Informes -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+        <a class="nav-link "  >
           <i class="fas fa-list fa-sm" style="color: black;"></i>
           <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+        <a class="nav-link "  >
         <i class="fas fa-search" style="color: black;"></i>
           <span class="text-black">Buscador</span>
         </a>
        
       </li> 
-       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+      <li class="nav-item">
+        <a class="nav-link "  >
         <i class="fas fa-scroll" style="color: black;"></i>
         <span class="text-black" style="color: black;">Consentimiento</span>
         </a>
+      </li>
         <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-info-circle" style="color: black;"></i>
-        <span class="text-black">Conocenos</span>
+        <a class="nav-link " >
+          <i class="fas fa-info-circle" style="color: black;"></i>
+          <span class="text-black">Conocenos</span>
         </a>
        
-      </li>
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
