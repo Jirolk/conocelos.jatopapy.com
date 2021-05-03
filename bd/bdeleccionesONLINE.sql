@@ -27,7 +27,6 @@ CREATE TABLE `candidatodetalle` (
   `formacProf` tinytext DEFAULT NULL,
   `experLab` tinytext DEFAULT NULL,
   `profeOcupActual` tinytext DEFAULT NULL,
-  `numContact` int(11) DEFAULT NULL,
   PRIMARY KEY (`codDetalle`),
   KEY `ci` (`ci`),
   CONSTRAINT `candidatodetalle_ibfk_1` FOREIGN KEY (`ci`) REFERENCES `candidatos` (`ci`)
@@ -35,7 +34,7 @@ CREATE TABLE `candidatodetalle` (
 
 /*Data for the table `candidatodetalle` */
 
-insert  into `candidatodetalle`(`codDetalle`,`ci`,`formacAca`,`formacProf`,`experLab`,`profeOcupActual`,`numContact`) values (0,2934298,'Bachiller en Ciencias y Letras - CREC - Año 1996 (Concepción) (Mejor Egresado) Abogado - Universidad Católica - Año 2002 (Concepción) (Alumno Distinguido) Especialista en Didáctica para la Educación Superior - UNC - Año 2010 (Concepción) Maestrí','Docente Escalafonado de la Universidad Nacional de Concepción - 2018. Diplomado en Curriculum por Competencia - Concepción - 2015 Diplomado en Evaluación por Competencia - Concepción - 2015 Estudio Actual: Doctorado en Ciencias Jurídicas -Universidad','Secretario General de la Junta Municipal de Concepción - Funcionario con carrera administrativa en la institución con 21 años de servicio, iniciando como Ordenanza Municipal. Salida: Año 2016. Afiliado al Partico ANR - Partido Colorado.','Docente Universitario de la UNC - Concepción - 2013/2021 Asesor en asuntos jurídicos. Asesor en asuntos legislativos.',971801011);
+insert  into `candidatodetalle`(`codDetalle`,`ci`,`formacAca`,`formacProf`,`experLab`,`profeOcupActual`) values (0,2934298,'Bachiller en Ciencias y Letras - CREC - Año 1996 (Concepción) (Mejor Egresado) Abogado - Universidad Católica - Año 2002 (Concepción) (Alumno Distinguido) Especialista en Didáctica para la Educación Superior - UNC - Año 2010 (Concepción) Maestrí','Docente Escalafonado de la Universidad Nacional de Concepción - 2018. Diplomado en Curriculum por Competencia - Concepción - 2015 Diplomado en Evaluación por Competencia - Concepción - 2015 Estudio Actual: Doctorado en Ciencias Jurídicas -Universidad','Secretario General de la Junta Municipal de Concepción - Funcionario con carrera administrativa en la institución con 21 años de servicio, iniciando como Ordenanza Municipal. Salida: Año 2016. Afiliado al Partico ANR - Partido Colorado.','Docente Universitario de la UNC - Concepción - 2013/2021 Asesor en asuntos jurídicos. Asesor en asuntos legislativos.');
 
 /*Table structure for table `candidatos` */
 
@@ -78,6 +77,21 @@ CREATE TABLE `candidatura` (
 /*Data for the table `candidatura` */
 
 insert  into `candidatura`(`codCand`,`descripcion`) values (1,'INTENDENTE MUNICIPAL\r\n'),(2,'JUNTA MUNICIPAL\r\n');
+
+/*Table structure for table `contacto` */
+
+DROP TABLE IF EXISTS `contacto`;
+
+CREATE TABLE `contacto` (
+  `idContacto` int(11) NOT NULL,
+  `codDetalle` int(11) DEFAULT NULL,
+  `numCntacto` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idContacto`),
+  KEY `codDetalle` (`codDetalle`),
+  CONSTRAINT `contacto_ibfk_1` FOREIGN KEY (`codDetalle`) REFERENCES `candidatodetalle` (`codDetalle`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `contacto` */
 
 /*Table structure for table `departamentos` */
 
@@ -130,7 +144,7 @@ CREATE TABLE `movimientos` (
 
 /*Data for the table `movimientos` */
 
-insert  into `movimientos`(`codMov`,`codDist`,`nombMov`,`codPartido`,`siglas`,`img`) values (9,0,'FRENTE DE INTEGRACION LIBERAL',1,'FIL',NULL),(22,0,'MOVIMIENTO REIVINDICACIÓN PUBLICANA',2,'MRR',NULL),(53,0,'FRENTE DE INTEGRACION LIBERAL DE CIUDADANOS ORGANIZADOS',1,'FILCO',NULL),(100,0,'DIALOGO AZUL',1,'DA',NULL),(2023,0,'FRENTE NUEVAS IDEAS',1,'FNI',NULL);
+insert  into `movimientos`(`codMov`,`codDist`,`nombMov`,`codPartido`,`siglas`,`img`) values (9,0,'FRENTE DE INTEGRACION LIBERAL',1,'FIL',NULL),(10,0,'ESPERANZA REPUBLICANA',2,'ER',NULL),(13,0,'FRENTE DE INTEGRACION LIBERAL DE CIUDADANOS ORGANIZADOS',1,'FILCO',NULL),(22,0,'MOVIMIENTO REIVINDICACIÓN PUBLICANA',2,'MRR',NULL),(36,0,'FUERZA RENOVADORA REPUBLICANA',2,'FRR',NULL),(100,0,'DIALOGO AZUL',1,'DA',NULL),(2023,0,'FRENTE NUEVAS IDEAS',1,'FNI',NULL);
 
 /*Table structure for table `partidopolitico` */
 
@@ -167,7 +181,7 @@ DROP TABLE IF EXISTS `redessociales`;
 
 CREATE TABLE `redessociales` (
   `codRedes` int(11) NOT NULL,
-  `redSocial` enum('FACEBOOK','INSTAGRAM','TWITTER') DEFAULT NULL,
+  `redSocial` enum('FACEBOOK','INSTAGRAM','TWITTER','YOUTUBE','TIKTOK') DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `codDetalle` int(11) DEFAULT NULL,
   PRIMARY KEY (`codRedes`),
