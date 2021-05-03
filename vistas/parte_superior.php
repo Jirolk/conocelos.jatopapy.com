@@ -34,7 +34,7 @@
   <div id="wrapper" class="">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav roque  sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav roque  sidebar  accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -69,7 +69,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
         <i class="fas fa-users" style="color: black;"></i>
           <span class="text-black">Perfiles de Candidatos</span>
         </a>
