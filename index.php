@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- <meta name="theme-color" content="black"> -->
     <link rel="icon" type="image/png" href="img/logo.png" />
+
     <title>CONOCELOS</title>
-    
+
     <?php require_once "lib/librerias_Superior.php"; ?>
     <?php require_once "lib/librerias_inferior.php"; ?>
 
@@ -21,7 +22,7 @@
 
 <div class="container-fluid ">
   <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <!-- <h1 class="text-white mb-0">Tablero</h1> -->
+    <!-- <h1 class="text-black mb-0">Tablero</h1> -->
   </div>
     
 
@@ -31,8 +32,6 @@
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>
-<script src="/js/demo/chart.min.js"></script>
+<!-- <script src="/js/demo/chart.min.js"></script> -->
 <!-- <script src="/internas/js/demo/chart-pie-demo.js"></script>  -->
 <!-- </body> -->
-
-</html>

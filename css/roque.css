@@ -4,10 +4,12 @@
     }
 }
 
-
+.blackiconcolor {
+    color: black;
+}
 .roque {
-    background: rgb(157, 207, 221);
-    background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%);
+    background:  rgb(114, 195, 218);
+    /* background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%); */
 }
 
 .roque:hover {
@@ -20,19 +22,31 @@
 }
 
 .r3 {
-    background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%);
+    /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
+    background:  rgb(114, 195, 218);
     color: rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ROQUE
 .r2:hover {
     background-color: rgba(0, 225, 255, 0.103);
     color: rgb(0, 0, 0);
 }
 
+<<<<<<< HEAD
 .fondocont {
     background: rgb(0, 0, 0, 0);
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
 }
+=======
+/* .fondocont { */
+    /* background: rgb(0, 0, 0,0);
+    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
+    
+/* } */
+>>>>>>> ROQUE
 
 .tc {
     /* text-decoration: rgb(255, 0, 0); */
@@ -65,7 +79,9 @@
 }
 
 #logosmll {
-    width: 20%;
+    /* width: 20%; */
+    width: 50%;
+    height: 50%;
 }
 
 .bt {
@@ -97,10 +113,19 @@ textarea {
     background-color: rgba(141, 19, 19, 0.212);
     color: white;
 }
+<<<<<<< HEAD
 
 .cardGan {
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%);
     color: white;
+=======
+.cardGan{
+  
+    /* background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
+    background:  rgb(114, 195, 218);
+    color: white;
+    
+>>>>>>> ROQUE
 }
 
 .buM:hover {
@@ -116,19 +141,32 @@ textarea {
     flex: 8 2 auto;
 }
 
+<<<<<<< HEAD
 .bgrimg {
     background-image: url("../img/LogoFinal.png");
     /* position: absolute; */
+=======
+.bgrimg{
+    /*background-image: url("../img/LogoFinal.png");
+    /* position: absolute; 
+>>>>>>> ROQUE
     background-repeat: no-repeat;
-    /* width: 100%; */
+    /* width: 100%; 
     height: 90%;
     background-size: contain;
-    opacity: 60%;
+    /* opacity: 60%; */
     background-position: center;
     /* position: relative; */
 }
 
+<<<<<<< HEAD
 #link {
     color: black;
     text-decoration: none;
 }
+=======
+#link{
+    color: black;
+    text-decoration: none;
+  }
+>>>>>>> ROQUE

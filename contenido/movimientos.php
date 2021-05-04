@@ -14,8 +14,8 @@
 
 <div class=" container-fluid ">
   <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-white mb-0">Tablero</h1>
-    <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generate Report</a> -->
+    <h1 class="text-black mb-0">Tablero</h1>
+    <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-black-50"></i>&nbsp;Generate Report</a> -->
   </div>
   <?php
     require_once("../servicios/conexion.php");
@@ -28,7 +28,7 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class="text-white text-center font-weight-bold ">
+                    <h4 class="text-black text-center font-weight-bold ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
                         </h4>
                       </div>
@@ -43,22 +43,22 @@
         echo '
         
           <div class="col-md-6 col-xl-3 mb-4">
-            <a  href="../index.php">
+            <a  href="../contenido/movimientodetalle.php?id='.$fil['codMov'].'">
               <div class="card shadow border-left-dark cardGan py-2">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="../index.php">
-                        <img class="img-fluid" href="../index.php"  src="../imgmovimientos/';
-                        echo isset($fil['img']) ? $fil['img'] : '../imgmovimientos/defaultmovimiento.png'; 
+                        <div class="text-uppercase text-black font-weight-bold text-xs mb-1" >
+                        <img class="img-fluid"  style="width: 60px; height: 60px;"  src="../imgmovimientos/';
+                        echo isset($fil['img']) ? $fil['img'] : 'defaultmovimiento.png'; 
                         echo'" alt="../imgmovimientos/defaultmovimiento.png"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class="text-white"> '.$fil['nombMov'].'</p>
+                              <p class="text-black"> '.$fil['nombMov'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6>Lista '.$fil['codMov'].'</h6>
+                              <h6 class="text-black">Lista '.$fil['codMov'].'</h6>
                             </div>
                                         
                           </div>
@@ -85,7 +85,7 @@
                 
                 <div class="row">
                   <div class="col-sm-3">
-                    <div class="text-uppercase text-white font-weight-bold text-xs mb-1" href="index.php"><img class="img-fluid"  src="img/sicctema.jpeg" alt="logo"></div>
+                    <div class="text-uppercase text-black font-weight-bold text-xs mb-1" href="index.php"><img class="img-fluid"  src="img/sicctema.jpeg" alt="logo"></div>
                   </div>
                   <div class="col mb-1">
           

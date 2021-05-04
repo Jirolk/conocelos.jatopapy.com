@@ -63,7 +63,8 @@
   <script src="../js/botones/buttons.print.min.js"></script>
   <script src="../js/botones/pdfmake.min.js"></script>
   <script src="../js/botones/vfs_fonts.js"></script>
-  
+  <script src="../contenido/jsComparador/select2.min.js"></script>
+  <script src="../js/alertify.min.js"></script>
 </body>
 
 </html>
