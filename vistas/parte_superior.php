@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/LogoFinal.png" />
   <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -19,7 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
   <!-- color roque -->
-  <!-- <link href="css/roque.css" rel="stylesheet"> -->
+  <link href="css/roque.css" rel="stylesheet">
   <!-- Font-Adswesome -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   
@@ -68,6 +68,28 @@
      
 
       <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+        <i class="fas fa-search"></i>
+          <span>Buscador</span>
+        </a>
+       
+      </li> 
+      <li class="nav-item">
+      
+      <input list="buscar" class="form-control" autocomplete="off"  id="ibuscar" onchange="buscarCan();">
+      <datalist name="buscar" id="buscar" >
+            <?php
+                // require_once("../servicios/conexion.php");
+                // $conex = conexion();
+                // $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
+                // $res = mysqli_query($conex, $sql);
+                // while ($row = mysqli_fetch_array($res)) {
+                //   echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
+                // }
+            ?>
+      </datalist>
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-users"></i>
