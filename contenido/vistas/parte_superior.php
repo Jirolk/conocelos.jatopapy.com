@@ -71,7 +71,7 @@
           <img class="img-fluid"  src="../img/LogoFinal.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
-        <div class="sidebar-brand-text text-black mx-3"> CONÓCELOS </div>
+        <div class="sidebar-brand-text text-white mx-3"> CONÓCELOS </div>
       </a>
 
       <!-- Divider -->
@@ -80,8 +80,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="../index.php">
-          <i class="fas fa-home " style="color: black;"></i>
-          <span class="text-black">Home</span></a>
+          <i class="fas fa-home " style="color: white;"></i>
+          <span class="text-white">Home</span></a>
       </li>
 
       <!-- Divider -->
@@ -98,35 +98,35 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="fas fa-users" style="color: black;"></i>
-          <span class="text-black">Perfiles de Candidatos</span>
+        <i class="fas fa-users" style="color: white;"></i>
+          <span class="text-white">Perfiles de Candidatos</span>
         </a>
         
       </li>
       <!-- nav Item Informes -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: black;"></i>
-          <span class="text-black">Comparador de Perfiles</span>
+          <i class="fas fa-list fa-sm" style="color: white;"></i>
+          <span class="text-white">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-search" style="color: black;"></i>
-          <span class="text-black">Buscador</span>
+        <i class="fas fa-search" style="color: white;"></i>
+          <span class="text-white">Buscador</span>
         </a>
        
       </li> 
        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-scroll" style="color: black;"></i>
-        <span class="text-black">Consentimiento</span>
+        <i class="fas fa-scroll" style="color: white;"></i>
+        <span class="text-white">Consentimiento</span>
         </a>
         <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-info-circle" style="color: black;"></i>
-        <span class="text-black">Conocenos</span>
+        <i class="fas fa-info-circle" style="color: white;"></i>
+        <span class="text-white">Conocenos</span>
         </a>
        
       </li>
@@ -136,7 +136,7 @@
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <button style="color:white; " class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
 
     </ul>

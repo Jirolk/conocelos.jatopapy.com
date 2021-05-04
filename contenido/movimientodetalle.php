@@ -39,7 +39,7 @@
       ';
 
       echo '
-          <h2 class="text-black text-center font-weight-bold ">
+          <h2 class=" text-center font-weight-bold ">
             '. $fila["nombMov"] .' - '.$fila["siglas"].' - LISTA '.$fila["codMov"].'
           </h2>
           
@@ -47,9 +47,9 @@
         echo '
         <div class="row">
           <div class="col">
-                    <div class="card shadow mb-4 text-dark ">
+                    <div class="card shadow mb-4  ">
                       <div class="card py-3 r3 align-items-center">
-                            <h5 class="text-black text-center font-weight-bold ">
+                            <h5 class=" text-center font-weight-bold ">
                               CANDIDATO A INTENDENTE
                             </h5>
                       </div>
@@ -63,7 +63,7 @@
       $re = mysqli_query($conex, $sq);
       if(!empty($re)) {
         echo '
-              <h5 class="text-black text-center font-weight-bold ">
+              <h5 class="text-center font-weight-bold ">
                 ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA
               </h5>
         <br>
@@ -80,20 +80,20 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-3">
-                          <div class="text-uppercase text-black font-weight-bold text-xs mb-1">
+                          <div class="text-uppercase font-weight-bold text-xs mb-1">
                                     <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
                                     echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
                                     echo'" alt="logo"></div>
                           </div>
                             <div class="col-sm-8 align-items-center">
                               <div class="row align-items-center">
-                                <p class="text-black text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                                <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
                               </div>
                               <div class="row align-items-center">
-                                <h6 class="text-black text-left font-weight-bold">'.$fil['descripcion'].' </h6>
+                                <h6 class="text-left font-weight-bold">'.$fil['descripcion'].' </h6>
                               </div>
                               <div class="row align-items-center">
-                                <h6 class="text-black text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
+                                <h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
                               </div>
                                           
                             </div>
@@ -109,9 +109,9 @@
       echo '
       <div class="row">
         <div class="col">
-                  <div class="card shadow mb-4 text-dark ">
+                  <div class="card shadow mb-4 ">
                     <div class="card py-3 r3 align-items-center">
-                          <h5 class="text-black text-center font-weight-bold ">
+                          <h5 class=" text-center font-weight-bold ">
                             CANDIDATOS A JUNTA MUNICIPAL
                           </h5>
                     </div>
@@ -133,20 +133,20 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-black font-weight-bold text-xs mb-1">
+                        <div class="text-uppercase  font-weight-bold text-xs mb-1">
                                   <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
                                   echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
                                   echo'" alt="logo"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class="text-black text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                              <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6 class="text-black text-left font-weight-bold">'.$fil['descripcion'].' </h6>
+                              <h6 class=" text-left font-weight-bold">'.$fil['descripcion'].' </h6>
                             </div>
                             <div class="row align-items-center">
-                              <h6 class="text-black text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
+                              <h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
                             </div>
                                         
                           </div>

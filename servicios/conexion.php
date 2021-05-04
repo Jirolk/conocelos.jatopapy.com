@@ -4,7 +4,7 @@ function conexion(){
     $dbnam = "jattugco_candidatos";
     // $port = "3306";
     $usuario="root";
-    $password="123456";
+    $password="";
     $conexion = null;
     $conexion = mysqli_connect($host, $usuario, $password, $dbnam);
     //("host=$host port=$port dbname=$dbnam user=$user password=$pass");
