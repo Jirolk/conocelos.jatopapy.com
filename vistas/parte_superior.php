@@ -63,31 +63,29 @@
         
       </li>
       <li class="nav-item">
-        <a class="nav-link "  >
+        <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
           <i class="fas fa-list fa-sm" style="color: black;"></i>
           <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
-        <a class="nav-link "  >
+        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-search" style="color: black;"></i>
           <span class="text-black">Buscador</span>
         </a>
        
       </li> 
-      <li class="nav-item">
-        <a class="nav-link "  >
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
         <i class="fas fa-scroll" style="color: black;"></i>
-        <span class="text-black" style="color: black;">Consentimiento</span>
+        <span class="text-black">Consentimiento</span>
         </a>
-      </li>
         <li class="nav-item">
-        <a class="nav-link " >
-          <i class="fas fa-info-circle" style="color: black;"></i>
-          <span class="text-black">Conocenos</span>
+        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-info-circle" style="color: black;"></i>
+        <span class="text-black">Conocenos</span>
         </a>
-       
       </li>
       <hr class="sidebar-divider d-none d-md-block">
 
