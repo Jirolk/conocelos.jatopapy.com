@@ -137,3 +137,11 @@ textarea {
     color: black;
     text-decoration: none;
   }
+  .iconoInput {
+    color: #e8e8e8;
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+    padding-top: 10px;}
+    .inputPadding {
+    padding-left: 40px;}

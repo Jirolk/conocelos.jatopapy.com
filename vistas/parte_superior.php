@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/LogoFinal.png" />
   <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -54,6 +54,25 @@
 
       <hr class="sidebar-divider">
 
+      <li class="nav-item">
+        <a class="nav-link "  >
+        <i class="fas fa-search  iconoInput" style="color: white;"></i>
+        
+        <input list="ruc" class="form-control inputPadding" autocomplete="off"  id="iruc" onchange="" placeholder="Busca un perfil político">
+        <datalist name="ruc" id="ruc" >
+              <?php
+                 /*  require_once("../servicios/conexion.php");
+                  $conex = conexion();
+                  $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
+                  $res = mysqli_query($conex, $sql);
+                  while ($row = mysqli_fetch_array($res)) {
+                    echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
+                  }*/
+              ?>
+        </datalist>
+        </a>
+       
+      </li> 
     
       <li class="nav-item">
         <a class="nav-link " href="contenido/movimientos.php" >
@@ -69,13 +88,6 @@
         </a>
        
       </li>
-      <li class="nav-item">
-        <a class="nav-link "  >
-        <i class="fas fa-search" style="color: white;"></i>
-          <span class="text-white">Buscador</span>
-        </a>
-       
-      </li> 
       <li class="nav-item">
         <a class="nav-link "  >
         <i class="fas fa-scroll" style="color: white;"></i>
