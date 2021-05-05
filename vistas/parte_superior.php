@@ -64,8 +64,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: black;"></i>
-          <span class="text-black">Comparador de Perfiles</span>
+          <i class="fas fa-list fa-sm" style="color: white;"></i>
+          <span class="text-white">Comparador de Perfiles</span>
         </a>
        
       </li>
