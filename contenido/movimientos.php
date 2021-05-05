@@ -13,9 +13,13 @@
 </DIv> -->
 
 <div class=" container-fluid ">
-  <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-gray mb-0">Tablero</h1>
-    <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-black-50"></i>&nbsp;Generate Report</a> -->
+  <div class="row">
+    <div class="col">
+      <div class="align-items-center ">
+        <h1 class="text-dark text-center font-weight-bold ">Partidos Politicos</h1>
+        <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-black-50"></i>&nbsp;Generate Report</a> -->
+      </div>
+    </div>
   </div>
   <?php
     require_once("../servicios/conexion.php");
@@ -28,7 +32,7 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class=" text-center font-weight-bold ">
+                    <h4 class="text-dark font-weight-bold ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
                         </h4>
                       </div>
