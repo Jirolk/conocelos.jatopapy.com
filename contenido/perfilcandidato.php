@@ -58,7 +58,7 @@
         echo '
         <div class="row">
           <div class="col">
-                    <div class="card shadow mb-4  ">
+                    <div class="card shadow mb-2  ">
                       <div class="card py-3 r3 align-items-center">
                             <h5 class=" text-center font-weight-bold ">
                               DATOS PERSONALES
@@ -66,7 +66,6 @@
                       </div>
                     </div>
             </div>
-                  
         </div>';
       /*$sq = "SELECT * FROM candidatos c
             join candidatura cc on c.codCand = cc.codCand
@@ -80,11 +79,23 @@
         <br>
        ';*/
      // }else {
-        echo '<div class="row">';
+         echo '
+         <div class="row">
+            <div class="col">
+                <div class="card shadow mb-2  ">
+                    <div class="card py-3 r2 align-items-center">
+                        <p class=" text-left font-weight-bold"> </p><p class=" text-left font-weight-bold"> '.$fila['nomApe'].'</p>
+                    </div>
+                </div>
+            </div>
+            
+         </div>
+         <div class="row">';
          //foreach($re as $fil){
         
-          echo '
+        /*  echo '
           
+
             <div class="col-md-6 col-xl-3 mb-4">
               
                 <div class="card shadow border-left-dark cardGan py-2">
@@ -113,7 +124,7 @@
                   </div>
               
             </div>
-          ';
+          ';*/
         //}
         echo '</div>';
       //}
