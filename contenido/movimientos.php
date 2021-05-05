@@ -32,9 +32,9 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class="text-dark font-weight-bold ">
+                    <h6 class="text-dark text-center font-weight-bold ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
-                        </h4>
+                        </h6>
                       </div>
                       </div>
                     </div>
