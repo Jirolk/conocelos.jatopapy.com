@@ -66,21 +66,26 @@ function consulta(sele) {
 }
 
 function comparar() {
-    var cand1 = document.getElementById("buscador1");
-    var cand2 = document.getElementById("buscador2");
-    // alert(cand1.options[cand1.selectedIndex].value)
+    if (document.getElementById("buscador1")) {
+        var cand1 = document.getElementById("buscador1");
+        var cand2 = document.getElementById("buscador2");
+        // alert(cand1.options[cand1.selectedIndex].value)
 
-    if (cand1.options[cand1.selectedIndex].value == 0) {
-        alertify.error("Los campos no pueden estar vacios!");
-        $("#buscador1").select2('open');
-    } else if (cand2.options[cand2.selectedIndex].value == 0) {
-        alertify.error("Los campos no pueden estar vacios!");
-        $("#buscador2").select2('open');
-    } else if (cand2.options[cand2.selectedIndex].value == cand1.options[cand1.selectedIndex].value) {
-        alertify.error("No te servirá de mucho comparar el mismo Perfil, Elije otro");
+        if (cand1.options[cand1.selectedIndex].value == 0) {
+            alertify.error("Los campos no pueden estar vacios!");
+            $("#buscador1").select2('open');
+        } else if (cand2.options[cand2.selectedIndex].value == 0) {
+            alertify.error("Los campos no pueden estar vacios!");
+            $("#buscador2").select2('open');
+        } else if (cand2.options[cand2.selectedIndex].value == cand1.options[cand1.selectedIndex].value) {
+            alertify.error("No te servirá de mucho comparar el mismo Perfil, Elije otro");
+        } else {
+
+
+            alertify.error("Esta en desarrollo!");
+        }
+
     } else {
-
-
         alertify.error("Esta en desarrollo!");
     }
 
@@ -95,7 +100,7 @@ function busqueAva() {
         c = 1;
     } else {
         document.getElementById("busqueAva").innerHTML = `<a id="busqueAva" class="btn text-success" onclick="">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>`;
-        contraerBusqueda();
+        habilitar();
         c = 0;
     }
 
@@ -117,26 +122,6 @@ function desplegarBusqueda() {
     </div>
     <br><hr>
     <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-up"></b></i></a>
-    <hr><br>
-
-    <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
-    `;
-}
-
-function contraerBusqueda() {
-    document.getElementById("CampoBusqueda").innerHTML = `
-    <div class="row mt-3">
-        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-            <select class="form-control" id="buscador1" name="candidato1"></select>
-            <br>
-        </div>
-        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-        <select class="form-control" id="buscador2" name="candidato1"></select>
-        <br>
-        </div>
-    </div>
-    <br><hr>
-    <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>
     <hr><br>
 
     <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
