@@ -56,9 +56,9 @@
 
       <li class="nav-item">
         <a class="nav-link "  >
-        <i class="fas fa-search  iconoInput" style="color: white;"></i>
+        <i class="fas fa-search  iconoInput" style="color: black;"></i>
         
-        <input list="ruc" class="form-control inputPadding" autocomplete="off"  id="iruc" onchange="" placeholder="Busca un perfil político">
+        <input list="ruc" class="form-control inputPadding" style="background-color: rgb(255, 255, 255);opacity: 0.8;" autocomplete="off"  id="iruc" onchange="" placeholder="   Buscar candidato">
         <datalist name="ruc" id="ruc" >
               <?php
                  /*  require_once("../servicios/conexion.php");
