@@ -1,3 +1,5 @@
+var c = 0;
+
 function habilitar(value) {
     var sele = document.getElementById("tipoCand");
     // alert(sele.options[sele.selectedIndex].value);
@@ -6,26 +8,27 @@ function habilitar(value) {
 
         document.getElementById("CampoBusqueda").innerHTML = `
         <div class="row mt-3">
-            <div class="col-6"> Nombre del Candidato <br>
+            <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
                 <select class="form-control" id="buscador1" name="candidato1"></select>
                 <br>
-                <a href="">busqueda avanzada</a>
             </div>
-            <div class="col-6"> Nombre del Candidato <br>
+            <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
             <select class="form-control" id="buscador2" name="candidato1"></select>
             <br>
-         
-            <a href="">busqueda avanzada</a>
             </div>
         </div>
-        <button class="btn btn-info mt-5" onclick="comparar();">Comparar</button>
+        <br><hr>
+        <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>
+        <hr><br>
+
+        <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
         `;
         consulta(sele.options[sele.selectedIndex].value);
         $("#buscador1").select2();
         $("#buscador2").select2();
 
     } else if (sele.options[sele.selectedIndex].value == 0) {
-        document.getElementById("CampoBusqueda").innerHTML = "<label for='fec1'class='mt-5 text-danger'>Favor de Elegir una opcion</label>";
+        document.getElementById("CampoBusqueda").innerHTML = "<label for='fec1'class='mt-5 text-danger'>Favor de Elegir una opción</label>";
     }
 }
 // document.getElementById("CampoBusqueda").innerHTML = "<label for='fec1'class='mt-5 text-danger'>Favor de Elegir una opcion</label>";
@@ -65,14 +68,77 @@ function consulta(sele) {
 function comparar() {
     var cand1 = document.getElementById("buscador1");
     var cand2 = document.getElementById("buscador2");
+    // alert(cand1.options[cand1.selectedIndex].value)
 
-
-    if (cand2.options[cand2.selectedIndex].value == 0 || cand2.options[cand2.selectedIndex].value == 0) {
+    if (cand1.options[cand1.selectedIndex].value == 0) {
         alertify.error("Los campos no pueden estar vacios!");
-    } else if (cand2.options[cand2.selectedIndex].value == cand2.options[cand2.selectedIndex].value) {
+        $("#buscador1").select2('open');
+    } else if (cand2.options[cand2.selectedIndex].value == 0) {
+        alertify.error("Los campos no pueden estar vacios!");
+        $("#buscador2").select2('open');
+    } else if (cand2.options[cand2.selectedIndex].value == cand1.options[cand1.selectedIndex].value) {
         alertify.error("No te servirá de mucho comparar el mismo Perfil, Elije otro");
     } else {
+
+
         alertify.error("Esta en desarrollo!");
     }
 
+}
+
+
+function busqueAva() {
+    // alert(c);
+    if (c == 0) {
+        document.getElementById("busqueAva").innerHTML = `<a id = "busqueAva" class="btn text-success" onclick=" ">busqueda avanzada <b><i class="fa fa-angle-double-up "></b></i></a>`;
+        desplegarBusqueda();
+        c = 1;
+    } else {
+        document.getElementById("busqueAva").innerHTML = `<a id="busqueAva" class="btn text-success" onclick="">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>`;
+        contraerBusqueda();
+        c = 0;
+    }
+
+}
+
+function desplegarBusqueda() {
+
+    document.getElementById("CampoBusqueda").innerHTML = `
+    <div class="row mt-3">
+        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
+            
+        <input type="text">
+            <br>
+        </div>
+        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
+        <input type="text">
+        <br>
+        </div>
+    </div>
+    <br><hr>
+    <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-up"></b></i></a>
+    <hr><br>
+
+    <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
+    `;
+}
+
+function contraerBusqueda() {
+    document.getElementById("CampoBusqueda").innerHTML = `
+    <div class="row mt-3">
+        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
+            <select class="form-control" id="buscador1" name="candidato1"></select>
+            <br>
+        </div>
+        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
+        <select class="form-control" id="buscador2" name="candidato1"></select>
+        <br>
+        </div>
+    </div>
+    <br><hr>
+    <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>
+    <hr><br>
+
+    <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
+    `;
 }
