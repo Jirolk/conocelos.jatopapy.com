@@ -63,9 +63,9 @@
         
       </li>
       <li class="nav-item">
-        <a class="nav-link "  >
-          <i class="fas fa-list fa-sm" style="color: white;"></i>
-          <span class="text-white">Comparador de Perfiles</span>
+        <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+          <i class="fas fa-list fa-sm" style="color: black;"></i>
+          <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
@@ -81,13 +81,11 @@
         <i class="fas fa-scroll" style="color: white;"></i>
         <span class="text-black" style="color: white;">Consentimiento</span>
         </a>
-      </li>
         <li class="nav-item">
         <a class="nav-link " >
           <i class="fas fa-info-circle" style="color: white;"></i>
           <span class="text-white">Conocenos</span>
         </a>
-       
       </li>
       <hr class="sidebar-divider d-none d-md-block">
 

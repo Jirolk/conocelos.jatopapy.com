@@ -26,10 +26,8 @@
   <!-- Data table -->
   <link rel="stylesheet" href="../css/datatables.min.css">
  
-
-
-
-
+  <!-- select2 css -->
+<link rel="stylesheet" href="../contenido/cssComparador/select2.min.css">
 
 
 
@@ -105,9 +103,9 @@
       </li>
       <!-- nav Item Informes -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: white;"></i>
-          <span class="text-white">Comparador de Perfiles</span>
+        <a class="nav-link collapsed" href="../contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+          <i class="fas fa-list fa-sm" style="color: black;"></i>
+          <span class="text-black">Comparador de Perfiles</span>
         </a>
        
       </li>
