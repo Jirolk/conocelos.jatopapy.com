@@ -4,6 +4,16 @@
 
 
 <div class=" container-fluid ">
+
+
+
+
+
+
+
+
+
+
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
@@ -15,13 +25,9 @@
       <div class="aling-center">';
       echo' 
           <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgcandidatos/';
-          
           echo isset($fila['img']) ? $fila['img'] : 'defaultcandidato.png'; 
           echo'" alt="logo">
-          
-        
-      </div>
-      ';
+      </div>';
 
       echo '
           <h2 class=" text-center font-weight-bold ">
@@ -29,6 +35,19 @@
           </h2>
           
         ';
+
+        echo'<div class=" container text-center ">
+                    <label for="tipoCand" class="mt-3 font-weight-bold">Tipo de Candidatura</label>
+                    <select class="form-control text-uppercase text-center col col-md-12" name="tipoCand" id="tipoCand" autofocus onchange="habilitar(value);">';
+                        echo "<option value='0'>Eliga una Opción</option>";
+                        echo "<option value='" . $fila['codCand'] . "'>";
+                        echo $fila['descripcion'];
+                        echo "</option>";
+        echo'       </select>
+                <div class="" id="CampoBusqueda"></div>
+                <div id="BusAvan"></div>
+            </div> ';
+
         echo '
         <div class="row">
           <div class="col">
@@ -97,7 +116,7 @@
                   <div class="card shadow mb-4 ">
                     <div class="card py-3 r3 align-items-center">
                           <h5 class=" text-center font-weight-bold ">
-                            CANDIDATOS A JUNTA MUNICIPAL
+                            CUESTIONARIO
                           </h5>
                     </div>
                   </div>
