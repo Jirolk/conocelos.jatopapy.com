@@ -18,7 +18,10 @@
     require_once("../servicios/conexion.php");
     $conex = conexion();
     $id = $_GET["id"];
-    $sql = "SELECT * FROM candidatos where ci=".$id;
+    $sql = "SELECT c.*,cc.descripcion,cd.* FROM candidatos c
+	INNER JOIN candidatura cc ON c.codCand =cc.codCand
+	INNER JOIN candidatodetalle cd ON c.ci =cd.ci
+	WHERE c.ci=".$id;
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
@@ -37,16 +40,20 @@
         ';
 
         echo'<div class=" container text-center ">
-                    <label for="tipoCand" class="mt-3 font-weight-bold">Tipo de Candidatura</label>
-                    <select class="form-control text-uppercase text-center col col-md-12" name="tipoCand" id="tipoCand" autofocus onchange="habilitar(value);">';
-                        echo "<option value='0'>Eliga una Opción</option>";
-                        echo "<option value='" . $fila['codCand'] . "'>";
-                        echo $fila['descripcion'];
+                    <label for="tipoCand" class="mt-3 font-weight-bold">Filtro de datos</label>
+                    <select class="form-control text-uppercase text-center col col-md-12" name="tipoCand" id="tipoCand"  onchange="habilitar(value);">';
+                        echo "<option value='0'>Todos los datos</option>";
+                        echo '<option value="1" >';
+                        echo 'Datos peronales';
+                        echo "</option>";
+                        echo '<option value="2" >';
+                        echo 'Cuestionario';
                         echo "</option>";
         echo'       </select>
                 <div class="" id="CampoBusqueda"></div>
                 <div id="BusAvan"></div>
-            </div> ';
+            </div> 
+            <hr class="divider">';
 
         echo '
         <div class="row">
@@ -61,7 +68,7 @@
             </div>
                   
         </div>';
-      $sq = "SELECT * FROM candidatos c
+      /*$sq = "SELECT * FROM candidatos c
             join candidatura cc on c.codCand = cc.codCand
             where codMov= ".$fila['codMov']." AND c.codCand=1" ;
       $re = mysqli_query($conex, $sq);
@@ -71,10 +78,10 @@
                 LOS DATOS AUN NO HAN SIDO ACTUALIZADOS
               </h5>
         <br>
-       ';
-      }else {
+       ';*/
+     // }else {
         echo '<div class="row">';
-         foreach($re as $fil){
+         //foreach($re as $fil){
         
           echo '
           
@@ -83,33 +90,33 @@
                 <div class="card shadow border-left-dark cardGan py-2">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-sm-3">
-                          <div class="text-uppercase font-weight-bold text-xs mb-1">
-                                    <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
-                                    echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
-                                    echo'" alt="logo"></div>
-                          </div>
-                            <div class="col-sm-8 align-items-center">
-                              <div class="row align-items-center">
-                                <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
-                              </div>
-                              <div class="row align-items-center">
-                                <h6 class="text-left font-weight-bold">'.$fil['descripcion'].' </h6>
-                              </div>
-                              <div class="row align-items-center">
-                                <h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
-                              </div>
-                                          
+                        <div class="col-sm-4">
+                            <div class="text-uppercase font-weight-bold text-xs mb-1">
+                                <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
+                                echo isset($fila['img']) ? $fila['img'] : '../imgcandidatos/defaultcandidato.png'; 
+                                echo'" alt="logo"></div>
                             </div>
-                      </div>
+                                <div class="col-sm-8 align-items-center">
+                                    <div class="row align-items-center">
+                                        <p class=" text-left font-weight-bold"> '.$fila['nomApe'].'</p>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <h6 class="text-left font-weight-bold">'.$fila['descripcion'].' </h6>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <h6 class=" text-left font-weight-bold">Orden: '.$fila['orden'].'</h6>
+                                    </div>
+                                            
+                                </div>
+                        </div>
                     </div>
                   </div>
               
             </div>
           ';
-        }
+        //}
         echo '</div>';
-      }
+      //}
       echo '
       <div class="row">
         <div class="col">
@@ -136,7 +143,7 @@
               <div class="card shadow border-left-dark cardGan py-2">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="text-uppercase  font-weight-bold text-xs mb-1">
                                   <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
                                   echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
