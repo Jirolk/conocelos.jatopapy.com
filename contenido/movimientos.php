@@ -37,13 +37,13 @@
         echo '
         
           <div class="col-md-6 col-xl-3 mb-4">
-            <a  href="../contenido/movimientodetalle.php?id='.$fil['codMov'].'">
-              <div class="card shadow border-left-dark cardGan py-2">
+          <div class="card shadow border-left-dark cardGan py-2">
+          <a  href="../contenido/movimientodetalle.php?id='.$fil['codMov'].'">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="text-uppercase font-weight-bold text-xs mb-1" >
-                        <img class="img-fluid"  style="width: 60px; height: 60px;"  src="../imgmovimientos/';
+                        <img class="img-fluid rounded mx-auto d-block"  style="width: 100px; height: 100px;"  src="../imgmovimientos/';
                         echo isset($fil['img']) ? $fil['img'] : 'defaultmovimiento.png'; 
                         echo'" alt="../imgmovimientos/defaultmovimiento.png"></div>
                         </div>
@@ -58,8 +58,8 @@
                           </div>
                     </div>
                   </div>
+                  </a>
                 </div>
-              </a>
           </div>
         ';
       }
