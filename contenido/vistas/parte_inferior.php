@@ -65,6 +65,13 @@
   <script src="../js/botones/vfs_fonts.js"></script>
   <script src="../contenido/jsComparador/select2.min.js"></script>
   <script src="../js/alertify.min.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

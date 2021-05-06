@@ -31,70 +31,70 @@
 <body id="page-top ">
 
   <!-- Page Wrapper -->
-  <div id="wrapper" class="">
+  <div id="wrapper" class="wrapper">
+      <nav id="sidebar" class="sidebar roque" >
 
-    <!-- Sidebar -->
-    <ul class="navbar-nav roque  sidebar   d-none d-md-block" id="accordionSidebar">
+                <ul class="list-unstyled components">
+                  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+                    <div class="sidebar-brand-icon ">
 
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon ">
+                      <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
+                    </div>
+                    <div class="sidebar-brand-text text-white h6 mx-3"> CONÓCELOS </div>
+                  </a>
+                    <!-- <p>Dummy Heading</p> -->
+                    <hr class="sidebar-divider my-0">
 
-          <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
-        </div>
-        <div class="sidebar-brand-text text-white mx-3"> CONÓCELOS </div>
-      </a>
+                <li class="nav-item  ">
+                  <a class="nav-link " href="index.php">
+                    <i  class="fas fa-home" style="color: white;"></i>
+                    <span class="text-white">Home</span></a>
+                </li>
 
-      <hr class="sidebar-divider my-0">
+                <hr class="sidebar-divider">
 
-      <li class="nav-item  d-none d-md-block">
-        <a class="nav-link " href="index.php">
-          <i  class="fas fa-home" style="color: white;"></i>
-          <span class="text-white">Home</span></a>
-      </li>
 
-      <hr class="sidebar-divider">
+                <li class="nav-item  ">
+                  <a class="nav-link " href="contenido/movimientos.php" >
+                  <i class="fas fa-users" style="color: white;"></i>
+                    <span class="text-white">Perfiles de Candidatos</span>
+                  </a>
+                  
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+                    <i class="fas fa-list fa-sm" style="color: white;"></i>
+                    <span class="text-white">Comparador de Perfiles</span>
+                  </a>
+                
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link "  >
+                  <i class="fas fa-search" style="color: white;"></i>
+                    <span class="text-white">Buscador</span>
+                  </a>
+                
+                </li> 
+                <li class="nav-item  ">
+                  <a class="nav-link "  >
+                  <i class="fas fa-scroll" style="color: white;"></i>
+                  <span class="text-black" style="color: white;">Consentimiento</span>
+                  </a>
+                  <li class="nav-item  ">
+                  <a class="nav-link " >
+                    <i class="fas fa-info-circle" style="color: white;"></i>
+                    <span class="text-white">Conocenos</span>
+                  </a>
+                </li>
+                <hr class="sidebar-divider ">
 
-    
-      <li class="nav-item  d-none d-md-block">
-        <a class="nav-link " href="contenido/movimientos.php" >
-        <i class="fas fa-users" style="color: white;"></i>
-          <span class="text-white">Perfiles de Candidatos</span>
-        </a>
-        
-      </li>
-      <li class="nav-item  d-none d-md-block">
-        <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: white;"></i>
-          <span class="text-white">Comparador de Perfiles</span>
-        </a>
-       
-      </li>
-      <li class="nav-item  d-none d-md-block">
-        <a class="nav-link "  >
-        <i class="fas fa-search" style="color: white;"></i>
-          <span class="text-white">Buscador</span>
-        </a>
-       
-      </li> 
-      <li class="nav-item  d-none d-md-block">
-        <a class="nav-link "  >
-        <i class="fas fa-scroll" style="color: white;"></i>
-        <span class="text-black" style="color: white;">Consentimiento</span>
-        </a>
-        <li class="nav-item  d-none d-md-block">
-        <a class="nav-link " >
-          <i class="fas fa-info-circle" style="color: white;"></i>
-          <span class="text-white">Conocenos</span>
-        </a>
-      </li>
-      <hr class="sidebar-divider d-none d-md-block">
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center ">
+                  <button style="color: white;" class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
 
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-block">
-        <button style="color: white;" class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+      </nav>
 
-    </ul>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -106,8 +106,8 @@
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+    
+          <button id="sidebarCollapse" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars" style="color: black;"></i>
           </button>
 
