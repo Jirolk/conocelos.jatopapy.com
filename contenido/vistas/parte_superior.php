@@ -43,10 +43,10 @@
 <link rel="stylesheet" href="../css/font-awesome.min.css">
 <!-- dropzone para alzar imagenes suelta y arastra -->
 <link rel="stylesheet" href="../css/dropzone.min.css">
-<link rel="stylesheet" href="../css/main.css?v1">
+<link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/util.css">
 <!-- Estilo Propio -->
-<link rel="stylesheet" href="../css/roque.css?v1">
+<link rel="stylesheet" href="../css/roque.css?n=1">
 
 
 
