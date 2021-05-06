@@ -8,7 +8,7 @@
     color: black;
 } */
 .roque {
-    background:  rgb(114, 195, 218);
+    background:  #CEB48D;
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%); */
 }
 /* .fondocont { */
@@ -16,7 +16,7 @@
     background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
     
 /* } */
-
+/*#80786B #D3BAA7*/
 .bgrimg{
     /*background-image: url("../img/LogoFinal.png");
     /* position: absolute; 
@@ -40,7 +40,7 @@
 
 .r3 {
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
-    background:  rgb(114, 195, 218);
+    background: #CEB48D;
     color: rgb(255, 255, 255);
 }
 .r2:hover {
@@ -116,8 +116,8 @@ textarea {
 .cardGan{
   
     /* background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
-    background:  rgb(114, 195, 218);
-    color: white;
+    background:  white;
+    color: gray;
     
 }
 .buM:hover{
@@ -137,3 +137,11 @@ textarea {
     color: black;
     text-decoration: none;
   }
+  .iconoInput {
+    font-size: 15px;
+    position: absolute;
+    left: 150px;
+    padding-top: 15px;}
+    .inputPadding {
+    padding-left: 40px;
+    }

@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/LogoFinal.png" />
   <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -41,57 +41,71 @@
 
           <img class="img-fluid"  src="img/LogoFinal.png" alt="logo">
         </div>
-        <div class="sidebar-brand-text text-black mx-3"> CONÓCELOS </div>
+        <div class="sidebar-brand-text text-white mx-3"> CONÓCELOS </div>
       </a>
 
       <hr class="sidebar-divider my-0">
 
       <li class="nav-item active">
         <a class="nav-link " href="index.php">
-          <i  class="fas fa-home" style="color: black;"></i>
-          <span class="text-black">Home</span></a>
+          <i  class="fas fa-home" style="color: white;"></i>
+          <span class="text-white">Home</span></a>
       </li>
 
       <hr class="sidebar-divider">
 
+      <li class="nav-item">
+        <a class="nav-link "  >
+        <i class="fas fa-search  iconoInput" style="color: black;"></i>
+        
+        <input list="ruc" class="form-control inputPadding" style="background-color: rgb(255, 255, 255);opacity: 0.8;" autocomplete="off"  id="iruc" onchange="" placeholder="   Buscar candidato">
+        <datalist name="ruc" id="ruc" >
+              <?php
+                 /*  require_once("../servicios/conexion.php");
+                  $conex = conexion();
+                  $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
+                  $res = mysqli_query($conex, $sql);
+                  while ($row = mysqli_fetch_array($res)) {
+                    echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
+                  }*/
+              ?>
+        </datalist>
+        </a>
+       
+      </li> 
     
       <li class="nav-item">
         <a class="nav-link " href="contenido/movimientos.php" >
-        <i class="fas fa-users" style="color: black;"></i>
-          <span class="text-black">Perfiles de Candidatos</span>
+        <i class="fas fa-users" style="color: white;"></i>
+          <span class="text-white">Perfiles de Candidatos</span>
         </a>
         
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: black;"></i>
-          <span class="text-black">Comparador de Perfiles</span>
+        <a class="nav-link "  >
+          <i class="fas fa-list fa-sm" style="color: white;"></i>
+          <span class="text-white">Comparador de Perfiles</span>
         </a>
        
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-search" style="color: black;"></i>
-          <span class="text-black">Buscador</span>
+        <a class="nav-link "  >
+        <i class="fas fa-scroll" style="color: white;"></i>
+        <span class="text-black" style="color: white;">Consentimiento</span>
+        </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link " >
+          <i class="fas fa-info-circle" style="color: white;"></i>
+          <span class="text-white">Conocenos</span>
         </a>
        
-      </li> 
-       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-        <i class="fas fa-scroll" style="color: black;"></i>
-        <span class="text-black">Consentimiento</span>
-        </a>
-        <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-info-circle" style="color: black;"></i>
-        <span class="text-black">Conocenos</span>
-        </a>
       </li>
       <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
-        <button style="color: black;" class="rounded-circle border-0" id="sidebarToggle"></button>
+        <button style="color: white;" class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
 
     </ul>

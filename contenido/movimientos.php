@@ -14,7 +14,7 @@
 
 <div class=" container-fluid ">
   <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-black mb-0">Tablero</h1>
+    <h1 class="text-gray mb-0">Tablero</h1>
     <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-black-50"></i>&nbsp;Generate Report</a> -->
   </div>
   <?php
@@ -28,7 +28,7 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class="text-black text-center font-weight-bold ">
+                    <h4 class=" text-center font-weight-bold ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
                         </h4>
                       </div>
@@ -48,17 +48,17 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                        <div class="text-uppercase text-black font-weight-bold text-xs mb-1" >
+                        <div class="text-uppercase font-weight-bold text-xs mb-1" >
                         <img class="img-fluid"  style="width: 60px; height: 60px;"  src="../imgmovimientos/';
                         echo isset($fil['img']) ? $fil['img'] : 'defaultmovimiento.png'; 
                         echo'" alt="../imgmovimientos/defaultmovimiento.png"></div>
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class="text-black"> '.$fil['nombMov'].'</p>
+                              <p class="font-weight-bold" > '.$fil['nombMov'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6 class="text-black">Lista '.$fil['codMov'].'</h6>
+                              <h6 >Lista '.$fil['codMov'].'</h6>
                             </div>
                                         
                           </div>

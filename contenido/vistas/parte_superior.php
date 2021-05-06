@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="../img/logo.png" />
+  <link rel="icon" type="image/png" href="../img/LogoFinal.png" />
   <title>CONOCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -21,31 +22,34 @@
   <!-- <link href="css/roque.css" rel="stylesheet"> -->
   <!-- Font-Adswesome -->
   <link rel="stylesheet" href="../css/font-awesome.min.css">
-
+  
   <!-- Data table -->
   <link rel="stylesheet" href="../css/datatables.min.css">
-
-  <!-- select2 css -->
-  <link rel="stylesheet" href="../contenido/cssComparador/select2.min.css">
+ 
 
 
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="../css/estilos.css"> -->
-  <!-- Datatables -->
-  <link rel="stylesheet" href="../css/datatables.min.css">
-  <!-- Alertify -->
-  <link rel="stylesheet" href="../css/alertify.min.css">
-  <link rel="stylesheet" href="../css/default.min.css">
-  <!-- Font-Awesome -->
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <!-- dropzone para alzar imagenes suelta y arastra -->
-  <link rel="stylesheet" href="../css/dropzone.min.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/util.css">
-  <!-- Estilo Propio -->
-  <link rel="stylesheet" href="../css/roque.css">
+
+
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="../css/estilos.css"> -->
+<!-- Datatables -->
+<link rel="stylesheet" href="../css/datatables.min.css">
+<!-- Alertify -->
+<link rel="stylesheet" href="../css/alertify.min.css">
+<link rel="stylesheet" href="../css/default.min.css">
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<!-- dropzone para alzar imagenes suelta y arastra -->
+<link rel="stylesheet" href="../css/dropzone.min.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/util.css">
+<!-- Estilo Propio -->
+<link rel="stylesheet" href="../css/roque.css">
+
 
 
 
@@ -64,10 +68,10 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
         <div class="sidebar-brand-icon ">
 
-          <img class="img-fluid" src="../img/LogoFinal.png" alt="logo">
+          <img class="img-fluid"  src="../img/LogoFinal.png" alt="logo">
           <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
-        <div class="sidebar-brand-text text-black mx-3"> CONÓCELOS </div>
+        <div class="sidebar-brand-text text-white mx-3"> CONÓCELOS </div>
       </a>
 
       <!-- Divider -->
@@ -76,8 +80,8 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="../index.php">
-          <i class="fas fa-home " style="color: black;"></i>
-          <span class="text-black">Home</span></a>
+          <i class="fas fa-home " style="color: white;"></i>
+          <span class="text-white">Home</span></a>
       </li>
 
       <!-- Divider -->
@@ -89,42 +93,42 @@
       </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-
+     
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="../contenido/movimientos.php" data-toggle="" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-users" style="color: black;"></i>
-          <span class="text-black">Perfiles de Candidatos</span>
+        <i class="fas fa-users" style="color: white;"></i>
+          <span class="text-white">Perfiles de Candidatos</span>
         </a>
-
+        
       </li>
       <!-- nav Item Informes -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="../contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-list fa-sm" style="color: black;"></i>
-          <span class="text-black">Comparador de Perfiles</span>
+        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+          <i class="fas fa-list fa-sm" style="color: white;"></i>
+          <span class="text-white">Comparador de Perfiles</span>
         </a>
-
+       
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-search" style="color: black;"></i>
-          <span class="text-black">Buscador</span>
+        <i class="fas fa-search" style="color: white;"></i>
+          <span class="text-white">Buscador</span>
         </a>
-
-      </li>
-      <li class="nav-item">
+       
+      </li> 
+       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
-          <i class="fas fa-scroll" style="color: black;"></i>
-          <span class="text-black">Consentimiento</span>
+        <i class="fas fa-scroll" style="color: white;"></i>
+        <span class="text-white">Consentimiento</span>
         </a>
-      <li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-info-circle" style="color: black;"></i>
-          <span class="text-black">Conocenos</span>
+        <i class="fas fa-info-circle" style="color: white;"></i>
+        <span class="text-white">Conocenos</span>
         </a>
-
+       
       </li>
       </li>
       <!-- Divider -->
@@ -132,7 +136,7 @@
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle" ></button>
+        <button style="color:white; " class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
 
     </ul>
@@ -148,23 +152,21 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"  >
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars" style="color: black;"></i>
           </button>
 
-          <!-- Topbar Navbar -->
+           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-
+            
             <!-- Nav Item - Alerts -->
-
+            
 
             <!-- Nav Item - User Information -->
-
+  
           </ul>
 
         </nav>
         <!-- End of Topbar -->
-
-        
