@@ -68,6 +68,7 @@
                     </div>
                     <div class="sidebar-brand-text text-white h6 mx-3"> CONÓCELOS </div>
                   </a>
+                  <br>
                     <!-- <p>Dummy Heading</p> -->
                     <hr class="sidebar-divider my-0">
 
