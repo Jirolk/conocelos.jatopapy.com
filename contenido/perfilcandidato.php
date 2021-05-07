@@ -5,15 +5,6 @@
 
 <div class=" container-fluid ">
 
-
-
-
-
-
-
-
-
-
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
