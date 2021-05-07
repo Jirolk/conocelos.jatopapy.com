@@ -75,7 +75,30 @@
             <div class="col">
                 <div class="card shadow mb-2  ">
                     <div class="card py-3 r2 align-items-center">
-                        <p class=" text-left font-weight-bold"> </p><p class=" text-left font-weight-bold"> '.$fila['nomApe'].'</p>
+                      <ul>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                 </div>
             </div>
