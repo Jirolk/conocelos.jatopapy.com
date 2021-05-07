@@ -2,20 +2,14 @@
   require_once "vistas/parte_superior.php"; 
 ?>
 
-  <?php 
-    //require_once ".././lib/librerias_Superior.php"; 
-    //require_once "../lib/librerias_inferior.php"; 
-  ?>
-<!-- INICIO DEL  CONTENIDO PRINCIPAL -->
-<!-- 
-<DIv class="container">
-  <h1>Contenido Principal</h1>
-</DIv> -->
 
 <div class=" container-fluid ">
-  <div class="d-sm-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-gray mb-0">Tablero</h1>
-    <!-- <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-black-50"></i>&nbsp;Generate Report</a> -->
+  <div class="row">
+    <div class="col">
+      <div class="align-items-center ">
+        <h1 class="text-dark text-center font-weight-bold ">Partidos Politicos</h1>
+      </div>
+    </div>
   </div>
   <?php
     require_once("../servicios/conexion.php");
@@ -28,9 +22,9 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h4 class=" text-center font-weight-bold ">
+                    <h6 class="text-dark text-center font-weight-bold ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
-                        </h4>
+                        </h6>
                       </div>
                       </div>
                     </div>
@@ -43,13 +37,13 @@
         echo '
         
           <div class="col-md-6 col-xl-3 mb-4">
-            <a  href="../contenido/movimientodetalle.php?id='.$fil['codMov'].'">
-              <div class="card shadow border-left-dark cardGan py-2">
+          <div class="card shadow border-left-dark cardGan py-2">
+          <a  href="../contenido/movimientodetalle.php?id='.$fil['codMov'].'">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="text-uppercase font-weight-bold text-xs mb-1" >
-                        <img class="img-fluid"  style="width: 60px; height: 60px;"  src="../imgmovimientos/';
+                        <img class="img-fluid rounded mx-auto d-block"  style="width: 100px; height: 100px;"  src="../imgmovimientos/';
                         echo isset($fil['img']) ? $fil['img'] : 'defaultmovimiento.png'; 
                         echo'" alt="../imgmovimientos/defaultmovimiento.png"></div>
                         </div>
@@ -64,8 +58,8 @@
                           </div>
                     </div>
                   </div>
+                  </a>
                 </div>
-              </a>
           </div>
         ';
       }
@@ -76,41 +70,6 @@
 </div>
 
 
-<!-- <div class="row">
-
-  <div class="col-md-6 col-xl-3 mb-4" href="index.php">
-          <a id="link" href="index.php">
-            <div class="card shadow border-left-dark cardGan py-2">
-              <div class="card-body">
-                
-                <div class="row">
-                  <div class="col-sm-3">
-                    <div class="text-uppercase text-black font-weight-bold text-xs mb-1" href="index.php"><img class="img-fluid"  src="img/sicctema.jpeg" alt="logo"></div>
-                  </div>
-                  <div class="col mb-1">
-          
-                  </div>  -->
-                    <!-- /.col-sm-6 -->
-                  <!-- <div class="col-sm-8 align-items-center">
-                    <div class="row align-items-center">
-                      <span class=" font-weight-bold txto">'.$fil['nombMov'].'</span>     
-                      <span class="text-justify">Movimiento infernal de pollos satanicos anti LGBT+XYZ999</span>     
-                    </div>
-
-                    <div class="row align-items-center">
-                      <h3>Lista 69</h3>
-                    </div>
-                  </div> -->
-                  <!-- /.col-sm-6 -->
-                <!-- </div> -->
-                <!-- /.row -->
-<!-- 
-              </div>
-            </div>
-          </a>
-        </div>
-
-</div> -->
 
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->

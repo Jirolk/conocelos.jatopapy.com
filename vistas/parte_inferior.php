@@ -63,7 +63,14 @@
   <script src="js/botones/buttons.print.min.js"></script>
   <script src="js/botones/pdfmake.min.js"></script>
   <script src="js/botones/vfs_fonts.js"></script>
-  
+  <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+            
+        });
+    </script>
 </body>
 
 </html>
