@@ -40,8 +40,8 @@
         ';
 
         echo'<div class=" container text-center ">
-                    <label for="tipoCand" class="mt-3 font-weight-bold">Filtro de datos</label>
-                    <select class="form-control text-uppercase text-center col col-md-12" name="tipoCand" id="tipoCand"  onchange="habilitar(value);">';
+                    <label for="detalle" class="mt-3 font-weight-bold">Filtro de datos</label>
+                    <select class="form-control text-uppercase text-center col col-md-12" name="detalle" id="detalle"  onchange="habilitar(value);">';
                         echo "<option value='0'>Todos los datos</option>";
                         echo '<option value="1" >';
                         echo 'Datos peronales';
