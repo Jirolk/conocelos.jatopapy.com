@@ -17,6 +17,9 @@
             WHERE c.ci=".$id;
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
+      setlocale(LC_TIME,"es_es.UTF-8");
+      list($año,$mes,$dia) = explode("-",date($fila['fechaNac']));
+      $Fecha= gmmktime(12,0,0,$mes,$dia,$año);      
       echo '
       <div class="aling-center">';
       echo' 
@@ -26,14 +29,14 @@
       </div>';
 
       echo '
-          <h2 class=" text-center font-weight-bold ">
+          <h2 class="py-2 text-center font-weight-bold ">
             '. $fila["nomApe"] .'
           </h2>
           
         ';
 
         echo'<div class=" container text-center ">
-                    <label for="detalle" class="mt-3 font-weight-bold">Filtro de datos</label>
+                    <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
                     <select class="form-control text-uppercase text-center col col-md-12" name="detalle" id="detalle"  onchange="habilitar(value);">';
                         echo "<option value='0'>Todos los datos</option>";
                         echo '<option value="1" >';
@@ -64,66 +67,113 @@
          <div class="row">
             <div class="col">
                 <div class="card shadow mb-2  ">
-                    <div class="card py-3 r2 align-items-center">
+                    <div class="card py-2 r2 align-items-center">
                       <ul>
+                      <li>
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Cédula de Identidad Nº: </h6>
+                        
+                      </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['ci'].'</p>
+                    </li>
+                    <li>
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Lugar y Fecha de Nacimiento: </h6>
+                        
+                      </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['lugarNac'].', '.strftime(" %d de %B de %Y", $Fecha).'.</p>
+                    </li>
+                    <li>
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Correo electrónico: </h6>
+                        
+                      </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['nomApe'].'</p>
+                    </li>
+                    <li>
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Número de Contacto para la ciudadanía: </h6>
+                        
+                      </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['nomApe'].'</p>
+                    </li>
                         <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                          <div class="">
+                            <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Partido Politico: </h6>
                           </div>
                         </li>
                         <li>
-                            <p class="text-uppercase text-dark p-1 text-right font-weight">'.$fila['nomApe'].'</p>
+                            <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['descrPart']." - ".$fila['siglas'].'</p>
                         </li>
                         <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Partido Politico: </h6>
+                          <div class="">
+                            <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Movimiento: </h6>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['nombMov']." - ".$fila['sgl']." - LISTA ".$fila['codMov'].'</p>
+                        </li>
+                        <li>
+                          <div class="">
+                            <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Candidatura: </h6>
                           </div>
                         </li>
                         <li>
-                            <p class="text-uppercase text-dark p-1 text-right font-weight">'.$fila['descrPart']." - ".$fila['siglas'].'</p>
+                          <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</p>
                         </li>
+
                         <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Movimiento: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nombMov']." - ".$fila['sgl']." - LISTA ".$fila['codMov'].'</h6>
+                          <div class="">
+                            <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Perfiles en Redes Sociales: </h6>
+                            
                           </div>
                         </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Candidatura: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</h6>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Número de Cédula de Identidad Paraguaya: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Lugar y Fecha de Nacimiento: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Correo electrónico: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Número de Contacto para la ciudadanía: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Perfiles en Redes Sociales: </h6>
-                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
-                          </div>
-                        </li>
+                        <li>';
+                          $cons = "SELECT * FROM redessociales WHERE codRedes =".$fila['codDetalle'];
+                          $resp = mysqli_query($conex, $cons);
+                          foreach($resp as $fi){
+                            if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
+                              echo '
+                              <p class="text-uppercase text-dark p-1 text-center font-weight">
+                                <a  href="'.$fi['url'].'">
+                                  <i class="fab fa-facebook-square " style="color: black;"></i>
+                                </a>
+                              </P>';
+                            }
+                            if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
+                              echo '
+                              <p class="text-uppercase text-dark p-1 text-center font-weight">
+                                <a  href="'.$fi['url'].'">
+                                  <i class="fab fa-instagram-square " style="color: black;"></i>
+                                </a>
+                              </P>';
+                            }
+                            if (strcasecmp($fi['redSocial'],"TWITTER") == 0) {
+                              echo '
+                              <p class="text-uppercase text-dark p-1 text-center font-weight">
+                                <a  href="'.$fi['url'].'">
+                                  <i class="fab fa-twitter-square " style="color: black;"></i>
+                                </a>
+                              </P>';
+                            }
+                            if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
+                              echo '
+                              <p class="text-uppercase text-dark p-1 text-center font-weight">
+                                <a  href="'.$fi['url'].'">
+                                  <i class="fab fa-youtube-square " style="color: black;"></i>
+                                </a>
+                              </P>';
+                            }
+                          }
+                        echo '</li>
                       </ul>
                     </div>
                 </div>
