@@ -9,10 +9,12 @@
     require_once("../servicios/conexion.php");
     $conex = conexion();
     $id = $_GET["id"];
-    $sql = "SELECT c.*,cc.descripcion,cd.* FROM candidatos c
-	INNER JOIN candidatura cc ON c.codCand =cc.codCand
-	INNER JOIN candidatodetalle cd ON c.ci =cd.ci
-	WHERE c.ci=".$id;
+    $sql = "SELECT c.*,cc.descripcion,cd.*,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
+                INNER JOIN movimientos cm ON c.codMov = cm.codMov
+                INNER JOIN partidopolitico pp ON cm.codPartido= pp.codPartido
+                INNER JOIN candidatura cc ON c.codCand = cc.codCand
+                INNER JOIN candidatodetalle cd ON c.ci = cd.ci
+            WHERE c.ci=".$id;
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
@@ -58,18 +60,6 @@
                     </div>
             </div>
         </div>';
-      /*$sq = "SELECT * FROM candidatos c
-            join candidatura cc on c.codCand = cc.codCand
-            where codMov= ".$fila['codMov']." AND c.codCand=1" ;
-      $re = mysqli_query($conex, $sq);
-      if(!empty($re)) {
-        echo '
-              <h5 class="text-center font-weight-bold ">
-                LOS DATOS AUN NO HAN SIDO ACTUALIZADOS
-              </h5>
-        <br>
-       ';*/
-     // }else {
          echo '
          <div class="row">
             <div class="col">
@@ -79,22 +69,58 @@
                         <li>
                           <div class="row">
                             <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                          </div>
+                        </li>
+                        <li>
+                            <p class="text-uppercase text-dark p-1 text-right font-weight">'.$fila['nomApe'].'</p>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Partido Politico: </h6>
+                          </div>
+                        </li>
+                        <li>
+                            <p class="text-uppercase text-dark p-1 text-right font-weight">'.$fila['descrPart']." - ".$fila['siglas'].'</p>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Movimiento: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nombMov']." - ".$fila['sgl']." - LISTA ".$fila['codMov'].'</h6>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Candidatura: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</h6>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Número de Cédula de Identidad Paraguaya: </h6>
                             <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
                           </div>
                         </li>
-                      </ul>
-                      <ul>
                         <li>
                           <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Lugar y Fecha de Nacimiento: </h6>
                             <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
                           </div>
                         </li>
-                      </ul>
-                      <ul>
                         <li>
                           <div class="row">
-                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Nombre y Apellido del Candidato: </h6>
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Correo electrónico: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Número de Contacto para la ciudadanía: </h6>
+                            <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="row">
+                            <h6 class="text-uppercase text-dark p-2 font-weight-bold">Perfiles en Redes Sociales: </h6>
                             <h6 class="text-uppercase text-dark p-2 text-right font-weight-bold">'.$fila['nomApe'].'</h6>
                           </div>
                         </li>
@@ -155,9 +181,10 @@
           </div>
                 
       </div>';
-      $sq = "SELECT * FROM candidatos c
+      /*$sq = "SELECT * FROM candidatos c
         join candidatura cc on c.codCand = cc.codCand
-        where codMov= ".$fila['codMov']." AND c.codCand=2" ;
+        where codMov= ".$fila['codMov']." AND c.codCand=2" ;*/
+      $sq = "SELECT * FROM respuestas WHERE idResp =17";
       $re = mysqli_query($conex, $sq);
       echo '<div class="row">';
       foreach($re as $fil){
@@ -176,13 +203,13 @@
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                              <p class=" text-left font-weight-bold"> '.$fil['detResp'].'</p>
                             </div>
                             <div class="row align-items-center">
-                              <h6 class=" text-left font-weight-bold">'.$fil['descripcion'].' </h6>
+                              <h6 class=" text-left font-weight-bold">'.$fil['idPreg'].' </h6>
                             </div>
                             <div class="row align-items-center">
-                              <h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
+                              <h6 class=" text-left font-weight-bold">Orden: '.$fil['ci'].'</h6>
                             </div>
                                         
                           </div>
