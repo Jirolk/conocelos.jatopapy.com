@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/LogoFinal.png" />
   <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -53,7 +53,27 @@
                 </li>
 
                 <hr class="sidebar-divider">
-
+                <li class="nav-item  ">
+                <div class="input-group input-group-sm mb-3">
+                    <input list="bus" type="text" class="form-control text-black" autocomplete="off" onchange="buscarRuc();" placeholder="Buscar a un candidato" id="ibus" style="background-color: rgb(255,255,255);opacity:0.5;"/>
+                    
+                    <datalist name="bus" id="bus" >
+                          <?php
+                              /*require_once("../servicios/conexion.php");
+                              $conex = conexion();
+                              $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
+                              $res = mysqli_query($conex, $sql);
+                              while ($row = mysqli_fetch_array($res)) {
+                                echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
+                              }*/
+                          ?>
+                    </datalist>
+                    <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search" style="color: white;"></i></button>
+                  </div>
+                </div>
+                  
+                </li>
 
                 <li class="nav-item  ">
                   <a class="nav-link " href="contenido/movimientos.php" >
@@ -62,6 +82,7 @@
                   </a>
                   
                 </li>
+               
                 <li class="nav-item  ">
                   <a class="nav-link collapsed" href="./contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
                     <i class="fas fa-list fa-sm" style="color: white;"></i>
