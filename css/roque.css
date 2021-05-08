@@ -28,13 +28,13 @@ textarea:focus, input:focus, input[type]:focus {
 
 
 .r2 {
-    background-color: #ceb48d6b;
+    background-color:  rgba(206, 180, 141, 0.5);
     color: rgba(0, 0, 0, 0);
 }
 
 .r3 {
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
-    background: #CEB48D;
+    background-color:  rgb(169,131,7);
     color: rgb(255, 255, 255);
 }
 

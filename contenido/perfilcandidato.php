@@ -102,9 +102,13 @@
                         
                       </div>
                     </li>
-                    <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['nomApe'].'</p>
-                    </li>
+                    <li>';
+                    $cons = "SELECT * FROM contacto WHERE codDetalle =".$fila['codDetalle'];
+                          $resp = mysqli_query($conex, $cons);
+                          foreach($resp as $fi){
+                          echo '  <p class="text-uppercase text-dark p-1 text-center font-weight">0'.$fi['numCntacto'].'</p>';
+                          }
+                    echo '</li>
                         <li>
                           <div class="">
                             <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Partido Politico: </h6>
@@ -137,7 +141,7 @@
                           </div>
                         </li>
                         <li>';
-                          $cons = "SELECT * FROM redessociales WHERE codRedes =".$fila['codDetalle'];
+                          $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
                           $resp = mysqli_query($conex, $cons);
                           foreach($resp as $fi){
                             if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
