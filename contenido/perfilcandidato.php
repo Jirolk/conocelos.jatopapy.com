@@ -106,7 +106,7 @@
                     $cons = "SELECT * FROM contacto WHERE codDetalle =".$fila['codDetalle'];
                           $resp = mysqli_query($conex, $cons);
                           foreach($resp as $fi){
-                          echo '  <p class="text-uppercase text-dark p-1 text-center font-weight">0'.$fi['numCntacto'].'</p>';
+                          echo '  <p class="text-uppercase text-dark  text-center font-weight">0'.$fi['numCntacto'].'</p>';
                           }
                     echo '</li>
                         <li>
@@ -143,40 +143,41 @@
                         <li>';
                           $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
                           $resp = mysqli_query($conex, $cons);
+                          echo '<p class="text-uppercase text-dark p-1 text-center font-weight">';
                           foreach($resp as $fi){
                             if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
                               echo '
-                              <p class="text-uppercase text-dark p-1 text-center font-weight">
                                 <a  href="'.$fi['url'].'">
-                                  <i class="fab fa-facebook-square " style="color: black;"></i>
-                                </a>
-                              </P>';
-                            }
-                            if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
+                                  <i class="h3 fab fa-facebook-square " style="color: black;"></i>
+                                </a>';
+                              }
+                              if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
                               echo '
-                              <p class="text-uppercase text-dark p-1 text-center font-weight">
-                                <a  href="'.$fi['url'].'">
-                                  <i class="fab fa-instagram-square " style="color: black;"></i>
-                                </a>
-                              </P>';
+                              
+                              <a  href="'.$fi['url'].'">
+                              
+                                  <i class="h3 fab fa-instagram " style="color: black;"></i>
+                                  </a>
+                              ';
                             }
                             if (strcasecmp($fi['redSocial'],"TWITTER") == 0) {
                               echo '
-                              <p class="text-uppercase text-dark p-1 text-center font-weight">
-                                <a  href="'.$fi['url'].'">
-                                  <i class="fab fa-twitter-square " style="color: black;"></i>
+                              
+                              <a  href="'.$fi['url'].'">
+                              <i class="h3 fab fa-twitter-square " style="color: black;"></i>
                                 </a>
-                              </P>';
-                            }
-                            if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
-                              echo '
-                              <p class="text-uppercase text-dark p-1 text-center font-weight">
+                              ';
+                              }
+                              if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
+                                echo '
+                              
                                 <a  href="'.$fi['url'].'">
-                                  <i class="fab fa-youtube-square " style="color: black;"></i>
+                                <i class="h3 fab fa-youtube-square " style="color: black;"></i>
                                 </a>
-                              </P>';
+                              ';
+                              }
                             }
-                          }
+                            echo'</P>';
                         echo '</li>
                       </ul>
                     </div>
