@@ -82,7 +82,7 @@
         
       </li>
       <li class="nav-item">
-        <a class="nav-link "  >
+        <a class="nav-link " href="contenido/comparador.php" >
           <i class="fas fa-list fa-sm" style="color: white;"></i>
           <span class="text-white">Comparador de Perfiles</span>
         </a>
