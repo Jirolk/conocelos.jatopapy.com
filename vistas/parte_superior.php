@@ -53,25 +53,7 @@
                 </li>
 
                 <hr class="sidebar-divider">
-                <li class="nav-item">
-        <a class="nav-link "  >
-        <i class="fas fa-search  iconoInput" style="color: black;"></i>
-        
-        <input list="ruc" class="form-control inputPadding" style="background-color: rgb(255, 255, 255);opacity: 0.8;" autocomplete="off"  id="iruc" onchange="" placeholder="   Buscar candidato">
-        <datalist name="ruc" id="ruc" >
-              <?php
-                 /*  require_once("../servicios/conexion.php");
-                  $conex = conexion();
-                  $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
-                  $res = mysqli_query($conex, $sql);
-                  while ($row = mysqli_fetch_array($res)) {
-                    echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
-                  }*/
-              ?>
-        </datalist>
-        </a>
-       
-      </li> 
+
 
                 <li class="nav-item  ">
                   <a class="nav-link " href="contenido/movimientos.php" >
