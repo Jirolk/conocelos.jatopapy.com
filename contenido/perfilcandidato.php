@@ -94,7 +94,38 @@
                       </div>
                     </li>
                     <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['nomApe'].'</p>
+                      <p class=" text-dark p-1 text-center font-weight">'.$fila['email'].'</p>
+                    </li>
+                    
+                    <li class="d-flex justify-content-center">
+                      <div class=" col-md-4  ">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Académica: </h6>
+                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacAca'].'</p>
+                        
+                      </div>
+                    </li>
+
+                    <li class="d-flex justify-content-center">
+                      <div class=" col-md-4  ">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Profesional: </h6>
+                        
+                        <p class=" text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacProf'].'</p>
+                      </div>
+                    </li>
+                    <li class="d-flex justify-content-center">
+                      <div class=" col-md-4  ">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Experiencia Laboral o Profesional: </h6>
+                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['experLab'].'</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Profesión u Ocupación Actual: </h6>
+                        
+                      </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['profeOcupActual'].'</p>
                     </li>
                     <li>
                       <div class="">
@@ -132,23 +163,25 @@
                         </li>
                         <li>
                           <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</p>
-                        </li>
+                        </li>';
+                        $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
+                        $resp = mysqli_query($conex, $cons);
+                        if(empty($resp)) {
 
-                        <li>
+                        }else {
+                          echo '<li>
                           <div class="">
-                            <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Perfiles en Redes Sociales: </h6>
-                            
+                          <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Perfiles en Redes Sociales: </h6>
+                          
                           </div>
-                        </li>
-                        <li>';
-                          $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
-                          $resp = mysqli_query($conex, $cons);
+                          </li>
+                          <li>';
                           echo '<p class="text-uppercase text-dark p-1 text-center font-weight">';
                           foreach($resp as $fi){
                             if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
                               echo '
-                                <a  href="'.$fi['url'].'">
-                                  <i class="h3 fab fa-facebook-square " style="color: black;"></i>
+                              <a  href="'.$fi['url'].'">
+                              <i class="h3 fab fa-facebook-square " style="color: black;"></i>
                                 </a>';
                               }
                               if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
@@ -165,18 +198,19 @@
                               
                               <a  href="'.$fi['url'].'">
                               <i class="h3 fab fa-twitter-square " style="color: black;"></i>
-                                </a>
+                              </a>
                               ';
-                              }
-                              if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
-                                echo '
-                              
-                                <a  href="'.$fi['url'].'">
-                                <i class="h3 fab fa-youtube-square " style="color: black;"></i>
-                                </a>
-                              ';
-                              }
                             }
+                            if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
+                              echo '
+                              
+                              <a  href="'.$fi['url'].'">
+                              <i class="h3 fab fa-youtube-square " style="color: black;"></i>
+                              </a>
+                              ';
+                            }
+                          }
+                        }
                             echo'</P>';
                         echo '</li>
                       </ul>
@@ -226,7 +260,7 @@
       echo '
       <div class="row">
         <div class="col">
-                  <div class="card shadow mb-4 ">
+                  <div class="card shadow mb-2 ">
                     <div class="card py-3 r3 align-items-center">
                           <h5 class=" text-center font-weight-bold ">
                             CUESTIONARIO
@@ -239,43 +273,32 @@
       /*$sq = "SELECT * FROM candidatos c
         join candidatura cc on c.codCand = cc.codCand
         where codMov= ".$fila['codMov']." AND c.codCand=2" ;*/
-      $sq = "SELECT * FROM respuestas WHERE idResp =17";
-      $re = mysqli_query($conex, $sq);
-      echo '<div class="row">';
-      foreach($re as $fil){
-        echo '
-        
-          <div class="col-md-6 col-xl-3 mb-4">
-            
-              <div class="card shadow border-left-dark cardGan py-2">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-4">
-                        <div class="text-uppercase  font-weight-bold text-xs mb-1">
-                                  <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
-                                  echo isset($fil['img']) ? $fil['img'] : '../imgcandidatos/defaultcandidato.png'; 
-                                  echo'" alt="logo"></div>
-                        </div>
-                          <div class="col-sm-8 align-items-center">
-                            <div class="row align-items-center">
-                              <p class=" text-left font-weight-bold"> '.$fil['detResp'].'</p>
-                            </div>
-                            <div class="row align-items-center">
-                              <h6 class=" text-left font-weight-bold">'.$fil['idPreg'].' </h6>
-                            </div>
-                            <div class="row align-items-center">
-                              <h6 class=" text-left font-weight-bold">Orden: '.$fil['ci'].'</h6>
-                            </div>
-                                        
+      $sq = "SELECT * FROM respuestas r
+              INNER JOIN preguntas p ON r.idPreg = p.idPreg
+              WHERE ci =".$id;
+      $result = mysqli_query($conex, $sq);
+      foreach($result as $row){
+                        echo '
+                           <div class="row">
+                              <div class="col">
+                                  <div class="card shadow mb-2  ">
+                                      <div class="card py-2 r2 ">
+                                        <ul>';
+                                          
+                        echo ' <li class="d-flex justify-content-center">
+                                <div class=" col-md-8  justify-content-center">
+                                  <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
+                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>
+                                  </div>
+                              </li>';
+                              echo '</ul>
                           </div>
-                    </div>
+                      </div>
                   </div>
-                </div>
-              
-          </div>
-        ';
-      }
-      echo '</div>';
+                  
+               </div>';
+                        }
+                      
     }
     cerrarBD($conex);
   ?>
