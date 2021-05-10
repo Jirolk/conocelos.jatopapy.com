@@ -37,7 +37,7 @@
 
         echo'<div class=" container text-center ">
                     <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
-                    <select class="form-control text-uppercase text-center col col-md-12" name="detalle" id="detalle"  onchange="habilitar(value);">';
+                    <select id="filtro" class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
                         echo "<option value='0'>Todos los datos</option>";
                         echo '<option value="1" >';
                         echo 'Datos peronales';
@@ -220,43 +220,7 @@
             
          </div>
          <div class="row">';
-         //foreach($re as $fil){
-        
-        /*  echo '
-          
-
-            <div class="col-md-6 col-xl-3 mb-4">
-              
-                <div class="card shadow border-left-dark cardGan py-2">
-                  <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="text-uppercase font-weight-bold text-xs mb-1">
-                                <img class="img-fluid rounded mx-auto d-block" href="../index.php"  src="../imgcandidatos/';
-                                echo isset($fila['img']) ? $fila['img'] : '../imgcandidatos/defaultcandidato.png'; 
-                                echo'" alt="logo"></div>
-                            </div>
-                                <div class="col-sm-8 align-items-center">
-                                    <div class="row align-items-center">
-                                        <p class=" text-left font-weight-bold"> '.$fila['nomApe'].'</p>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <h6 class="text-left font-weight-bold">'.$fila['descripcion'].' </h6>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <h6 class=" text-left font-weight-bold">Orden: '.$fila['orden'].'</h6>
-                                    </div>
-                                            
-                                </div>
-                        </div>
-                    </div>
-                  </div>
-              
-            </div>
-          ';*/
-        //}
         echo '</div>';
-      //}
       echo '
       <div class="row">
         <div class="col">
@@ -270,9 +234,6 @@
           </div>
                 
       </div>';
-      /*$sq = "SELECT * FROM candidatos c
-        join candidatura cc on c.codCand = cc.codCand
-        where codMov= ".$fila['codMov']." AND c.codCand=2" ;*/
       $sq = "SELECT * FROM respuestas r
               INNER JOIN preguntas p ON r.idPreg = p.idPreg
               WHERE ci =".$id;
