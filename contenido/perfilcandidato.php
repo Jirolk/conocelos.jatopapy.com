@@ -37,8 +37,8 @@
 
         echo'<div class=" container text-center ">
                     <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
-                    <select id="filtro" class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
-                        echo "<option value='0'>Todos los datos</option>";
+                    <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
+                        echo '<option selected value="0">Todos los datos</option>';
                         echo '<option value="1" >';
                         echo 'Datos peronales';
                         echo "</option>";
@@ -222,7 +222,7 @@
          <div class="row">';
         echo '</div>';
       echo '
-      <div class="row">
+      <div id="cuest" class="row">
         <div class="col">
                   <div class="card shadow mb-2 ">
                     <div class="card py-3 r3 align-items-center">
@@ -238,27 +238,29 @@
               INNER JOIN preguntas p ON r.idPreg = p.idPreg
               WHERE ci =".$id;
       $result = mysqli_query($conex, $sq);
+      echo'<div id="cuestDetalle">';
       foreach($result as $row){
-                        echo '
-                           <div class="row">
-                              <div class="col">
-                                  <div class="card shadow mb-2  ">
-                                      <div class="card py-2 r2 ">
-                                        <ul>';
-                                          
-                        echo ' <li class="d-flex justify-content-center">
-                                <div class=" col-md-8  justify-content-center">
-                                  <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
-                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>
-                                  </div>
-                              </li>';
-                              echo '</ul>
+                    echo '
+                        <div  class="row">
+                          <div class="col">
+                              <div class="card shadow mb-2  ">
+                                  <div class="card py-2 r2 ">
+                                    <ul>';
+                                      echo ' <li class="d-flex justify-content-center">
+                                              <div class=" col-md-8  justify-content-center">
+                                                <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
+                                                <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>
+                                                </div>
+                                            </li>';
+                                    echo '</ul>
                           </div>
                       </div>
                   </div>
                   
                </div>';
-                        }
+                       
+      }
+      
                       
     }
     cerrarBD($conex);
@@ -270,38 +272,26 @@
 <script src="../js/demo/chart.min.js"></script>
 <!-- </body> -->
 <script>
+  $(document).ready(function () {
+    document.getElementById('filtro').getElementsByTagName('option')[0].selected = 'selected'
+  });
   function habilitar(value) {
       var sele = document.getElementById("filtro");
-      if (sele.options[sele.selectedIndex].value == 1) {
-          document.getElementById("CampoBusqueda").innerHTML = "<input id='nroCaja'class='form-control' placeholder='000'> "
-          $("#nroCaja").focus();
-
+      if (sele.options[sele.selectedIndex].value == 0) {
+        document.getElementById('datPers').hidden= false;
+        document.getElementById('datPersDet').hidden= false;
+      } else if (sele.options[sele.selectedIndex].value == 1) {
+        document.getElementById('datPers').hidden= false;
+        document.getElementById('datPersDet').hidden= false;
+        document.getElementById('cuest').hidden= true;
+        document.getElementById('cuestDetalle').hidden= true;
       } else if (sele.options[sele.selectedIndex].value == 2) {
-          document.getElementById("CampoBusqueda").innerHTML = "<label for='fec1'class=''>Desde:</label><input  id='fec1' type='date' class='form-control'><label for='fec2' class=''>Hasta:</label><input  id='fec2' type='date' class='form-control mb-4'>"
-          $("#fec1").focus();
-      } else if (sele.options[sele.selectedIndex].value == 3) {
-          document.getElementById("CampoBusqueda").innerHTML = "<label for='fec3'class=''>Desde:</label><input  id='fec3' type='date' class='form-control'><label for='fec4' class=''>Hasta:</label><input  id='fec4' type='date' class='form-control mb-4'>"
-          $("#fec3").focus();
-      } else if (sele.options[sele.selectedIndex].value == 4) {
-          document.getElementById("CampoBusqueda").innerHTML = "<input  id='razon' class='form-control' placeholder='Nombre...'> "
-          $("#razon").focus();
-      } else if (sele.options[sele.selectedIndex].value == 5) {
-          document.getElementById("CampoBusqueda").innerHTML = `<select name="" id="estado" class="form-control mb-4">
-          <option value="0">Generar por:</option>
-          <option value="1">Activo</option>
-          <option value="2">Ocupado</option>
-        </select>`;
-
-          $("#estado").focus();
-      } else if (sele.options[sele.selectedIndex].value == 6) {
-          document.getElementById("CampoBusqueda").innerHTML = `<select name="" id="condicion" class="form-control mb-4">
-          <option value="0">Generar por:</option>
-          <option value="1">Contado</option>
-          <option value="2">Crédito</option>        
-        </select>`;
-          $("#condicion").focus();
-      }
-  }
+        document.getElementById('datPers').hidden= true;
+        document.getElementById('datPersDet').hidden= true;
+        document.getElementById('cuest').hidden= false;
+        document.getElementById('cuestDetalle').hidden= false;
+      } 
+  };
 </script>
 
 
