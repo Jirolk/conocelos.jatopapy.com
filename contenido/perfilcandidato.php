@@ -238,7 +238,7 @@
               INNER JOIN preguntas p ON r.idPreg = p.idPreg
               WHERE ci =".$id;
       $result = mysqli_query($conex, $sq);
-      echo'<div id="cuestDetalle">';
+      echo'<div id="cuestDetalle" class="mb-2 ">';
       foreach($result as $row){
                     echo '
                         <div  class="row">
