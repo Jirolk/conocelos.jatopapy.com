@@ -29,6 +29,13 @@ require_once "vistas/parte_superior.php";
   </select>
   <div class="" id="CampoBusqueda"></div>
   <div id="BusAvan"></div>
+
+
+
+
+
+
+
 </div>
 
 
