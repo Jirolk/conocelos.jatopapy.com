@@ -1,10 +1,10 @@
 <?php
 function conexion(){
-    $host = "localhost";
+    $host = "www.jatopapy.com";
     $dbnam = "jattugco_candidatos";
     // $port = "3306";
-    $usuario="root";
-    $password="123456";
+    $usuario="jattugco_candidatos";
+    $password="lista.candidatos@123";
     $conexion = null;
     $conexion = mysqli_connect($host, $usuario, $password, $dbnam);
     //("host=$host port=$port dbname=$dbnam user=$user password=$pass");
@@ -27,3 +27,4 @@ function cerrarBD($conexion){
 }
 
 ?>
+
