@@ -69,15 +69,6 @@
                 <div class="card shadow mb-2  ">
                     <div class="card py-2 r2 align-items-center">
                       <ul>
-                      <li>
-                      <div class="">
-                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Cédula de Identidad Nº: </h6>
-                        
-                      </div>
-                    </li>
-                    <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['ci'].'</p>
-                    </li>
                     <li>
                       <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Lugar y Fecha de Nacimiento: </h6>
