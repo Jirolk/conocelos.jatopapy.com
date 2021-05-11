@@ -3,20 +3,17 @@
        font-size: 10px;
     }
 }
+textarea:focus, input:focus, input[type]:focus {
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+}
 
-/* .blackiconcolor {
-    color: black;
-} */
 .roque {
-    background:  #CEB48D;
+    background:  rgb(169,131,7);
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%); */
 }
-/* .fondocont { */
-    /* background: rgb(0, 0, 0,0);
-    background: linear-gradient(0deg, rgb(16, 39, 45) 20%, rgba(157, 207, 221, 1) 100%); */
-    
-/* } */
-/*#80786B #D3BAA7*/
+
 .bgrimg{
     /*background-image: url("../img/LogoFinal.png");
     /* position: absolute; 
@@ -29,23 +26,16 @@
     /* position: relative; */
 }
 
-.roque:hover {
-    /* color: rgba(0, 247, 255, 0); */
-}
 
 .r2 {
-    background-color: rgba(157, 207, 221, 0);
-    color: rgb(255, 0, 0);
+    background-color:  rgba(206, 180, 141, 0.5);
+    color: rgba(0, 0, 0, 0);
 }
 
 .r3 {
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
-    background: #CEB48D;
+    background-color:  rgb(169,131,7);
     color: rgb(255, 255, 255);
-}
-.r2:hover {
-    background-color: rgba(0, 225, 255, 0);
-    color: rgba(0, 0, 0, 0);
 }
 
 .tc {
@@ -137,11 +127,49 @@ textarea {
     color: black;
     text-decoration: none;
   }
-  .iconoInput {
-    font-size: 15px;
-    position: absolute;
-    left: 150px;
-    padding-top: 15px;}
-    .inputPadding {
-    padding-left: 40px;
+
+
+
+
+/* ---------------------------------------------------
+CONTENT STYLE
+----------------------------------------------------- */
+
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0ms;
+}
+#content {
+    width: 100%;
+
+    transition: all 0ms;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+#sidebar.active {
+    margin-left: 0px;
+}
+
+@media (max-width: 360px) {
+    #sidebar.active {
+        margin-left: -104px;
     }
+    #sidebar {
+        margin-left: -104px;
+        /* display: none; */
+        
+    }
+    #sidebar.active {
+        margin-left: 0;
+        /* display: flex; */
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

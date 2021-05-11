@@ -6,7 +6,7 @@ require_once "vistas/parte_superior.php";
 <!-- INICIO DEL  CONTENIDO PRINCIPAL -->
 
 <DIv class="container text-center ">
-  <h1 class="text-info">Comparador de Perfiles</h1>
+  <h1 class="text-dark font-weight-bold">Comparador de Perfiles</h1>
   <h6 class="mt-2">Elija dos candidatos para comparar perfiles, puede buscar por nombres o en busqueda avanzada podrá hacer una busqueda por partido, movimiento y nombre.</h6>
 </DIv>
 <div class=" container text-center ">
