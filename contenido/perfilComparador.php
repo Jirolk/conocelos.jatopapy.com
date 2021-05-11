@@ -307,7 +307,7 @@ require_once "vistas/parte_superior.php";
 
             echo '<div class=" container text-center ">
                         <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
-                        <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
+                        <select id="filtro2"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
             echo '<option selected value="0">Todos los datos</option>';
             echo '<option value="1" >';
             echo 'Datos peronales';
@@ -322,7 +322,7 @@ require_once "vistas/parte_superior.php";
                 <hr class="divider">';
 
             echo '
-            <div id="datPers" class="row">
+            <div id="datPers1" class="row">
               <div class="col">
                         <div class="card shadow mb-2  ">
                           <div class="card py-3 r3 align-items-center">
@@ -334,7 +334,7 @@ require_once "vistas/parte_superior.php";
                 </div>
             </div>';
             echo '
-            <div id="datPersDet" class="row">
+            <div id="datPersDet1" class="row">
                 <div class="col">
                     <div class="card shadow mb-2  ">
                         <div class="card py-2 r2 align-items-center">
@@ -483,7 +483,7 @@ require_once "vistas/parte_superior.php";
             <div class="row">';
             echo '</div>';
             echo '
-          <div id="cuest" class="row">
+          <div id="cuest1" class="row">
             <div class="col">
                       <div class="card shadow mb-2 ">
                         <div class="card py-3 r3 align-items-center">
@@ -497,9 +497,9 @@ require_once "vistas/parte_superior.php";
           </div>';
             $sq = "SELECT * FROM respuestas r
                   INNER JOIN preguntas p ON r.idPreg = p.idPreg
-                  WHERE ci =" . $id;
+                  WHERE ci =" . $id2;
             $result = mysqli_query($conex, $sq);
-            echo '<div id="cuestDetalle" class="mb-2 ">';
+            echo '<div id="cuestDetalle1" class="mb-2 ">';
             foreach ($result as $row) {
               echo '
                             <div  class="row">
@@ -537,15 +537,17 @@ require_once "vistas/parte_superior.php";
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>
-<script src="../js/demo/chart.min.js"></script>
+
 <!-- </body> -->
 <script>
   $(document).ready(function() {
     document.getElementById('filtro').getElementsByTagName('option')[0].selected = 'selected'
+    document.getElementById('filtro2').getElementsByTagName('option')[0].selected = 'selected'
   });
 
   function habilitar(value) {
     var sele = document.getElementById("filtro");
+    var sele2 = document.getElementById("filtro2");
     if (sele.options[sele.selectedIndex].value == 0) {
       document.getElementById('datPers').hidden = false;
       document.getElementById('datPersDet').hidden = false;
@@ -559,6 +561,20 @@ require_once "vistas/parte_superior.php";
       document.getElementById('datPersDet').hidden = true;
       document.getElementById('cuest').hidden = false;
       document.getElementById('cuestDetalle').hidden = false;
+    }
+    if (sele2.options[sele2.selectedIndex].value == 0) {
+      document.getElementById('datPers1').hidden = false;
+      document.getElementById('datPersDet1').hidden = false;
+    } else if (sele2.options[sele2.selectedIndex].value == 1) {
+      document.getElementById('datPers1').hidden = false;
+      document.getElementById('datPersDet1').hidden = false;
+      document.getElementById('cuest1').hidden = true;
+      document.getElementById('cuestDetalle1').hidden = true;
+    } else if (sele2.options[sele2.selectedIndex].value == 2) {
+      document.getElementById('datPers1').hidden = true;
+      document.getElementById('datPersDet1').hidden = true;
+      document.getElementById('cuest1').hidden = false;
+      document.getElementById('cuestDetalle1').hidden = false;
     }
   };
 </script>

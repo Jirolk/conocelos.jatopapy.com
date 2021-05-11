@@ -40,6 +40,6 @@ require_once "vistas/parte_superior.php";
 
 
 
-<script src="../contenido/jsComparador/main.js?v3"></script>
+<script src="../contenido/jsComparador/main.js?v4"></script>
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>
