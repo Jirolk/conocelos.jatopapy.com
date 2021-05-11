@@ -116,8 +116,8 @@
                 <hr class="sidebar-divider ">
 
                 <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center ">
-                  <button style="color: white;" class="rounded-circle border-0" id="sidebarToggle"></button>
+                <div class="text-center  justify-items-center">
+                  <button style="color: white;" class="rounded-circle border-0 d-none d-sm-block " id="sidebarToggle"></button>
                 </div>
 
       </nav>
