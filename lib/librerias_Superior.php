@@ -15,3 +15,5 @@
 <link rel="stylesheet" href="css/util.css">
 <!-- Estilo Propio -->
 <link rel="stylesheet" href="css/roque.css?n=2">
+
+<link rel="stylesheet" href="css/select2.min.css">

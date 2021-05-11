@@ -25,12 +25,8 @@
   
   <!-- Data table -->
   <link rel="stylesheet" href="css/datatables.min.css">
- 
 </head>
-
 <body id="page-top ">
-
-  <!-- Page Wrapper -->
   <div id="wrapper" class="wrapper">
       <nav id="sidebar" class="sidebar roque" >
 
@@ -55,20 +51,22 @@
                 <hr class="sidebar-divider">
                 <li class="nav-item  ">
                 <div class="input-group input-group-sm mb-3">
-                    <input list="bus" type="text" class="form-control text-black" autocomplete="off" onchange="" placeholder="Buscar a un candidato" id="ibus" style="background-color: rgb(255,255,255);opacity:0.5;"/>
-                    
-                    <datalist name="bus" id="bus" >
-                      <option value="">Hola</option>
-                          <?php
-                             //require_once("../servicios/conexion.php");
-                              //$conex = conexion();
-                             /* $sql = "SELECT nomApe FROM candidatos";
-                              $res = mysqli_query($conex, $sql);
-                              while ($row = mysqli_fetch_array($res)) {
-                                echo '  <option value="'.$row["nomApe"].'">'.$row["nomApe"].'</option>';
-                              }*/
-                          ?>
-                    </datalist>
+                <select style="opacity:0.75;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="">
+                
+                  <?php
+                  /*require_once("../servicios/conexion.php");
+                  $conex = conexion();
+                  $sql = "SELECT * FROM candidatos ";
+                  $rs = mysqli_query($conex, $sql);
+                  echo "<option value='0'>Buscar candidato</option>";
+                 foreach ($rs as $fila) {
+                    echo "<option value='" . $fila['codCand'] . "'>";
+                    echo $fila['nomApe'];
+                    echo "</option>";
+                  }
+                  cerrarBD($conex);*/
+                  ?>
+                </select>
                     <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search" style="color: white;"></i></button>
                   </div>
@@ -143,3 +141,31 @@
 
         </nav>
         <!-- End of Topbar -->
+        
+<script type="text/javascript">
+  $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: "/conocelos.jatopapy.com/contenido/buscarAgus.php",
+        data: "candi=all",
+    }).done(function(resp) { //se ejecuta cuando la solicitud Ajax ha concluido satisfactoriamente
+        alert(resp);
+        if (resp == 1) {
+
+            alertify.error("Lo sentimos no hay resultado en su busqueda :(");
+        } else {
+            $("#bus").append(`
+            <option value="0"> Buscar Candidato </option>`);
+            for (var i in resp) {
+                $("#bus").append(`
+                <option value="` + resp[i].cod + `">` + resp[i].nom + `</option>`);
+            };
+
+
+        };
+    }).fail(function(resp) { //se ejecuta en que caso de que haya ocurrido algún error
+        alertify.error("Problemas con la base de datos");
+    });
+
+$("#bus").select2();
+</script>
