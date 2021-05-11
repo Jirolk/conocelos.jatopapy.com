@@ -55,16 +55,17 @@
                 <hr class="sidebar-divider">
                 <li class="nav-item  ">
                 <div class="input-group input-group-sm mb-3">
-                    <input list="bus" type="text" class="form-control text-black" autocomplete="off" onchange="buscarRuc();" placeholder="Buscar a un candidato" id="ibus" style="background-color: rgb(255,255,255);opacity:0.5;"/>
+                    <input list="bus" type="text" class="form-control text-black" autocomplete="off" onchange="" placeholder="Buscar a un candidato" id="ibus" style="background-color: rgb(255,255,255);opacity:0.5;"/>
                     
                     <datalist name="bus" id="bus" >
+                      <option value="">Hola</option>
                           <?php
-                              /*require_once("../servicios/conexion.php");
-                              $conex = conexion();
-                              $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
+                             //require_once("../servicios/conexion.php");
+                              //$conex = conexion();
+                             /* $sql = "SELECT nomApe FROM candidatos";
                               $res = mysqli_query($conex, $sql);
                               while ($row = mysqli_fetch_array($res)) {
-                                echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
+                                echo '  <option value="'.$row["nomApe"].'">'.$row["nomApe"].'</option>';
                               }*/
                           ?>
                     </datalist>
