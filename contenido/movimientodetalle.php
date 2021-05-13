@@ -46,7 +46,8 @@
             join candidatura cc on c.codCand = cc.codCand
             where codMov= ".$fila['codMov']." AND c.codCand=1" ;
       $re = mysqli_query($conex, $sq);
-      if(empty($re)) {
+      $row_cnt = $re->num_rows;
+      if($row_cnt==0) {
         echo '
               <h5 class="text-center font-weight-bold ">
                 ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA
@@ -54,7 +55,7 @@
         <br>
        ';
       }else {
-        echo '<div class="row">';
+        echo '<div class="row justify-content-center">';
          foreach($re as $fil){
         
           echo '
