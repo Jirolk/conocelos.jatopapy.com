@@ -46,7 +46,7 @@
             join candidatura cc on c.codCand = cc.codCand
             where codMov= ".$fila['codMov']." AND c.codCand=1" ;
       $re = mysqli_query($conex, $sq);
-      if(!empty($re)) {
+      if(empty($re)) {
         echo '
               <h5 class="text-center font-weight-bold ">
                 ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA

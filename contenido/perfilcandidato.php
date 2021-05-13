@@ -261,10 +261,21 @@
                                   <div class="card py-2 r2 ">
                                     <ul>';
                                       echo ' <li class="d-flex justify-content-center">
-                                              <div class=" col-md-8  justify-content-center">
-                                                <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
-                                                <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>
-                                                </div>
+                                              <div class=" col-md-8  justify-content-center">';
+                                                if ($fila['codCand']==1 && $row['idPreg']==2 ) {
+                                                  echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - ¿Cuáles son sus propuestas como pre candidato a Intendente?</h6>
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                } elseif ($fila['codCand']==1 && $row['idPreg']==1) {
+                                                  echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - ¿Cuál fue su trabajo o actividad anterior a ser pre candidato a Intendente??</h6>
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                }
+                                                else {
+                                                  echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                }
+                                                
+
+                                      echo'          </div>
                                             </li>';
                                     echo '</ul>
                           </div>
