@@ -11,6 +11,7 @@
 
     <?php require_once "lib/librerias_Superior.php"; ?>
     <?php require_once "lib/librerias_inferior.php"; ?>
+    
 
 </head>
 <?php require_once "vistas/parte_superior.php"; ?>
@@ -25,73 +26,122 @@
   <?php
     require_once("./servicios/conexion.php");
     $conex = conexion();
-    $sql = "SELECT ci,nomApe,codCand FROM `candidatos` AS r1 
+    /*$sql = "SELECT * FROM candidatos AS r1 
               JOIN (SELECT CEIL(RAND() * (SELECT MAX(ci) FROM candidatos)) AS id) AS r2
             WHERE r1.ci >= r2.id
             ORDER BY r1.ci ASC
-            LIMIT 5";
+            LIMIT 7";*/
+    $sql = "SELECT * FROM `candidatos`
+            ORDER BY RAND()
+            LIMIT 7";
     $res = mysqli_query($conex, $sql);
+    
+    echo '
+    <div class="container-1">
+		
+		<ul id="autoWidth" class="cs-hidden">
+    
+    ';
 
     foreach ($res as $fila) {
+      echo '
+      <li class="item-a">
+        <div class="box">
+          <div class="img-content">
+            <div  class="img" style="
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-size: cover;
+                    transition: .2s;">
+            <img src="imgcandidatos/';
+                  echo $fila['img'];
+                  echo '" alt="" style="
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            
+                            background-size: cover;
+                            transition: .2s;">
+                <div class="info">
+                  <h6>'.$fila['nomApe'].'</h6>
+                  <p style="color: #929292;">';
+                  if ($fila['codCand']==1) {
+                    echo 'INTENDENTE MUNICIPAL';
+                  }else {
+                    echo 'CONCEJAL MUNICIPAL';
+                  }
+                  echo '</p>
+                  </div>
+                  <div class="social">
+                    <ul>';
+                    //$cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
+                    $cons = "SELECT * FROM redessociales rs
+                        JOIN (SELECT ci FROM candidatos) AS ci
+                        JOIN (SELECT ci,codDetalle FROM candidatodetalle) cd
+                        WHERE ci.ci=cd.ci AND rs.codDetalle = cd.codDetalle";
 
+                    $resp = mysqli_query($conex, $cons);
+                    if(empty($resp)) {
+
+                    }else {
+                      echo '<li>';
+                      foreach($resp as $fi){
+                        if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
+                          echo '
+                          <a href="'.$fi['url'].'">
+                          <i class="h3 fab fa-facebook-f " style="color: black;"></i>
+                            </a>';
+                          }
+                          if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
+                          echo '
+                          
+                          <a  href="'.$fi['url'].'">
+                          
+                              <i class="h3 fab fa-instagram " style="color: black;"></i>
+                              </a>
+                          ';
+                        }
+                        if (strcasecmp($fi['redSocial'],"TWITTER") == 0) {
+                          echo '
+                          
+                          <a  href="'.$fi['url'].'">
+                          <i class="h3 fab fa-twitter-f " style="color: black;"></i>
+                          </a>
+                          ';
+                        }
+                        if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
+                          echo '
+                          
+                          <a  href="'.$fi['url'].'">
+                          <i class="h3 fab fa-youtube-f " style="color: black;"></i>
+                          </a>
+                          ';
+                        }
+                      }
+                      cerrarBD($cons);
+                      echo '</li>';
+                    }
+        echo' </ul>
+        </div>
+      </div>
+    </div>';
 
     }
-  
+    cerrarBD($conex);
   
   
   ?>
-
-<div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active ">
-      <div class="container-1">
-        <div class="img-content">
-          <div class="img">
-            <div class="info">
-              <h2>
-                nombre candidato
-            </h2>
-            <h4>
-              candidatura
-            </h4>
-          </div>
-          <div class="social">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="h3 fab fa-facebook-f"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+   
 </div>
- 
-  
-
-
 
 </div>
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
+
+</script>
 <?php require_once "vistas/parte_inferior.php"; ?>
 <!-- <script src="/js/demo/chart.min.js"></script> -->
 <!-- <script src="/internas/js/demo/chart-pie-demo.js"></script>  -->

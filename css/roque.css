@@ -179,11 +179,12 @@ a:focus {
             targetas de index
 ----------------------------------------------------------*/
 .container-1{
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    height: 50;
-    background: #b6b6b6;
+	width:100%;
+	height: 50;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+    /* background: #b6b6b679; */
 
 }   
 
@@ -191,12 +192,12 @@ a:focus {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    width: 350px;
-    height: 450px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width:280px;
+	height:500px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
 }
 
-.img-content .img{
+/* .img-content .img{
     width: 100%;
     height: 100%;
     top: 0;
@@ -204,7 +205,7 @@ a:focus {
     background: url("../img/sicctema.jpeg");
     background-size: cover;
     transition: .2s;
-}
+} */
 .img-content:hover .img{
     background-position-y: -76px;
 }
@@ -216,7 +217,7 @@ a:focus {
     background: #fff;
     width: 100%;
     height: 100px;
-    padding: 15px 10px;
+    padding: 2px 2px;
     text-align: center;
     z-index: 10;
     transition: .2s;
@@ -238,7 +239,7 @@ a:focus {
     transition: .3s;
 }
 .img-content:hover .social{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
 }
 .img-content .social ul{
     display: flex;
@@ -294,4 +295,50 @@ a:focus {
     transform:  translatseY(0px);
     opacity: 1;
     transition-delay: 0.4s;
+}
+
+
+/*000000000000000000000000000000000000000000000000000000000*/
+
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.box{
+	width:280px;
+	height:500px;
+	/* background-color:#1e1e26; */
+	border-radius: 10px;
+	/* box-shadow: 2px 10px 12px rgba(0,0,0,0.5); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: 20px 10px;
+}
+
+.box:hover{
+	/* background-color: #17171d; */
+	transform-style: preserve-3d;
+	transform: scale(1.02);
+	transition: all ease 0.3s;
+}
+
+/*--responsive for mobile phone--*/
+@media(max-width:720px){
+	.box{
+		width: 94%;
+		height: 500px;
+	}
+	.model{
+		height:250px;
+	}
+	.details p{
+		font-size: 16px;
+		width: 250px;
+	}
+
 }

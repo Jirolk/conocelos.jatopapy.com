@@ -1,10 +1,13 @@
 <?php
 function conexion(){
-    $host = "www.jatopapy.com";
+    //$host = "www.jatopapy.com";
+    $host = "localhost";
     $dbnam = "jattugco_candidatos";
     // $port = "3306";
-    $usuario="jattugco_candidatos";
-    $password="lista.candidatos@123";
+    //$usuario="jattugco_candidatos";
+    $usuario="root";
+    //$password="lista.candidatos@123";
+    $password="123456";
     $conexion = null;
     $conexion = mysqli_connect($host, $usuario, $password, $dbnam);
     //("host=$host port=$port dbname=$dbnam user=$user password=$pass");
