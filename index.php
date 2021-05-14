@@ -33,7 +33,7 @@
             LIMIT 7";*/
     $sql = "SELECT * FROM `candidatos`
             ORDER BY RAND()
-            LIMIT 7";
+            LIMIT 6";
     $res = mysqli_query($conex, $sql);
     
     echo '
@@ -79,16 +79,16 @@
                     <ul>';
                     //$cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
                     $cons = "SELECT * FROM redessociales rs
-                        JOIN (SELECT ci FROM candidatos) AS ci
-                        JOIN (SELECT ci,codDetalle FROM candidatodetalle) cd
-                        WHERE ci.ci=cd.ci AND rs.codDetalle = cd.codDetalle";
+                                INNER JOIN candidatodetalle dt ON rs.codDetalle=dt.codDetalle
+                                INNER JOIN candidatos c ON dt.ci=c.ci
+                            WHERE c.ci=".$fila['ci'];
 
                     $resp = mysqli_query($conex, $cons);
                     if(empty($resp)) {
 
                     }else {
-                      echo '<li>';
                       foreach($resp as $fi){
+                        echo '<li>';
                         if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
                           echo '
                           <a href="'.$fi['url'].'">
@@ -99,16 +99,16 @@
                           echo '
                           
                           <a  href="'.$fi['url'].'">
-                          
+                              
                               <i class="h3 fab fa-instagram " style="color: black;"></i>
-                              </a>
+                          </a>
                           ';
                         }
                         if (strcasecmp($fi['redSocial'],"TWITTER") == 0) {
                           echo '
                           
                           <a  href="'.$fi['url'].'">
-                          <i class="h3 fab fa-twitter-f " style="color: black;"></i>
+                            <i class="h3 fab fa-twitter" style="color: black;"></i>
                           </a>
                           ';
                         }
@@ -116,14 +116,14 @@
                           echo '
                           
                           <a  href="'.$fi['url'].'">
-                          <i class="h3 fab fa-youtube-f " style="color: black;"></i>
+                            <i class="h3 fab fa-youtube " style="color: black;"></i>
                           </a>
                           ';
                         }
+                        echo '</li>';
                       }
-                      cerrarBD($cons);
-                      echo '</li>';
                     }
+                    cerrarBD($cons);
         echo' </ul>
         </div>
       </div>
@@ -135,6 +135,8 @@
   
   ?>
    
+</div>
+
 </div>
 
 </div>
