@@ -25,12 +25,8 @@
   
   <!-- Data table -->
   <link rel="stylesheet" href="css/datatables.min.css">
- 
 </head>
-
 <body id="page-top ">
-
-  <!-- Page Wrapper -->
   <div id="wrapper" class="wrapper">
       <nav id="sidebar" class="sidebar roque" >
 
@@ -55,22 +51,9 @@
                 <hr class="sidebar-divider">
                 <li class="nav-item  ">
                 <div class="input-group input-group-sm mb-3">
-                    <input list="bus" type="text" class="form-control text-black" autocomplete="off" onchange="buscarRuc();" placeholder="Buscar a un candidato" id="ibus" style="background-color: rgb(255,255,255);opacity:0.5;"/>
-                    
-                    <datalist name="bus" id="bus" >
-                          <?php
-                              /*require_once("../servicios/conexion.php");
-                              $conex = conexion();
-                              $sql = "SELECT Ruc,Razon_social FROM proveedores WHERE Cod_sucursal=".$_SESSION['Cod_sucursal'];
-                              $res = mysqli_query($conex, $sql);
-                              while ($row = mysqli_fetch_array($res)) {
-                                echo '  <option value="'.$row["Ruc"].'">'.$row["Razon_social"].'</option>';
-                              }*/
-                          ?>
-                    </datalist>
-                    <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search" style="color: white;"></i></button>
-                  </div>
+                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="selCan(value)">
+                
+                </select>
                 </div>
                   
                 </li>
@@ -90,13 +73,6 @@
                   </a>
                 
                 </li>
-                <li class="nav-item  ">
-                  <a class="nav-link "  >
-                  <i class="fas fa-search" style="color: white;"></i>
-                    <span class="text-white">Buscador</span>
-                  </a>
-                
-                </li> 
                 <li class="nav-item  ">
                   <a class="nav-link "  >
                   <i class="fas fa-scroll" style="color: white;"></i>
@@ -142,3 +118,34 @@
 
         </nav>
         <!-- End of Topbar -->
+        
+        <script type="text/javascript">
+  $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: "contenido/buscarAgus.php",
+        data: "candi=all",
+    }).done(function(resp) { 
+        if (resp == 1) {
+
+            alertify.error("Lo sentimos no hay resultado en su busqueda :(");
+        } else {
+            $("#bus").append(`
+            <option value="0"> Buscar Candidato </option>`);
+            for (var i in resp) {
+                $("#bus").append(`
+                <option value="` + resp[i].cod + `">` + resp[i].nom + `-Lista `+resp[i].lis+`</option>`);
+            };
+
+
+        };
+    }).fail(function(resp) { //se ejecuta en que caso de que haya ocurrido algún error
+        alertify.error("Problemas con la base de datos");
+    });
+
+$("#bus").select2();
+$("#bus").css({"opacity":"0.5"});
+function selCan(value){
+  alert(value);
+}
+</script>

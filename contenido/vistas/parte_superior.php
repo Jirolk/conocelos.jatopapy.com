@@ -79,7 +79,15 @@
                 </li>
 
                 <hr class="sidebar-divider">
-
+                <li class="nav-item  ">
+                <div class="input-group input-group-sm mb-3">
+                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="">
+                
+                </select>
+              
+                </div>
+                  
+                </li>
 
                 <li class="nav-item  ">
                   <a class="nav-link " href="../contenido/movimientos.php" >
