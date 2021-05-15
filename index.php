@@ -91,14 +91,14 @@
                         echo '<li>';
                         if (strcasecmp($fi['redSocial'],"FACEBOOK") == 0) {
                           echo '
-                          <a href="'.$fi['url'].'">
+                          <a href="'.$fi['url'].'" target="_blank">
                           <i class="h3 fab fa-facebook-f " style="color: black;"></i>
                             </a>';
                           }
                           if (strcasecmp($fi['redSocial'],"INSTAGRAM") == 0) {
                           echo '
                           
-                          <a  href="'.$fi['url'].'">
+                          <a  href="'.$fi['url'].'" target="_blank">
                               
                               <i class="h3 fab fa-instagram " style="color: black;"></i>
                           </a>
@@ -107,7 +107,7 @@
                         if (strcasecmp($fi['redSocial'],"TWITTER") == 0) {
                           echo '
                           
-                          <a  href="'.$fi['url'].'">
+                          <a  href="'.$fi['url'].'" target="_blank">
                             <i class="h3 fab fa-twitter" style="color: black;"></i>
                           </a>
                           ';
@@ -115,7 +115,7 @@
                         if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
                           echo '
                           
-                          <a  href="'.$fi['url'].'">
+                          <a  href="'.$fi['url'].'" target="_blank">
                             <i class="h3 fab fa-youtube " style="color: black;"></i>
                           </a>
                           ';
