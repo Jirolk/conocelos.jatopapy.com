@@ -50,11 +50,7 @@
 
                 <hr class="sidebar-divider">
                 <li class="nav-item  ">
-                <div class="input-group input-group-sm mb-3">
-                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="selCan(value)">
                 
-                </select>
-                </div>
                   
                 </li>
 
@@ -97,13 +93,17 @@
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column fondocont ">
-
+    
       <!-- Main Content -->
       <div id="content" class=" bgrimg ">
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+        <div class="input-group input-group-sm mb-3">
+                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="selCan(value)">
+                
+                </select>
+                </div>
     
           <button id="sidebarCollapse" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars" style="color: black;"></i>
@@ -146,6 +146,6 @@
 $("#bus").select2();
 $("#bus").css({"opacity":"0.5"});
 function selCan(value){
-  alert(value);
+  location.href="contenido/perfilcandidato.php?id="+value;
 }
 </script>

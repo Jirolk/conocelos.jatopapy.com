@@ -80,12 +80,7 @@
 
                 <hr class="sidebar-divider">
                 <li class="nav-item  ">
-                <div class="input-group input-group-sm mb-3">
-                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="">
                 
-                </select>
-              
-                </div>
                   
                 </li>
 
@@ -140,8 +135,13 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-    
+        <!-- <div class="input-group input-group-sm mb-3">
+                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="">
+                
+                </select>
+              
+                </div>
+     -->
           <button id="sidebarCollapse" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars" style="color: black;"></i>
           </button>
