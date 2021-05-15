@@ -1,10 +1,17 @@
+<div id="cajacookies">
+  <p>
+    Éste sitio web usa cookies, si permanece aquí acepta su uso.
+    Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
+    <button onclick="aceptarCookies()" ><i class="fa fa-times"></i> Aceptar</button>
+  </p>
 </div>
-      <!-- End of Main Content -->
+</div>
+<!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="row">
-          <div class="container my-auto">
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="row">
+    <div class="container my-auto">
 
               <div class="copyright text-center text-dark my-auto">
                 <span>Copyright &copy; AIRES 2021</span>

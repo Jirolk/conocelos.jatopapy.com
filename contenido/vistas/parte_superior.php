@@ -145,12 +145,6 @@
 
   
           </ul>
-          <div id="cajacookies">
-  <p>
-    Éste sitio web usa cookies, si permanece aquí acepta su uso.
-    Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
-    <button onclick="aceptarCookies()" ><i class="fa fa-times"></i> Aceptar</button>
-  </p>
-</div>
+
         </nav>
         <!-- End of Topbar -->
