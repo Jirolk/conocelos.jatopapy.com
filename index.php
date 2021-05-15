@@ -39,22 +39,15 @@
           </div>
       </div>
       </div>
-      <div id="cajacookies">
-<p>
-Éste sitio web usa cookies, si permanece aquí acepta su uso.
-Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
-<button onclick="aceptarCookies()" ><i class="fa fa-times"></i> Aceptar</button>
-</div>
-</p>
-  <?php
+      <?php
     require_once("./servicios/conexion.php");
     $conex = conexion();
     /*$sql = "SELECT * FROM candidatos AS r1 
               JOIN (SELECT CEIL(RAND() * (SELECT MAX(ci) FROM candidatos)) AS id) AS r2
-            WHERE r1.ci >= r2.id
-            ORDER BY r1.ci ASC
-            LIMIT 7";*/
-    $sql = "SELECT * FROM `candidatos`
+              WHERE r1.ci >= r2.id
+              ORDER BY r1.ci ASC
+              LIMIT 7";*/
+              $sql = "SELECT * FROM `candidatos`
             ORDER BY RAND()
             LIMIT 6";
     $res = mysqli_query($conex, $sql);
@@ -69,16 +62,16 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
     foreach ($res as $fila) {
       echo '
       <li class="item-a">
-        <div class="box">
+      <div class="box">
           <div class="img-content">
-            <div  class="img" style="
+          <div  class="img" style="
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
                     background-size: cover;
                     transition: .2s;">
-            <img src="imgcandidatos/';
+                    <img src="imgcandidatos/';
                   echo $fila['img'];
                   echo '" alt="" style="
                             width: 100%;
@@ -88,9 +81,9 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
                             
                             background-size: cover;
                             transition: .2s;">
-                <div class="info">
-                  <h6>'.$fila['nomApe'].'</h6>
-                  <p style="color: #929292;">';
+                            <div class="info">
+                            <h6>'.$fila['nomApe'].'</h6>
+                            <p style="color: #929292;">';
                   if ($fila['codCand']==1) {
                     echo 'INTENDENTE MUNICIPAL';
                   }else {
@@ -99,8 +92,8 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
                   echo '</p>
                   </div>
                   <div class="social">
-                    <ul>';
-                    //$cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
+                  <ul>';
+                  //$cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
                     $cons = "SELECT * FROM redessociales rs
                                 INNER JOIN candidatodetalle dt ON rs.codDetalle=dt.codDetalle
                                 INNER JOIN candidatos c ON dt.ci=c.ci
@@ -123,7 +116,7 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
                           
                           <a  href="'.$fi['url'].'" target="_blank">
                               
-                              <i class="h3 fab fa-instagram " style="color: black;"></i>
+                          <i class="h3 fab fa-instagram " style="color: black;"></i>
                           </a>
                           ';
                         }
@@ -132,14 +125,14 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
                           
                           <a  href="'.$fi['url'].'" target="_blank">
                             <i class="h3 fab fa-twitter" style="color: black;"></i>
-                          </a>
-                          ';
+                            </a>
+                            ';
                         }
                         if (strcasecmp($fi['redSocial'],"YOUTUBE") == 0) {
                           echo '
                           
                           <a  href="'.$fi['url'].'" target="_blank">
-                            <i class="h3 fab fa-youtube " style="color: black;"></i>
+                          <i class="h3 fab fa-youtube " style="color: black;"></i>
                           </a>
                           ';
                         }
@@ -147,21 +140,28 @@ Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">pol�
                       }
                     }
                     cerrarBD($cons);
-        echo' </ul>
-        </div>
-      </div>
-    </div>';
-
-    }
+                    echo' </ul>
+                    </div>
+                    </div>
+                    </div>';
+                    
+                  }
     cerrarBD($conex);
-  
-  
-  ?>
+    
+    
+    ?>
    
+  </div>
+  
 </div>
 
+<div id="cajacookies">
+  <p>
+    Éste sitio web usa cookies, si permanece aquí acepta su uso.
+    Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
+    <button onclick="aceptarCookies()" ><i class="fa fa-times"></i> Aceptar</button>
+  </p>
 </div>
-
 </div>
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
