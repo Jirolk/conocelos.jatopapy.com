@@ -31,8 +31,8 @@
             <div class="  align-items-center" >
               <ul>
                 <li>
-                  <p class="text-uppercase text-dark p-1 text-justify font-weight">"CONÓCELOS" es un proyecto de transparencia electoral, que tiene como objetivo brindar  información a la ciudadanía sobre los candidatos a las elecciones internas 2021 de la ciudad de Concepción.
-                    A través de esta iniciativa buscamos mantener informado a los ciudadanos sobre los diferentes candidatos a los cargos de Intendencia y Concejalía, para así incrementar el acceso a la información pública por parte de la ciudadanía, promover la participación ciudadana y fortalecer el proceso democrático en la ciudad de Concepción.</p>
+                  <p class="text-uppercase text-dark p-0 text-justify font-weight">"CONÓCELOS" es un proyecto de transparencia electoral, que tiene como objetivo brindar  información a la ciudadanía sobre los candidatos a las elecciones internas 2021 de la ciudad de Concepción.</p>
+                  <p class="text-uppercase text-dark p-0 text-justify font-weight">A través de esta iniciativa buscamos mantener informado a los ciudadanos sobre los diferentes candidatos a los cargos de Intendencia y Concejalía, para así incrementar el acceso a la información pública por parte de la ciudadanía, promover la participación ciudadana y fortalecer el proceso democrático en la ciudad de Concepción.</p>
                 </li>
               </ul> 
             </div>
