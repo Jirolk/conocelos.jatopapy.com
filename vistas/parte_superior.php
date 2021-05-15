@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/LogoFinal.png" />
   <title>CONÓCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -145,20 +145,15 @@
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
+    
+          <button id="sidebarCollapse" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars" style="color: black;"></i>
           </button>
 
            <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            
-            <!-- Nav Item - Alerts -->
-            
 
-            <!-- Nav Item - User Information -->
   
           </ul>
 
