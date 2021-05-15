@@ -13,7 +13,7 @@
             <!-- </div>
             <div class="container my-auto col-md-4 col-xl-3 mb-4"> -->
               <div class="copyright text-center text-dark my-auto" >
-              <a class="copyright text-center  text-dark" href="index.php">
+              <a class="copyright text-center  text-dark" href="privacidad.php">
                 <span >Politica de Privacidad</span>
                 </a>
               <!-- <div>

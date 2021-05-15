@@ -99,7 +99,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-        <div class="input-group input-group-sm mb-3">
+        <div class="input-group input-group-sm mb-3" id="buscador">
                 <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="selCan(value)">
                 
                 </select>
