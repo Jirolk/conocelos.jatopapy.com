@@ -253,7 +253,11 @@
               WHERE ci =".$id;
       $result = mysqli_query($conex, $sq);
       echo'<div id="cuestDetalle" class="mb-2 ">';
+      
       foreach($result as $row){
+        $array = explode("\r\n", $row['detResp']);
+        
+
                     echo '
                         <div  class="row">
                           <div class="col">
@@ -264,14 +268,26 @@
                                               <div class=" col-md-8  justify-content-center">';
                                                 if ($fila['codCand']==1 && $row['idPreg']==2 ) {
                                                   echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - ¿Cuáles son sus propuestas como pre candidato a Intendente?</h6>
-                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">';
+                                                  foreach($array as  $indice => $item){
+                                                    echo $item . "<br />";
+                                                  }
+                                                  echo'</p>';
                                                 } elseif ($fila['codCand']==1 && $row['idPreg']==1) {
                                                   echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - ¿Cuál fue su trabajo o actividad anterior a ser pre candidato a Intendente??</h6>
-                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">';
+                                                  foreach($array as  $indice => $item){
+                                                    echo $item . "<br />";
+                                                  }
+                                                  echo'</p>';
                                                 }
                                                 else {
                                                   echo '<h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">'.$row['idPreg'].' - '.$row['detPreg'].'</h6>
-                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">'.$row['detResp'].'</p>';
+                                                  <p class="text-uppercase text-dark p-1 text-justify font-weight">';
+                                                  foreach($array as  $indice => $item){
+                                                    echo $item . "<br />";
+                                                  }
+                                                  echo'</p>';
                                                 }
                                                 
 

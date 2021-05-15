@@ -1,3 +1,10 @@
+<div id="cajacookies">
+  <p>
+    Éste sitio web usa cookies, si permanece aquí acepta su uso.
+    Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
+    <button onclick="aceptarCookies()" ><i class="fa fa-times"></i> Aceptar</button>
+  </p>
+</div>
 </div>
       <!-- End of Main Content -->
 
@@ -33,7 +40,7 @@
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+  <a class="scroll-to-top rounded" href="#content">
     <i class="fas fa-angle-up"></i>
   </a>
 
@@ -71,6 +78,49 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+        $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: "../contenido/buscarAgus.php",
+        data: "candi=all",
+    }).done(function(resp) { 
+        if (resp == 1) {
+
+            alertify.error("Lo sentimos no hay resultado en su busqueda :(");
+        } else {
+            $("#bus").append(`
+            <option value="0"> Buscar Candidato </option>`);
+            for (var i in resp) {
+                $("#bus").append(`
+                <option value="` + resp[i].cod + `">` + resp[i].nom + `-Lista `+resp[i].lis+`</option>`);
+            };
+
+
+        };
+    }).fail(function(resp) { //se ejecuta en que caso de que haya ocurrido algún error
+        alertify.error("Problemas con la base de datos");
+    });
+
+$("#bus").select2();
+$("#bus").css({"opacity":"0.5"});
+function compruebaAceptaCookies() {
+  if(localStorage.aceptaCookies == 'true'){
+    cajacookies.style.display = 'none';
+  }
+}
+
+/* aquí guardamos la variable de que se ha
+aceptado el uso de cookies así no mostraremos
+el mensaje de nuevo */
+function aceptarCookies() {
+  localStorage.aceptaCookies = 'true';
+  cajacookies.style.display = 'none';
+}
+
+/* ésto se ejecuta cuando la web está cargada */
+$(document).ready(function () {
+  compruebaAceptaCookies();
+});
     </script>
 </body>
 
