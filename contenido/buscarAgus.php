@@ -11,7 +11,8 @@ $sql = "SELECT * FROM candidatos" ;
         while ($row = mysqli_fetch_assoc($res)) {
             $elementos[] = array(
                 'cod' => $row['codCand'],
-                'nom' => $row['nomApe']
+                'nom' => $row['nomApe'],
+                'lis' => $row['codMov']
             );
         }
         cerrarBD($conex);

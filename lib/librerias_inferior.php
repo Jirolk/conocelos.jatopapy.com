@@ -20,4 +20,4 @@
 <!-- <script src="js/sweetalert2.all.min.js"></script> -->
 <script src="js/sweetalert2@9.js"></script>
 
-<script src="js/select2.min.js"></script>s
+<script src="js/select2.min.js"></script>

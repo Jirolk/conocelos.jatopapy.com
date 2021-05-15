@@ -71,6 +71,31 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+        $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: "../contenido/buscarAgus.php",
+        data: "candi=all",
+    }).done(function(resp) { 
+        if (resp == 1) {
+
+            alertify.error("Lo sentimos no hay resultado en su busqueda :(");
+        } else {
+            $("#bus").append(`
+            <option value="0"> Buscar Candidato </option>`);
+            for (var i in resp) {
+                $("#bus").append(`
+                <option value="` + resp[i].cod + `">` + resp[i].nom + `-Lista `+resp[i].lis+`</option>`);
+            };
+
+
+        };
+    }).fail(function(resp) { //se ejecuta en que caso de que haya ocurrido algún error
+        alertify.error("Problemas con la base de datos");
+    });
+
+$("#bus").select2();
+$("#bus").css({"opacity":"0.5"});
     </script>
 </body>
 
