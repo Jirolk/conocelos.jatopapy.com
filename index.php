@@ -22,7 +22,23 @@
 </DIv> -->
 
 <div class="container-fluid ">
-  
+  <div id="datPersDet" class="row">
+      <div class="col">
+            <div class="align-items-center ">
+              <h1 class="text-dark text-center font-weight-bold ">CONÓCELOS</h1>
+            </div>
+          <div class=" mb-2  ">
+            <div class="  align-items-center" >
+              <ul>
+                <li>
+                  <p class="text-uppercase text-dark p-1 text-justify font-weight">"CONÓCELOS" es un proyecto de transparencia electoral, que tiene como objetivo brindar  información a la ciudadanía sobre los candidatos a las elecciones internas 2021 de la ciudad de Concepción.
+                    A través de esta iniciativa buscamos mantener informado a los ciudadanos sobre los diferentes candidatos a los cargos de Intendencia y Concejalía, para así incrementar el acceso a la información pública por parte de la ciudadanía, promover la participación ciudadana y fortalecer el proceso democrático en la ciudad de Concepción.</p>
+                </li>
+              </ul> 
+            </div>
+          </div>
+      </div>
+      </div>
   <?php
     require_once("./servicios/conexion.php");
     $conex = conexion();
