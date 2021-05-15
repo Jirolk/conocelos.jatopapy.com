@@ -28,7 +28,7 @@
 </head>
 <body id="page-top ">
   <div id="wrapper" class="wrapper">
-      <nav id="sidebar" class="sidebar roque" >
+      <nav id="sidebar" class="sidebar roque">
 
                 <ul class="list-unstyled components">
                   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
