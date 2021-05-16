@@ -18,5 +18,5 @@
 
 <link rel="stylesheet" href="css/select2.min.css">
 
-<link rel="stylesheet" type="text/css" href="css/lightslider.css?n=1"/>
+<link rel="stylesheet" type="text/css" href="css/lightslider.css?n=6"/>
 
