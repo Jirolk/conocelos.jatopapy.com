@@ -1,4 +1,4 @@
-@media (max-width:740px) and (min-width:360px) {
+@media (max-width:700px) and (min-width:120px) {
     .txto {
         font-size: 10px;
     }
@@ -176,15 +176,14 @@ a:focus {
 
 @media (max-width: 700px) {
     #sidebar.active {
-        margin-left: 4px;
+        margin-left: -104px;
     }
     #sidebar {
-        margin-left: 4px;
+        margin-left: -104px;
         /* display: none; */
     }
     #sidebar.active {
         margin-left: 0;
-        /* display: flex; */
     }
     #sidebarCollapse span {
         display: none;
