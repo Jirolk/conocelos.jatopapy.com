@@ -156,11 +156,11 @@
 </div>
 
 
-</div>
+
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
-</script>
+
 <?php require_once "vistas/parte_inferior.php"; ?>
 <!-- <script src="/js/demo/chart.min.js"></script> -->
 <!-- <script src="/internas/js/demo/chart-pie-demo.js"></script>  -->
