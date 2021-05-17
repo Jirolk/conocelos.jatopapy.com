@@ -99,7 +99,7 @@
                       </div>
                     </li>
                     <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['lugarNac'].', '.$dia.' de '.$Mes.' de '.$año.'..</p>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['lugarNac'].', '.$dia.' de '.$Mes.' de '.$año.'.</p>
                     </li>
                     <li>
                       <div class="">
