@@ -117,8 +117,21 @@
                         
                         </div>
                         </li>
-                    <li>
-                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacAca'].'</p>
+                    <li>';
+                    $array = explode("\r\n", $fila['formacAca']);
+                  echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                  
+                  foreach($array as  $indice => $item){
+                    $asd=end($array);
+                    if (strcasecmp($item,$asd)==0) {
+                      # code...
+                      echo $item;
+                    }else {
+                      
+                      echo $item . '<br>';
+                    }
+                  }
+                  echo'</p>
                     </li>
                     <li class="d-flex justify-content-center">
                       <div class="">
@@ -126,16 +139,43 @@
                         
                         </div>
                         </li>
-                    <li>
-                       <p class=" text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacProf'].'</p>
+                    <li>';
+                    $array = explode("\r\n", $fila['formacProf']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                       echo'</p>
                     </li>
                     <li class="d-flex justify-content-center">
                       <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Experiencia Laboral o Profesional: </h6>
                       </div>
                     </li>
-                    <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['experLab'].'</p>
+                    <li>';
+                    $array = explode("\r\n", $fila['experLab']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                    
+                     echo '</p>
                     </li>
                     <li>
                       <div class="">
@@ -143,8 +183,22 @@
                         
                       </div>
                     </li>
-                    <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['profeOcupActual'].'</p>
+                    <li>';
+                    $array = explode("\r\n", $fila['profeOcupActual']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                      
+                    echo  '</p>
                     </li>
                     <li>
                       <div class="">
