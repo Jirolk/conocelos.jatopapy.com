@@ -173,13 +173,12 @@
         <ul>
             <li>
               <p class="text-uppercase text-dark p-0 text-justify font-weight">
-                Tanto en las internas partidarias del 20 de junio como las elecciones municipales del 10 de octubre se utilizará la máquina de votación,
-                por lo cual consideramos es de importancia el conocimiento del publico sobre como utilizar esta herramienta electoral.
+              Tanto en las internas partidarias del 20 de junio como en las elecciones municipales del 10 de octubre se utilizará la máquina de votación, por lo cual consideramos es de importancia para el conocimiento del publico sobre como utilizar esta herramienta electoral.
               </p>
             </li>
             <li>
             <p class="text-uppercase text-dark p-0 text-justify font-weight">
-                Para lo cual enlazamos a nuestra pagina un video explicativo del funcionamiento del mismo y una pagina del TSJE que permite simular el uso de la maquina de votación, todo esto tambien disponible al publico en genral en la página oficial deL TSJE.
+            Por lo cual enlazamos a nuestra pagina un video explicativo sobre funcionamiento del mismo y una pagina del TSJE que permite simular el uso de la maquina de votación, todo esto tambien está disponible para el publico en general en la página oficial del TSJE.
               </p>
             </li>
             <li>
