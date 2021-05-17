@@ -112,25 +112,30 @@
                     </li>
                     
                     <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
+                      <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Académica: </h6>
-                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacAca'].'</p>
                         
-                      </div>
+                        </div>
+                        </li>
+                    <li>
+                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacAca'].'</p>
                     </li>
-
                     <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
+                      <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Profesional: </h6>
                         
-                        <p class=" text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacProf'].'</p>
-                      </div>
+                        </div>
+                        </li>
+                    <li>
+                       <p class=" text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacProf'].'</p>
                     </li>
                     <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
+                      <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Experiencia Laboral o Profesional: </h6>
-                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['experLab'].'</p>
                       </div>
+                    </li>
+                    <li>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['experLab'].'</p>
                     </li>
                     <li>
                       <div class="">
