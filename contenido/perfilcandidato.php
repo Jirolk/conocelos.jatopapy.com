@@ -9,55 +9,39 @@
     require_once("../servicios/conexion.php");
     $conex = conexion();
     $id = $_GET["id"];
-    $sql = "SELECT c.*,cc.descripcion,cd.*,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
+    /*$sql = "SELECT c.*,cc.descripcion,cd.*,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
                 INNER JOIN movimientos cm ON c.codMov = cm.codMov
                 INNER JOIN partidopolitico pp ON cm.codPartido= pp.codPartido
                 INNER JOIN candidatura cc ON c.codCand = cc.codCand
                 INNER JOIN candidatodetalle cd ON c.ci = cd.ci
+            WHERE c.ci=".$id;*/
+    $sql = "SELECT c.*,cc.descripcion,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
+              INNER JOIN movimientos cm ON c.codMov = cm.codMov
+              INNER JOIN partidopolitico pp ON cm.codPartido= pp.codPartido
+              INNER JOIN candidatura cc ON c.codCand = cc.codCand
+            
             WHERE c.ci=".$id;
     $res = mysqli_query($conex, $sql);
+    $Qry = "SELECT * FROM candidatodetalle WHERE ci=".$id;
+    $r = mysqli_query($conex, $Qry);
+//    $row_cnt = $r->num_rows;
+    
     foreach ($res as $fila) {
-      list($año,$mes,$dia) = explode("-",date($fila['fechaNac']));
-      if ($mes==01) {
-        $Mes='enero';
-      }elseif ($mes==02) {
-        $Mes='febrero';
-      }elseif ($mes==03) {
-        $Mes='marzo';
-      }elseif ($mes==04) {
-        $Mes='abril';
-      }elseif ($mes==05) {
-        $Mes='mayo';
-      }elseif ($mes==06) {
-        $Mes='junio';
-      }elseif ($mes==07) {
-        $Mes='julio';
-      }elseif ($mes=='08') {
-        $Mes='agosto';
-      }elseif ($mes=='09') {
-        $Mes='septiembre';
-      }elseif ($mes==10) {
-        $Mes='octubre';
-      }elseif ($mes==11) {
-        $Mes='noviembre';
-      }else {
-        $Mes='diciembre';
-      }
       echo '
       <div class="aling-center">';
       echo' 
-          <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgcandidatos/';
-          echo isset($fila['img']) ? $fila['img'] : 'defaultcandidato.png'; 
-          echo'" alt="logo">
+      <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgcandidatos/';
+      echo isset($fila['img']) ? $fila['img'] : 'defaultcandidato.png'; 
+      echo'" alt="logo">
       </div>';
-
+      
       echo '
-          <h2 class="py-2 text-center font-weight-bold ">
-            '. $fila["nomApe"] .'
-          </h2>
-          
-        ';
-
+      <h2 class="py-2 text-center font-weight-bold ">
+      '. $fila["nomApe"] .'
+      </h2>
+      
+      ';
+      
         echo'<div class=" container text-center ">
                     <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
                     <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
@@ -86,6 +70,49 @@
                     </div>
             </div>
         </div>';
+        $row_cnt = $r -> num_rows;
+        if($row_cnt==0) {
+        /*if(empty($r)==0) {*/
+          echo '
+          <script>
+          $(document).ready(function () {
+            document.getElementById("filtro").hidden = true;
+          });
+          </script>
+            <h5 class="text-center font-weight-bold " >
+              ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA
+            </h5>
+            <br onload="block(value);">
+            ';
+        }else {
+          
+
+      list($año,$mes,$dia) = explode("-",date($fila['fechaNac']));
+      if ($mes==01) {
+        $Mes='enero';
+      }elseif ($mes==02) {
+        $Mes='febrero';
+      }elseif ($mes==03) {
+        $Mes='marzo';
+      }elseif ($mes==04) {
+        $Mes='abril';
+      }elseif ($mes==05) {
+        $Mes='mayo';
+      }elseif ($mes==06) {
+        $Mes='junio';
+      }elseif ($mes==07) {
+        $Mes='julio';
+      }elseif ($mes=='08') {
+        $Mes='agosto';
+      }elseif ($mes=='09') {
+        $Mes='septiembre';
+      }elseif ($mes==10) {
+        $Mes='octubre';
+      }elseif ($mes==11) {
+        $Mes='noviembre';
+      }else {
+        $Mes='diciembre';
+      }
          echo '
          <div id="datPersDet" class="row">
             <div class="col">
@@ -109,16 +136,18 @@
                     </li>
                     <li>
                       <p class=" text-dark p-1 text-center font-weight">'.$fila['email'].'</p>
-                    </li>
-                    
-                    <li class="d-flex justify-content-center">
+                    </li>';
+        foreach ($r as $f) {
+
+
+                    echo'<li class="d-flex justify-content-center">
                       <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Académica: </h6>
                         
                         </div>
                         </li>
                     <li>';
-                    $array = explode("\r\n", $fila['formacAca']);
+                    $array = explode("\r\n", $f['formacAca']);
                   echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
                   
                   foreach($array as  $indice => $item){
@@ -140,7 +169,7 @@
                         </div>
                         </li>
                     <li>';
-                    $array = explode("\r\n", $fila['formacProf']);
+                    $array = explode("\r\n", $f['formacProf']);
                     echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
                     
                     foreach($array as  $indice => $item){
@@ -161,7 +190,7 @@
                       </div>
                     </li>
                     <li>';
-                    $array = explode("\r\n", $fila['experLab']);
+                    $array = explode("\r\n", $f['experLab']);
                     echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
                     
                     foreach($array as  $indice => $item){
@@ -184,7 +213,7 @@
                       </div>
                     </li>
                     <li>';
-                    $array = explode("\r\n", $fila['profeOcupActual']);
+                    $array = explode("\r\n", $f['profeOcupActual']);
                     echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
                     
                     foreach($array as  $indice => $item){
@@ -207,7 +236,7 @@
                       </div>
                     </li>
                     <li>';
-                    $cons = "SELECT * FROM contacto WHERE codDetalle =".$fila['codDetalle'];
+                    $cons = "SELECT * FROM contacto WHERE codDetalle =".$f['codDetalle'];
                           $resp = mysqli_query($conex, $cons);
                           foreach($resp as $fi){
                           echo '  <p class="text-uppercase text-dark  text-center font-weight">0'.$fi['numCntacto'].'</p>';
@@ -237,7 +266,7 @@
                         <li>
                           <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</p>
                         </li>';
-                        $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
+                        $cons = "SELECT * FROM redessociales WHERE codDetalle =".$f['codDetalle'];
                         $resp = mysqli_query($conex, $cons);
                         if(empty($resp)) {
 
@@ -285,8 +314,9 @@
                           }
                         }
                             echo'</P>';
-                        echo '</li>
-                      </ul>
+                        echo '</li>';
+          }
+          echo'            </ul>
                     </div>
                 </div>
             </div>
@@ -294,6 +324,7 @@
          </div>
          <div class="row">';
         echo '</div>';
+      }
       echo '
       <div id="cuest" class="row">
         <div class="col">
@@ -355,13 +386,10 @@
                                     echo '</ul>
                           </div>
                       </div>
-                  </div>
-                  
-               </div>';
-                       
+                  </div>';
+                  echo '</div>';
       }
-      
-                      
+      echo '</div>';             
     }
     cerrarBD($conex);
   ?>
@@ -379,19 +407,24 @@
       var sele = document.getElementById("filtro");
       if (sele.options[sele.selectedIndex].value == 0) {
         document.getElementById('datPers').hidden= false;
+        document.getElementById('cuest').hidden= false;
         document.getElementById('datPersDet').hidden= false;
+        document.getElementById('cuestDetalle').hidden= false;
       } else if (sele.options[sele.selectedIndex].value == 1) {
+        document.getElementById('cuest').hidden= true;
         document.getElementById('datPers').hidden= false;
         document.getElementById('datPersDet').hidden= false;
-        document.getElementById('cuest').hidden= true;
         document.getElementById('cuestDetalle').hidden= true;
       } else if (sele.options[sele.selectedIndex].value == 2) {
+        document.getElementById('cuest').hidden= false;
         document.getElementById('datPers').hidden= true;
         document.getElementById('datPersDet').hidden= true;
-        document.getElementById('cuest').hidden= false;
         document.getElementById('cuestDetalle').hidden= false;
       } 
   };
+  function block(value) {
+    document.getElementById("filtro").disabled = true;
+  }
 </script>
 
 
