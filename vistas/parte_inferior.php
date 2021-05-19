@@ -86,7 +86,9 @@
         });
         function compruebaAceptaCookies() {
   if(localStorage.aceptaCookies == 'true'){
-    cajacookies.style.display = 'none';
+    document.getElementById('cajacookies').style.display = 'none';
+  } else if(localStorage.aceptaCookies != 'true'){
+    document.getElementById('cajacookies').style.display = 'inline';
   }
 }
 
