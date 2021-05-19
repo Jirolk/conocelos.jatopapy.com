@@ -77,7 +77,7 @@
 <script src="js/botones/vfs_fonts.js"></script>
 <script type="text/javascript" src="js/lightslider.js"></script>
 <script src="js/sweetalert2@9.js"></script>
-<script src="js/contactanos.js"></script>
+<script src="js/contactanos.js?v2"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#sidebarCollapse').on('click', function() {

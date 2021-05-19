@@ -78,7 +78,7 @@
 <script src="../contenido/jsComparador/select2.min.js"></script>
 <script src="../js/alertify.min.js"></script>
 <script src="../js/sweetalert2@9.js"></script>
-<script src="../js/contactanos.js"></script>
+<script src="../js/contactanos.js?v2"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#sidebarCollapse').on('click', function() {
