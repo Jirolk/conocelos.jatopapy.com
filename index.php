@@ -47,9 +47,10 @@
                 WHERE r1.ci >= r2.id
                 ORDER BY r1.ci ASC
                 LIMIT 7";*/
-    $sql = "SELECT * FROM `candidatos`
-              ORDER BY RAND()
-              LIMIT 6";
+      $sql = "SELECT * FROM `candidatos`
+                WHERE img IS NOT NULL
+                ORDER BY RAND()
+                LIMIT 6";
     $res = mysqli_query($conex, $sql);
 
     echo '

@@ -42,34 +42,9 @@
       
       ';
       
-        echo'<div class=" container text-center ">
-                    <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
-                    <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
-                        echo '<option selected value="0">Todos los datos</option>';
-                        echo '<option value="1" >';
-                        echo 'Datos peronales';
-                        echo "</option>";
-                        echo '<option value="2" >';
-                        echo 'Cuestionario';
-                        echo "</option>";
-        echo'       </select>
-                <div class="" id="CampoBusqueda"></div>
-                <div id="BusAvan"></div>
-            </div> 
-            <hr class="divider">';
 
-        echo '
-        <div id="datPers" class="row">
-          <div class="col">
-                    <div class="card shadow mb-2  ">
-                      <div class="card py-3 r3 align-items-center">
-                            <h5 class=" text-center font-weight-bold ">
-                              DATOS PERSONALES
-                            </h5>
-                      </div>
-                    </div>
-            </div>
-        </div>';
+
+        
         $row_cnt = $r -> num_rows;
         if($row_cnt==0) {
         /*if(empty($r)==0) {*/
@@ -79,13 +54,40 @@
             document.getElementById("filtro").hidden = true;
           });
           </script>
-            <h5 class="text-center font-weight-bold " >
-              ESTA LISTA NO PRESENTA CANDIDATO A INTENDENCIA
+          <hr class="divider">
+            <h5 class="text-center text-black font-weight-bold " >
+            A la fecha todavía no se ha recepcionado los datos de este candidato
             </h5>
-            <br onload="block(value);">
+            <br onload="block();">
             ';
         }else {
-          
+          echo'<div class=" container text-center ">
+          <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
+          <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
+              echo '<option selected value="0">TODOS LOS DATOS</option>';
+              echo '<option value="1" >';
+              echo 'DATOS PERSONALES';
+              echo "</option>";
+              echo '<option value="2" >';
+              echo 'CUESTIONARIO';
+              echo "</option>";
+echo'       </select>
+      <div class="" id="CampoBusqueda"></div>
+      <div id="BusAvan"></div>
+  </div> 
+  <hr class="divider">';
+          echo '
+          <div id="datPers" class="row">
+            <div class="col">
+                      <div class="card shadow mb-2  ">
+                        <div class="card py-3 r3 align-items-center">
+                              <h5 class=" text-center font-weight-bold ">
+                                DATOS PERSONALES
+                              </h5>
+                        </div>
+                      </div>
+              </div>
+          </div>'; 
 
       list($año,$mes,$dia) = explode("-",date($fila['fechaNac']));
       if ($mes==01) {
@@ -324,7 +326,7 @@
          </div>
          <div class="row">';
         echo '</div>';
-      }
+
       echo '
       <div id="cuest" class="row">
         <div class="col">
@@ -391,6 +393,7 @@
       }
       echo '</div>';             
     }
+  }
     cerrarBD($conex);
   ?>
 </div>
@@ -422,7 +425,7 @@
         document.getElementById('cuestDetalle').hidden= false;
       } 
   };
-  function block(value) {
+  function block() {
     document.getElementById("filtro").disabled = true;
   }
 </script>
