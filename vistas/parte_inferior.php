@@ -12,7 +12,12 @@
 <footer class="sticky-footer bg-white">
   <div class="row">
     <div class="container my-auto">
+      <ul>
+        <li class="text-center font-weight-bold text-dark">
+          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
 
+        </li>
+      </ul>
       <div class="copyright text-center text-dark my-auto">
         <span>Copyright &copy; AIRES 2021</span>
       </div>
@@ -71,6 +76,8 @@
 <script src="js/botones/pdfmake.min.js"></script>
 <script src="js/botones/vfs_fonts.js"></script>
 <script type="text/javascript" src="js/lightslider.js"></script>
+<script src="js/sweetalert2@9.js"></script>
+<script src="js/contactanos.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#sidebarCollapse').on('click', function() {
@@ -103,6 +110,13 @@
   $(document).ready(function() {
     compruebaAceptaCookies();
   });
+
+
+
+
+
+
+
 </script>
 </body>
 
