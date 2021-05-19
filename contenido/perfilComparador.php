@@ -11,12 +11,7 @@ require_once "vistas/parte_superior.php";
   $id = $_GET["id"];
   $id2 = $_GET["id2"];
   ?>
-   <a class="ir-arriba" javascript:void(0) title="Volver arriba">
-      <span class="fa-stack">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
+   
   <div class="row">
    
     <div class="col col-sm-6">
@@ -190,14 +185,14 @@ require_once "vistas/parte_superior.php";
             foreach ($resp as $fi) {
               if (strcasecmp($fi['redSocial'], "FACEBOOK") == 0) {
                 echo '
-                                      <a  href="' . $fi['url'] . '">
+                                      <a  href="' . $fi['url'] . '" TARGET="_blank">
                                       <i class="h3 fab fa-facebook-square " style="color: black;"></i>
                                         </a>';
               }
               if (strcasecmp($fi['redSocial'], "INSTAGRAM") == 0) {
                 echo '
                                       
-                                      <a  href="' . $fi['url'] . '">
+                                      <a  href="' . $fi['url'] . '" TARGET="_blank">
                                       
                                           <i class="h3 fab fa-instagram " style="color: black;"></i>
                                           </a>
@@ -206,7 +201,7 @@ require_once "vistas/parte_superior.php";
               if (strcasecmp($fi['redSocial'], "TWITTER") == 0) {
                 echo '
                                       
-                                      <a  href="' . $fi['url'] . '">
+                                      <a  href="' . $fi['url'] . '" TARGET="_blank">
                                       <i class="h3 fab fa-twitter-square " style="color: black;"></i>
                                       </a>
                                       ';
@@ -214,7 +209,7 @@ require_once "vistas/parte_superior.php";
               if (strcasecmp($fi['redSocial'], "YOUTUBE") == 0) {
                 echo '
                                       
-                                      <a  href="' . $fi['url'] . '">
+                                      <a  href="' . $fi['url'] . '" TARGET="_blank">
                                       <i class="h3 fab fa-youtube-square " style="color: black;"></i>
                                       </a>
                                       ';
@@ -447,14 +442,14 @@ require_once "vistas/parte_superior.php";
             foreach ($resp as $fi) {
               if (strcasecmp($fi['redSocial'], "FACEBOOK") == 0) {
                 echo '
-                                  <a  href="' . $fi['url'] . '">
+                                  <a  href="' . $fi['url'] . '" TARGET="_blank">
                                   <i class="h3 fab fa-facebook-square " style="color: black;"></i>
                                     </a>';
               }
               if (strcasecmp($fi['redSocial'], "INSTAGRAM") == 0) {
                 echo '
                                   
-                                  <a  href="' . $fi['url'] . '">
+                                  <a  href="' . $fi['url'] . '" TARGET="_blank">
                                   
                                       <i class="h3 fab fa-instagram " style="color: black;"></i>
                                       </a>
@@ -463,7 +458,7 @@ require_once "vistas/parte_superior.php";
               if (strcasecmp($fi['redSocial'], "TWITTER") == 0) {
                 echo '
                                   
-                                  <a  href="' . $fi['url'] . '">
+                                  <a  href="' . $fi['url'] . '" TARGET="_blank">
                                   <i class="h3 fab fa-twitter-square " style="color: black;"></i>
                                   </a>
                                   ';
@@ -471,7 +466,7 @@ require_once "vistas/parte_superior.php";
               if (strcasecmp($fi['redSocial'], "YOUTUBE") == 0) {
                 echo '
                                   
-                                  <a  href="' . $fi['url'] . '">
+                                  <a  href="' . $fi['url'] . '" TARGET="_blank">
                                   <i class="h3 fab fa-youtube-square " style="color: black;"></i>
                                   </a>
                                   ';
