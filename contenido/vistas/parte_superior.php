@@ -125,7 +125,7 @@
         <span>Consentimiento</span>
         </a>
         <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="../contenido/conocenos.php" data-toggle="" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-info-circle"></i>
         <span>Conocenos</span>
         </a>
