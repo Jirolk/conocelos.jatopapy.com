@@ -3,7 +3,7 @@ function conexion(){
     //$host = "www.jatopapy.com";
     $host = "localhost";
     $dbnam = "jattugco_candidatos";
-    // $port = "3306";
+    $port = "3306";
     //$usuario="jattugco_candidatos";
     $usuario="root";
     //$password="lista.candidatos@123";
