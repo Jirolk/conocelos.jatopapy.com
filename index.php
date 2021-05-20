@@ -96,7 +96,7 @@
       }
       echo '</p>';
        echo '
-        <a href="../contenido/perfilcandidato.php?id='.$fila['ci'].'">Ver perfil</a>
+        <a class=" btn badge badge-secondary" href="./contenido/perfilcandidato.php?id='.$fila['ci'].'">Ver perfil</a>
        ';
                   echo'  </div>
                     <div class="social">
