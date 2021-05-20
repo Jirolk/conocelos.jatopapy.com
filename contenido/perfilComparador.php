@@ -54,7 +54,7 @@ require_once "vistas/parte_superior.php";
                             <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
           echo '<option selected value="0">Todos los datos</option>';
           echo '<option value="1" >';
-          echo 'Datos peronales';
+          echo 'Datos personales';
           echo "</option>";
           echo '<option value="2" >';
           echo 'Cuestionario';
@@ -311,7 +311,7 @@ require_once "vistas/parte_superior.php";
                         <select id="filtro2"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
           echo '<option selected value="0">Todos los datos</option>';
           echo '<option value="1" >';
-          echo 'Datos peronales';
+          echo 'Datos personales';
           echo "</option>";
           echo '<option value="2" >';
           echo 'Cuestionario';
@@ -532,7 +532,7 @@ require_once "vistas/parte_superior.php";
   </div>
 
 
-  <button class="btn btn-block" onclick="volver();">volver</button>
+  <button class="btn btn-block mt-3" onclick="volver();">volver</button>
 
 </div>
 

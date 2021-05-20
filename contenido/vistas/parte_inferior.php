@@ -14,7 +14,7 @@
     <div class="container my-auto">
       <ul>
         <li class="text-center font-weight-bold text-dark">
-          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" onclick="contactanos();">Contacta con Nosotros! <img src="../img/wtp.png" width="20" height="20" alt="wtp"></a>
+          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white mb-2 mt-2" onclick="contactanos();">Contacta con Nosotros! <img src="../img/wtp.png" width="20" height="20" alt="wtp"></a>
 
         </li>
       </ul>
