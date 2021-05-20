@@ -18,6 +18,7 @@
 
         </li>
       </ul>
+      <hr>
       <div class="copyright text-center text-dark my-auto">
         <span>Copyright &copy; AIRES 2021</span>
       </div>
@@ -25,13 +26,15 @@
       <!-- </div>
             <div class="container my-auto col-md-4 col-xl-3 mb-4"> -->
       <div class="copyright text-center text-dark my-auto">
-        <a class="copyright text-center  text-dark" href="index.php">
+        <a class="copyright text-center  text-dark" href="privacidad.php">
           <span>Politica de Privacidad</span>
         </a>
         <!-- <div>
               <div class="copyright text-center text-dark my-auto"> -->
         <span> - </span>
-        <a class="copyright text-center  text-dark" href="../index.php"><span>Politica de Cookies</span></a>
+        <a class="copyright text-center  text-dark" href="privacidad.php"><span>Politica de Cookies</span></a>
+        <hr><br><a class="btn badge badge-secondary text-center  " href="../contenido/movimientos.php"><span>Ver Perfiles</span></a>
+        <a class=" btn badge badge-secondary text-center " href="../contenido/comparador.php"><span>Comparar Perfiles</span></a>
       </div>
     </div>
   </div>

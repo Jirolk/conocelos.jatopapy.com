@@ -11,9 +11,9 @@ require_once "vistas/parte_superior.php";
   $id = $_GET["id"];
   $id2 = $_GET["id2"];
   ?>
-   
+
   <div class="row">
-   
+
     <div class="col col-sm-6">
 
 
@@ -33,30 +33,30 @@ require_once "vistas/parte_superior.php";
         foreach ($res as $fila) {
           setlocale(LC_TIME, "es_es.UTF-8");
           list($año, $mes, $dia) = explode("-", date($fila['fechaNac']));
-          if ($mes==01) {
-            $Mes='enero';
-          }elseif ($mes==02) {
-            $Mes='febrero';
-          }elseif ($mes==03) {
-            $Mes='marzo';
-          }elseif ($mes==04) {
-            $Mes='abril';
-          }elseif ($mes==05) {
-            $Mes='mayo';
-          }elseif ($mes==06) {
-            $Mes='junio';
-          }elseif ($mes==07) {
-            $Mes='julio';
-          }elseif ($mes=='08') {
-            $Mes='agosto';
-          }elseif ($mes=='09') {
-            $Mes='septiembre';
-          }elseif ($mes==10) {
-            $Mes='octubre';
-          }elseif ($mes==11) {
-            $Mes='noviembre';
-          }else {
-            $Mes='diciembre';
+          if ($mes == 01) {
+            $Mes = 'enero';
+          } elseif ($mes == 02) {
+            $Mes = 'febrero';
+          } elseif ($mes == 03) {
+            $Mes = 'marzo';
+          } elseif ($mes == 04) {
+            $Mes = 'abril';
+          } elseif ($mes == 05) {
+            $Mes = 'mayo';
+          } elseif ($mes == 06) {
+            $Mes = 'junio';
+          } elseif ($mes == 07) {
+            $Mes = 'julio';
+          } elseif ($mes == '08') {
+            $Mes = 'agosto';
+          } elseif ($mes == '09') {
+            $Mes = 'septiembre';
+          } elseif ($mes == 10) {
+            $Mes = 'octubre';
+          } elseif ($mes == 11) {
+            $Mes = 'noviembre';
+          } else {
+            $Mes = 'diciembre';
           }
 
 
@@ -118,7 +118,7 @@ require_once "vistas/parte_superior.php";
                               </div>
                             </li>
                             <li>
-                              <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['lugarNac'] . ', ' . strftime(" %d de %B de %Y", $mes) . '.</p>
+                            <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['lugarNac'] . ', ' . $dia . ' de ' . $Mes . ' de ' . $año . '.</p>
                             </li>
                             <li>
                               <div class="">
@@ -294,7 +294,9 @@ require_once "vistas/parte_superior.php";
         }
         echo "</div>";
       } else {
-        echo "<h1 class='text-danger'>No hay Registros</h1>";
+        echo "<hr class='divider'>
+        <h5 class='text-center text-black font-weight-bold '>A la fecha todavía no se ha recepcionado los datos de este candidato</h5> <br><br>
+        <a href='comparador.php' class='btn btn-secondary btn-lg btn-block' role='button' aria-disabled='true'>REGRESAR</a>";
       }
       ?>
 
@@ -318,33 +320,33 @@ require_once "vistas/parte_superior.php";
           // setlocale(LC_TIME, "es_es.UTF-8");
           list($año, $mes, $dia) = explode("-", date($fila['fechaNac']));
 
-          if ($mes==01) {
-            $Mes='enero';
-          }elseif ($mes==02) {
-            $Mes='febrero';
-          }elseif ($mes==03) {
-            $Mes='marzo';
-          }elseif ($mes==04) {
-            $Mes='abril';
-          }elseif ($mes==05) {
-            $Mes='mayo';
-          }elseif ($mes==06) {
-            $Mes='junio';
-          }elseif ($mes==07) {
-            $Mes='julio';
-          }elseif ($mes=='08') {
-            $Mes='agosto';
-          }elseif ($mes=='09') {
-            $Mes='septiembre';
-          }elseif ($mes==10) {
-            $Mes='octubre';
-          }elseif ($mes==11) {
-            $Mes='noviembre';
-          }else {
-            $Mes='diciembre';
+          if ($mes == 01) {
+            $Mes = 'enero';
+          } elseif ($mes == 02) {
+            $Mes = 'febrero';
+          } elseif ($mes == 03) {
+            $Mes = 'marzo';
+          } elseif ($mes == 04) {
+            $Mes = 'abril';
+          } elseif ($mes == 05) {
+            $Mes = 'mayo';
+          } elseif ($mes == 06) {
+            $Mes = 'junio';
+          } elseif ($mes == 07) {
+            $Mes = 'julio';
+          } elseif ($mes == '08') {
+            $Mes = 'agosto';
+          } elseif ($mes == '09') {
+            $Mes = 'septiembre';
+          } elseif ($mes == 10) {
+            $Mes = 'octubre';
+          } elseif ($mes == 11) {
+            $Mes = 'noviembre';
+          } else {
+            $Mes = 'diciembre';
           }
 
-        //  $Fecha = gmmktime(12, 0, 0, $mes, $dia, $año);
+          //  $Fecha = gmmktime(12, 0, 0, $mes, $dia, $año);
           echo '
           <div class="aling-center">';
           echo ' 
@@ -402,7 +404,7 @@ require_once "vistas/parte_superior.php";
                           </div>
                         </li>
                         <li>
-                          <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['lugarNac'] . ', ' . strftime(" %d de %B de %Y", $mes) . '.</p>
+                        <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['lugarNac'] . ', ' . $dia . ' de ' . $Mes . ' de ' . $año . '.</p>
                         </li>
                         <li>
                           <div class="">
@@ -578,7 +580,8 @@ require_once "vistas/parte_superior.php";
         }
       } else {
         echo "<hr class='divider'>
-        <h5 class='text-center text-black font-weight-bold '>A la fecha todavía no se ha recepcionado los datos de este candidato</h5> <br>";
+        <h5 class='text-center text-black font-weight-bold '>A la fecha todavía no se ha recepcionado los datos de este candidato</h5> <br><br>
+        <a href='comparador.php' class='btn btn-secondary btn-lg btn-block' role='button' aria-disabled='true'>REGRESAR</a>";
       }
       cerrarBD($conex);
       ?>
@@ -600,7 +603,7 @@ require_once "vistas/parte_superior.php";
     document.getElementById('filtro').getElementsByTagName('option')[2].selected = 'selected'
     document.getElementById('filtro2').getElementsByTagName('option')[2].selected = 'selected'
     habilitar();
-    });
+  });
 
 
   function volver() {
