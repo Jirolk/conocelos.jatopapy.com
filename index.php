@@ -94,8 +94,11 @@
       } else {
         echo 'CONCEJAL MUNICIPAL';
       }
-      echo '</p>
-                    </div>
+      echo '</p>';
+       echo '
+        <a href="../contenido/perfilcandidato.php?id='.$fila['ci'].'">Ver perfil</a>
+       ';
+                  echo'  </div>
                     <div class="social">
                     <ul>';
       //$cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];

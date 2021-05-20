@@ -58,6 +58,8 @@
             <h5 class="text-center text-black font-weight-bold " >
             A la fecha todavía no se ha recepcionado los datos de este candidato
             </h5>
+            <br>
+            <a href="../index.php" class="btn btn-secondary btn-lg btn-block" role="button" aria-disabled="true">REGRESAR</a>
             <br onload="block();">
             ';
         }else {
