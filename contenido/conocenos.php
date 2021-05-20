@@ -9,8 +9,7 @@
 
   <title>CONOCELOS</title>
 
-  <?php require_once "lib/librerias_Superior.php"; ?>
-  <?php require_once "lib/librerias_inferior.php"; ?>
+
 
 
 </head>
