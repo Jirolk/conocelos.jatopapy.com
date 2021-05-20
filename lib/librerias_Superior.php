@@ -14,5 +14,9 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/util.css">
 <!-- Estilo Propio -->
-<link rel="stylesheet" href="css/roque.css">
+<link rel="stylesheet" href="css/roque.css?n=13">
+
+<link rel="stylesheet" href="css/select2.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
 

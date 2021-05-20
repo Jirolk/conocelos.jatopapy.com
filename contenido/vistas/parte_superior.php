@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="../img/logo.png" />
+  <link rel="icon" type="image/png" href="../img/LogoFinal.png" />
   <title>CONOCELOS</title>
 
   <!-- Custom fonts for this template-->
@@ -26,10 +26,8 @@
   <!-- Data table -->
   <link rel="stylesheet" href="../css/datatables.min.css">
  
-
-
-
-
+  <!-- select2 css -->
+<link rel="stylesheet" href="../contenido/cssComparador/select2.min.css">
 
 
 
@@ -48,7 +46,7 @@
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/util.css">
 <!-- Estilo Propio -->
-<link rel="stylesheet" href="../css/roque.css">
+<link rel="stylesheet" href="../css/roque.css?n=10">
 
 
 
@@ -131,21 +129,21 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
+        <!-- <div class="input-group input-group-sm mb-3">
+                <select style="opacity:0.5;" class="form-control text-uppercase text-center col col-md-12" name="bus" id="bus" autofocus onchange="">
+                
+                </select>
+              
+                </div>
+     -->
+          <button id="sidebarCollapse" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars" style="color: black;"></i>
           </button>
 
            <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            
-            <!-- Nav Item - Alerts -->
-            
 
-            <!-- Nav Item - User Information -->
   
           </ul>
 
