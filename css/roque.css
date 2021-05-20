@@ -249,13 +249,21 @@ a:focus {
     left: 0;
     background: #fff;
     width: 100%;
-    height: 80px;
-    padding: 2px 2px;
+    height: 89px;
+    padding: 1px 1px;
     text-align: center;
     z-index: 10;
     transition: .2s;
 }
+.img-content .info p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
+.img-content .info h6 {
+    margin-top: 0;
+    margin-bottom: 1px;
+}
 .img-content:hover .info {
     bottom: 0;
 }

@@ -46,7 +46,7 @@
         <li class="nav-item  ">
           <a class="nav-link " href="index.php">
             <i class="fas fa-home" style="color: white;"></i>
-            <span class="text-white">Home</span></a>
+            <span class="text-white">Inicio</span></a>
         </li>
 
         <hr class="sidebar-divider">
@@ -70,17 +70,19 @@
           </a>
 
         </li>
-        <li class="nav-item  ">
+        <!-- <li class="nav-item  ">
           <a class="nav-link ">
             <i class="fas fa-scroll" style="color: white;"></i>
             <span class="text-black" style="color: white;">Consentimiento</span>
           </a>
+        </li>
+
         <li class="nav-item  ">
           <a class="nav-link ">
             <i class="fas fa-info-circle" style="color: white;"></i>
             <span class="text-white">Conocenos</span>
           </a>
-        </li>
+        </li> -->
         <hr class="sidebar-divider ">
 
         <!-- Sidebar Toggler (Sidebar) -->

@@ -4,7 +4,8 @@
     Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
     <button onclick="aceptarCookies()"><i class="fa fa-times"></i> Aceptar</button>
   </p>
-</div>
+  </div>
+  </div>
 </div>
 <!-- End of Main Content -->
 
