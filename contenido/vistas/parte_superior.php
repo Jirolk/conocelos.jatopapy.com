@@ -59,6 +59,7 @@
 <body id="page-top ">
 
   <!-- Page Wrapper -->
+<<<<<<< Updated upstream
   <div id="wrapper" class="">
 
     <!-- Sidebar -->
@@ -140,6 +141,70 @@
       </div>
 
     </ul>
+=======
+  <div id="wrapper" class="wrapper">
+      <nav id="sidebar" class="sidebar roque" >
+
+                <ul class="list-unstyled components">
+                  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
+                    <div class="sidebar-brand-icon ">
+
+                      <img class="img-fluid"  src="../img/LogoFinal.png" alt="logo">
+                    </div>
+                    <div class="sidebar-brand-text text-white h6 mx-3"> CONÓCELOS </div>
+                  </a>
+                  <br>
+                    <!-- <p>Dummy Heading</p> -->
+                    <hr class="sidebar-divider my-0">
+
+                <li class="nav-item  ">
+                  <a class="nav-link " href="../index.php">
+                    <i  class="fas fa-home" style="color: white;"></i>
+                    <span class="text-white">Inicio</span></a>
+                </li>
+
+                <hr class="sidebar-divider">
+                <li class="nav-item  ">
+                
+                  
+                </li>
+
+                <li class="nav-item  ">
+                  <a class="nav-link " href="../contenido/movimientos.php" >
+                  <i class="fas fa-users" style="color: white;"></i>
+                    <span class="text-white">Perfiles de Candidatos</span>
+                  </a>
+                  
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link collapsed" href="../contenido/comparador.php" data-toggle="" data-target="#Geneinfo" aria-expanded="true" aria-controls="Geneinfo">
+                    <i class="fas fa-list fa-sm" style="color: white;"></i>
+                    <span class="text-white">Comparador de Perfiles</span>
+                  </a>
+                
+                </li>
+                <!-- <li class="nav-item  ">
+                  <a class="nav-link "  >
+                  <i class="fas fa-scroll" style="color: white;"></i>
+                  <span class="text-black" style="color: white;">Consentimiento</span>
+                  </a>
+                </li>-->
+                  <li class="nav-item  ">
+                  <a class="nav-link " href="../contenido/conocenos.php">
+                    <i class="fas fa-info-circle" style="color: white;"></i>
+                    <span class="text-white">Conocenos</span>
+                  </a>
+                </li> 
+                <hr class="sidebar-divider ">
+
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center  justify-items-center">
+                  <button style="color: white;" class="rounded-circle border-0 d-none d-sm-block " id="sidebarToggle"></button>
+                </div>
+
+      </nav>
+
+>>>>>>> Stashed changes
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
