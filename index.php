@@ -87,7 +87,9 @@
                               background-size: cover;
                               transition: .2s;">
                               <div class="info">
-                              <h6>' . $fila['nomApe'] . '</h6>
+                              <h6>';
+                              echo isset($fila['alias']) ? $fila['alias'] :  $fila["nomApe"]; 
+                              echo'</h6>
                               <p style="color: #929292;">';
       if ($fila['codCand'] == 1) {
         echo 'INTENDENTE MUNICIPAL';
