@@ -36,8 +36,10 @@
       </div>';
       
       echo '
-      <h2 class="py-2 text-center font-weight-bold ">
-      '. $fila["nomApe"] .'
+      <h2 class="py-2 text-center text-uppercase font-weight-bold ">
+      ';
+      echo isset($fila['alias']) ? $fila['alias'] :  $fila["nomApe"]; 
+       echo'
       </h2>
       
       ';
