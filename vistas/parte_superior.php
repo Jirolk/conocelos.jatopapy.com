@@ -28,10 +28,10 @@
 
 <body id="page-top ">
 
-  <div id="wrapper" class="wrapper">
-    <nav id="sidebar" class="sidebar roque">
+  <div id="wrapper" class="wrapper" >
+    <nav id="sidebar" class="sidebar roque" >
 
-      <ul class="list-unstyled components">
+      <ul class="list-unstyled components" >
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
           <div class="sidebar-brand-icon ">
 
@@ -136,8 +136,14 @@
               $("#bus").append(`
             <option value="0"> Buscar Candidato </option>`);
               for (var i in resp) {
-                $("#bus").append(`
+                if(resp[i].ali != null ){
+                    $("#bus").append(`
+                  <option value="` + resp[i].cod + `">` + resp[i].ali + `-Lista ` + resp[i].lis + `</option>`);
+                }else{
+                  $("#bus").append(`
                 <option value="` + resp[i].cod + `">` + resp[i].nom + `-Lista ` + resp[i].lis + `</option>`);
+                }
+                
               };
 
 

@@ -21,7 +21,7 @@ function habilitar(value) {
         <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>
         <hr><br>
 
-        <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
+        <button class="btn mt-5 mb-5" style="background: rgb(185, 127, 51);" onclick="comparar();">Comparar</button>
         `;
         consulta(sele.options[sele.selectedIndex].value);
         $("#buscador1").select2();
@@ -126,6 +126,6 @@ function desplegarBusqueda() {
     <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-up"></b></i></a>
     <hr><br>
 
-    <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
+    <button class="btn mt-5 mb-5" style="background: rgb(185, 127, 51);" onclick="comparar();">Comparar</button>
     `;
 }

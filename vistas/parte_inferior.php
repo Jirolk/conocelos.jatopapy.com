@@ -1,4 +1,4 @@
-<div id="cajacookies">
+<div id="cajacookies" style="display: none;">
   <p>
     Éste sitio web usa cookies, si permanece aquí acepta su uso.
     Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
@@ -15,7 +15,7 @@
     <div class="container my-auto">
       <ul>
         <li class="text-center font-weight-bold text-dark">
-          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
+          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white " style="background: rgb(185, 127, 51);" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
 
         </li>
       </ul>
@@ -94,9 +94,14 @@
   if(localStorage.aceptaCookies == 'true'){
     document.getElementById('cajacookies').style.display = 'none';
   } else if(localStorage.aceptaCookies != 'true'){
-    document.getElementById('cajacookies').style.display = 'inline';
+    document.getElementById('cajacookies').style.display = 'inline-block';
   }
-
+}
+function aceptarCookies() {
+    localStorage.aceptaCookies = 'true';
+    cajacookies.style.display = 'none';
+  
+  }
   /* ésto se ejecuta cuando la web está cargada */
   $(document).ready(function() {
     compruebaAceptaCookies();

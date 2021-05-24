@@ -22,7 +22,7 @@
         <div class="col">
                   <div class="card shadow mb-4 text-dark ">
                   <div class="card py-3 r3 align-items-center">
-                    <h6 class="text-dark text-center font-weight-bold ">
+                    <h6 class="text-white text-center ">
                       '. $fila["descrPart"] .' - '.$fila["siglas"].'
                         </h6>
                       </div>
