@@ -128,7 +128,9 @@
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                              <p class=" text-left font-weight-bold"> ';
+                              echo isset($fila['alias']) ? $fila['alias'] :  $fila["nomApe"]; 
+                              echo'</p>
                             </div>
                             <div class="row align-items-center">
                               <h6 class=" text-left font-weight-bold">'.$fil['descripcion'].' </h6>
