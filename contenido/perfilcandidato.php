@@ -9,14 +9,90 @@
     require_once("../servicios/conexion.php");
     $conex = conexion();
     $id = $_GET["id"];
-    $sql = "SELECT c.*,cc.descripcion,cd.*,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
+    /*$sql = "SELECT c.*,cc.descripcion,cd.*,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
                 INNER JOIN movimientos cm ON c.codMov = cm.codMov
                 INNER JOIN partidopolitico pp ON cm.codPartido= pp.codPartido
                 INNER JOIN candidatura cc ON c.codCand = cc.codCand
                 INNER JOIN candidatodetalle cd ON c.ci = cd.ci
+            WHERE c.ci=".$id;*/
+    $sql = "SELECT c.*,cc.descripcion,cm.codMov,cm.nombMov,cm.siglas AS sgl,cm.codMov,pp.descrPart,pp.siglas FROM candidatos c
+              INNER JOIN movimientos cm ON c.codMov = cm.codMov
+              INNER JOIN partidopolitico pp ON cm.codPartido= pp.codPartido
+              INNER JOIN candidatura cc ON c.codCand = cc.codCand
+            
             WHERE c.ci=".$id;
     $res = mysqli_query($conex, $sql);
+    $Qry = "SELECT * FROM candidatodetalle WHERE ci=".$id;
+    $r = mysqli_query($conex, $Qry);
+//    $row_cnt = $r->num_rows;
+    
     foreach ($res as $fila) {
+      echo '
+      <div class="aling-center">';
+      echo' 
+      <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgcandidatos/';
+      echo isset($fila['img']) ? $fila['img'] : 'defaultcandidato.png'; 
+      echo'" alt="logo">
+      </div>';
+      
+      echo '
+      <h2 class="py-2 text-center text-uppercase font-weight-bold ">
+      ';
+      echo isset($fila['alias']) ? $fila['alias'] :  $fila["nomApe"]; 
+       echo'
+      </h2>
+      
+      ';
+      
+
+
+        
+        $row_cnt = $r -> num_rows;
+        if($row_cnt==0) {
+        /*if(empty($r)==0) {*/
+          echo '
+          <script>
+          $(document).ready(function () {
+            document.getElementById("filtro").hidden = true;
+          });
+          </script>
+          <hr class="divider">
+            <h5 class="text-center text-black font-weight-bold " >
+            A la fecha todavía no se ha recepcionado los datos de este candidato
+            </h5>
+            <br>
+            <a href="../index.php" class="btn btn-secondary btn-lg btn-block" role="button" aria-disabled="true">REGRESAR</a>
+            <br onload="block();">
+            ';
+        }else {
+          echo'<div class=" container text-center ">
+          <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
+          <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
+              echo '<option selected value="0">TODOS LOS DATOS</option>';
+              echo '<option value="1" >';
+              echo 'DATOS PERSONALES';
+              echo "</option>";
+              echo '<option value="2" >';
+              echo 'CUESTIONARIO';
+              echo "</option>";
+echo'       </select>
+      <div class="" id="CampoBusqueda"></div>
+      <div id="BusAvan"></div>
+  </div> 
+  <hr class="divider">';
+          echo '
+          <div id="datPers" class="row">
+            <div class="col">
+                      <div class="card shadow mb-2  ">
+                        <div class="card py-3 r3 align-items-center">
+                              <h5 class=" text-center font-weight-bold ">
+                                DATOS PERSONALES
+                              </h5>
+                        </div>
+                      </div>
+              </div>
+          </div>'; 
+
       list($año,$mes,$dia) = explode("-",date($fila['fechaNac']));
       if ($mes==01) {
         $Mes='enero';
@@ -43,49 +119,6 @@
       }else {
         $Mes='diciembre';
       }
-      echo '
-      <div class="aling-center">';
-      echo' 
-          <img style="width: 130px; height: 130px;" class="rounded mx-auto d-block"  src="../imgcandidatos/';
-          echo isset($fila['img']) ? $fila['img'] : 'defaultcandidato.png'; 
-          echo'" alt="logo">
-      </div>';
-
-      echo '
-          <h2 class="py-2 text-center font-weight-bold ">
-            '. $fila["nomApe"] .'
-          </h2>
-          
-        ';
-
-        echo'<div class=" container text-center ">
-                    <label for="detalle" class="py-1 font-weight-bold">Filtro de datos</label>
-                    <select id="filtro"  class="form-control text-uppercase text-center col col-md-12" onchange="habilitar(value);">';
-                        echo '<option selected value="0">Todos los datos</option>';
-                        echo '<option value="1" >';
-                        echo 'Datos peronales';
-                        echo "</option>";
-                        echo '<option value="2" >';
-                        echo 'Cuestionario';
-                        echo "</option>";
-        echo'       </select>
-                <div class="" id="CampoBusqueda"></div>
-                <div id="BusAvan"></div>
-            </div> 
-            <hr class="divider">';
-
-        echo '
-        <div id="datPers" class="row">
-          <div class="col">
-                    <div class="card shadow mb-2  ">
-                      <div class="card py-3 r3 align-items-center">
-                            <h5 class=" text-center font-weight-bold ">
-                              DATOS PERSONALES
-                            </h5>
-                      </div>
-                    </div>
-            </div>
-        </div>';
          echo '
          <div id="datPersDet" class="row">
             <div class="col">
@@ -99,7 +132,7 @@
                       </div>
                     </li>
                     <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['lugarNac'].', '.$dia.' de '.$Mes.' de '.$año.'..</p>
+                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['lugarNac'].', '.$dia.' de '.$Mes.' de '.$año.'.</p>
                     </li>
                     <li>
                       <div class="">
@@ -109,28 +142,75 @@
                     </li>
                     <li>
                       <p class=" text-dark p-1 text-center font-weight">'.$fila['email'].'</p>
-                    </li>
-                    
-                    <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
-                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Académica: </h6>
-                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacAca'].'</p>
-                        
-                      </div>
-                    </li>
+                    </li>';
+        foreach ($r as $f) {
 
+
+                    echo'<li class="d-flex justify-content-center">
+                      <div class="">
+                        <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Académica: </h6>
+                        
+                        </div>
+                        </li>
+                    <li>';
+                    $array = explode("\r\n", $f['formacAca']);
+                  echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                  
+                  foreach($array as  $indice => $item){
+                    $asd=end($array);
+                    if (strcasecmp($item,$asd)==0) {
+                      # code...
+                      echo $item;
+                    }else {
+                      
+                      echo $item . '<br>';
+                    }
+                  }
+                  echo'</p>
+                    </li>
                     <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
+                      <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Formación Profesional: </h6>
                         
-                        <p class=" text-uppercase text-dark p-1 text-center font-weight">'.$fila['formacProf'].'</p>
-                      </div>
+                        </div>
+                        </li>
+                    <li>';
+                    $array = explode("\r\n", $f['formacProf']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                       echo'</p>
                     </li>
                     <li class="d-flex justify-content-center">
-                      <div class=" col-md-4  ">
+                      <div class="">
                         <h6 class="text-uppercase text-dark p-2 text-center font-weight-bold">Experiencia Laboral o Profesional: </h6>
-                        <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['experLab'].'</p>
                       </div>
+                    </li>
+                    <li>';
+                    $array = explode("\r\n", $f['experLab']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                    
+                     echo '</p>
                     </li>
                     <li>
                       <div class="">
@@ -138,8 +218,22 @@
                         
                       </div>
                     </li>
-                    <li>
-                      <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['profeOcupActual'].'</p>
+                    <li>';
+                    $array = explode("\r\n", $f['profeOcupActual']);
+                    echo'      <p class="text-uppercase text-dark p-1 text-center font-weight">';
+                    
+                    foreach($array as  $indice => $item){
+                      $asd=end($array);
+                      if (strcasecmp($item,$asd)==0) {
+                        # code...
+                        echo $item;
+                      }else {
+                        
+                        echo $item . '<br>';
+                      }
+                    }
+                      
+                    echo  '</p>
                     </li>
                     <li>
                       <div class="">
@@ -148,7 +242,7 @@
                       </div>
                     </li>
                     <li>';
-                    $cons = "SELECT * FROM contacto WHERE codDetalle =".$fila['codDetalle'];
+                    $cons = "SELECT * FROM contacto WHERE codDetalle =".$f['codDetalle'];
                           $resp = mysqli_query($conex, $cons);
                           foreach($resp as $fi){
                           echo '  <p class="text-uppercase text-dark  text-center font-weight">0'.$fi['numCntacto'].'</p>';
@@ -178,7 +272,7 @@
                         <li>
                           <p class="text-uppercase text-dark p-1 text-center font-weight">'.$fila['descripcion']." - Orden N° - ".$fila['orden'].'</p>
                         </li>';
-                        $cons = "SELECT * FROM redessociales WHERE codDetalle =".$fila['codDetalle'];
+                        $cons = "SELECT * FROM redessociales WHERE codDetalle =".$f['codDetalle'];
                         $resp = mysqli_query($conex, $cons);
                         if(empty($resp)) {
 
@@ -226,8 +320,9 @@
                           }
                         }
                             echo'</P>';
-                        echo '</li>
-                      </ul>
+                        echo '</li>';
+          }
+          echo'            </ul>
                     </div>
                 </div>
             </div>
@@ -235,6 +330,7 @@
          </div>
          <div class="row">';
         echo '</div>';
+
       echo '
       <div id="cuest" class="row">
         <div class="col">
@@ -296,14 +392,12 @@
                                     echo '</ul>
                           </div>
                       </div>
-                  </div>
-                  
-               </div>';
-                       
+                  </div>';
+                  echo '</div>';
       }
-      
-                      
+      echo '</div>';             
     }
+  }
     cerrarBD($conex);
   ?>
 </div>
@@ -320,19 +414,24 @@
       var sele = document.getElementById("filtro");
       if (sele.options[sele.selectedIndex].value == 0) {
         document.getElementById('datPers').hidden= false;
+        document.getElementById('cuest').hidden= false;
         document.getElementById('datPersDet').hidden= false;
+        document.getElementById('cuestDetalle').hidden= false;
       } else if (sele.options[sele.selectedIndex].value == 1) {
+        document.getElementById('cuest').hidden= true;
         document.getElementById('datPers').hidden= false;
         document.getElementById('datPersDet').hidden= false;
-        document.getElementById('cuest').hidden= true;
         document.getElementById('cuestDetalle').hidden= true;
       } else if (sele.options[sele.selectedIndex].value == 2) {
+        document.getElementById('cuest').hidden= false;
         document.getElementById('datPers').hidden= true;
         document.getElementById('datPersDet').hidden= true;
-        document.getElementById('cuest').hidden= false;
         document.getElementById('cuestDetalle').hidden= false;
       } 
   };
+  function block() {
+    document.getElementById("filtro").disabled = true;
+  }
 </script>
 
 

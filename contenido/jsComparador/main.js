@@ -9,11 +9,11 @@ function habilitar(value) {
         document.getElementById("CampoBusqueda").innerHTML = `
         <div class="row mt-3">
             <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-                <select class="form-control" id="buscador1" name="candidato1"></select>
+                <select class="form-control" id="buscador1" name="buscador1"></select>
                 <br>
             </div>
             <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-            <select class="form-control" id="buscador2" name="candidato1"></select>
+            <select class="form-control" id="buscador2" name="buscador2"></select>
             <br>
             </div>
         </div>
@@ -66,6 +66,7 @@ function consulta(sele) {
 }
 
 function comparar() {
+
     if (document.getElementById("buscador1")) {
         var cand1 = document.getElementById("buscador1");
         var cand2 = document.getElementById("buscador2");
@@ -81,8 +82,9 @@ function comparar() {
             alertify.error("No te servirá de mucho comparar el mismo Perfil, Elije otro");
         } else {
 
-
-            alertify.error("Esta en desarrollo!");
+            candidato1 = cand1.options[cand1.selectedIndex].value;
+            candidato2 = cand2.options[cand2.selectedIndex].value;
+            window.location = "perfilComparador.php?id=" + candidato1 + "&id2=" + candidato2;
         }
 
     } else {
