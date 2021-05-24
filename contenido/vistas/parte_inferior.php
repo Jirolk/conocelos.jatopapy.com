@@ -30,8 +30,6 @@
         </a>
         <!-- <div>
               <div class="copyright text-center text-dark my-auto"> -->
-        <span> - </span>
-        <a class="copyright text-center  text-dark" href="../index.php"><span>Politica de Cookies</span></a>
       </div>
     </div>
   </div>

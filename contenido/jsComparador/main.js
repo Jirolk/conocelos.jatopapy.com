@@ -18,8 +18,6 @@ function habilitar(value) {
             </div>
         </div>
         <br><hr>
-        <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>
-        <hr><br>
 
         <button class="btn mt-5 mb-5 text-white" style="background: rgb(185, 127, 51);color:white;" onclick="comparar();">Comparar</button>
         `;
