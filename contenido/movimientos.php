@@ -14,7 +14,7 @@
   <?php
     require_once("../servicios/conexion.php");
     $conex = conexion();
-    $sql = "SELECT * FROM partidopolitico order by  codPartido desc";
+    $sql = "SELECT * FROM partidopolitico order by  codPartido desc ";
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
@@ -30,7 +30,7 @@
                     </div>
                   
         </div>';
-      $sq = "SELECT * FROM movimientos where codPartido= ".$fila['codPartido'];
+      $sq = "SELECT * FROM movimientos where codPartido= ".$fila['codPartido']." order by  codMov asc";
       $re = mysqli_query($conex, $sq);
       echo '<div class="row">';
       foreach($re as $fil){
