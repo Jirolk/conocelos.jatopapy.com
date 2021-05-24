@@ -45,7 +45,7 @@ input[type]:focus {
 }
 
 .roque {
-    background: rgb(169, 131, 7);
+    background: rgb(185, 127, 51);
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 25%, rgb(157, 207, 221) 160%); */
 }
 
@@ -68,7 +68,7 @@ input[type]:focus {
 
 .r3 {
     /* background: linear-gradient(00deg, rgb(16, 39, 45) 200%, rgb(157, 207, 221) 0%); */
-    background-color: rgb(169, 131, 7);
+    background: rgb(185, 127, 51);
     color: rgb(255, 255, 255);
 }
 
