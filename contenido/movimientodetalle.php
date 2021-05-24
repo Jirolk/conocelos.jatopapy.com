@@ -44,7 +44,8 @@
         </div>';
       $sq = "SELECT * FROM candidatos c
             join candidatura cc on c.codCand = cc.codCand
-            where codMov= ".$fila['codMov']." AND c.codCand=1" ;
+            where codMov= ".$fila['codMov']." AND c.codCand=1 
+            order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       $row_cnt = $re->num_rows;
       if($row_cnt==0) {
@@ -109,7 +110,8 @@
       </div>';
       $sq = "SELECT * FROM candidatos c
         join candidatura cc on c.codCand = cc.codCand
-        where codMov= ".$fila['codMov']." AND c.codCand=2" ;
+        where codMov= ".$fila['codMov']." AND c.codCand=2
+        order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       echo '<div class="row">';
       foreach($re as $fil){
