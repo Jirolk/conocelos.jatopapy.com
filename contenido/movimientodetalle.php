@@ -129,7 +129,7 @@
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
                               <p class=" text-left font-weight-bold"> ';
-                              echo isset($fila['alias']) ? $fila['alias'] :  $fila["nomApe"]; 
+                              echo isset($fil['alias']) ? $fil['alias'] :  $fil["nomApe"]; 
                               echo'</p>
                             </div>
                             <div class="row align-items-center">
