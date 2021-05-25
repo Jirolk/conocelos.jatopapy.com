@@ -35,7 +35,7 @@
               <p class="text-uppercase text-dark p-0 text-justify font-weight">A través de esta iniciativa buscamos mantener informado a los ciudadanos sobre los diferentes candidatos a los cargos de Intendencia y Concejalía, para así incrementar el acceso a la información pública por parte de la ciudadanía, promover la participación ciudadana y fortalecer el proceso democrático en la ciudad de Concepción.</p>
             </li>
             <li class="text-center font-weight-bold text-dark">
-              Si te gustaria formar parte de nuestra Base de Datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" style="background: rgb(185, 127, 51);" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
+              Si te gustaria formar parte de nuestra Base de Datos y que la ciudadanía te conozca con tu propuesta electoral, <a class="btn badge badge-info text-white" style="background: rgb(185, 127, 51);" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
             
             </li>
           </ul>
