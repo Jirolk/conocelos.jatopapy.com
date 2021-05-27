@@ -15,10 +15,10 @@
 </head>
 <?php require_once "vistas/parte_superior.php"; ?>
 <!-- INICIO DEL "CONOCENOS" -->
-<!-- 
+
 <DIv class="container">
   <h1>CONÓCENOS</h1>
-</DIv> -->
+</DIv>
 
 <div class="container-fluid ">
   <div id="datPersDet" class="row">
@@ -39,11 +39,9 @@
               <p class="text-uppercase text-dark p-0 text-justify font-weight">4)	Roque Delvalle</p>
               <p class="text-uppercase text-dark p-0 text-justify font-weight">5)	Sandro Castillo</p>
             </li>
-         
           </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
