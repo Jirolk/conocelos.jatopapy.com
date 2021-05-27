@@ -1,4 +1,4 @@
-<div id="cajacookies">
+<div id="cajacookies" style="display: none;">
   <p>
     Éste sitio web usa cookies, si permanece aquí acepta su uso.
     Puede leer más sobre el uso de cookies en nuestra <a href="privacidad.php">política de privacidad</a><br>
@@ -15,10 +15,11 @@
     <div class="container my-auto">
       <ul>
         <li class="text-center font-weight-bold text-dark">
-          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
+          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propuesta electoral, <a class="btn badge badge-info text-white " style="background: rgb(185, 127, 51);" onclick="contactanos();">Contacta con Nosotros! <img src="img/wtp.png" width="20" height="20" alt="wtp"></a>
 
         </li>
       </ul>
+      <hr>
       <div class="copyright text-center text-dark my-auto">
         <span>Copyright &copy; AIRES 2021</span>
       </div>
@@ -31,9 +32,12 @@
         </a>
         <!-- <div>
               <div class="copyright text-center text-dark my-auto"> -->
-        <span> - </span>
-        <a class="copyright text-center  text-dark" href="index.php"><span>Politica de Cookies</span></a>
+        <!-- <span> - </span>
+        <a class="copyright text-center  text-dark" href="privacidad.php"><span>Politica de Cookies</span></a>
+        <hr><br><a class="btn badge badge-secondary text-center  " href="contenido/movimientos.php"><span>Ver Perfiles</span></a>
+        <a class=" btn badge badge-secondary text-center " href="contenido/comparador.php"><span>Comparar Perfiles</span></a> -->
       </div>
+
     </div>
   </div>
 </footer>
@@ -67,46 +71,41 @@
 <!-- Page level custom scripts -->
 <!-- <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script> -->
-
-<!-- Data Table -->
-<script src="js/datatables.min.js"></script>
-<!-- botones -->
-<script src="js/botones/buttons.html5.min.js"></script>
-<script src="js/botones/jszip.min.js"></script>
-<script src="js/botones/buttons.print.min.js"></script>
-<script src="js/botones/pdfmake.min.js"></script>
-<script src="js/botones/vfs_fonts.js"></script>
-<script type="text/javascript" src="js/lightslider.js"></script>
-<script src="js/sweetalert2@9.js"></script>
-<script src="js/contactanos.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#sidebarCollapse').on('click', function() {
-      $('#sidebar').toggleClass('active');
-    });
-    $('#autoWidth').lightSlider({
-      autoWidth: true,
-      loop: true,
-      onSliderLoad: function() {
-        $('#autoWidth').removeClass('cS-hidden');
-      }
-    });
-  });
-
-  function compruebaAceptaCookies() {
-    if (localStorage.aceptaCookies == 'true') {
-      cajacookies.style.display = 'none';
-    }
+  
+  <!-- Data Table -->
+  <script src="js/datatables.min.js"></script>
+  <!-- botones -->
+  <script src="js/botones/buttons.html5.min.js"></script>
+  <script src="js/botones/jszip.min.js"></script>
+  <script src="js/botones/buttons.print.min.js"></script>
+  <script src="js/botones/pdfmake.min.js"></script>
+  <script src="js/botones/vfs_fonts.js"></script>
+  <script type="text/javascript" src="js/lightslider.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+            $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+        });
+        function compruebaAceptaCookies() {
+  if(localStorage.aceptaCookies == 'true'){
+    document.getElementById('cajacookies').style.display = 'none';
+  } else if(localStorage.aceptaCookies != 'true'){
+    document.getElementById('cajacookies').style.display = 'inline-block';
   }
-
-  /* aquí guardamos la variable de que se ha
-  aceptado el uso de cookies así no mostraremos
-  el mensaje de nuevo */
-  function aceptarCookies() {
+}
+function aceptarCookies() {
     localStorage.aceptaCookies = 'true';
     cajacookies.style.display = 'none';
+  
   }
-
   /* ésto se ejecuta cuando la web está cargada */
   $(document).ready(function() {
     compruebaAceptaCookies();

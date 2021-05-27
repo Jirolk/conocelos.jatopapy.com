@@ -2,7 +2,15 @@
 <html lang="es">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKV0E5KNDJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-HKV0E5KNDJ');
+</script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,10 +36,10 @@
 
 <body id="page-top ">
 
-  <div id="wrapper" class="wrapper">
-    <nav id="sidebar" class="sidebar roque">
+  <div id="wrapper" class="wrapper" >
+    <nav id="sidebar" class="sidebar roque" >
 
-      <ul class="list-unstyled components">
+      <ul class="list-unstyled components" >
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
           <div class="sidebar-brand-icon ">
 
@@ -136,8 +144,14 @@
               $("#bus").append(`
             <option value="0"> Buscar Candidato </option>`);
               for (var i in resp) {
-                $("#bus").append(`
+                if(resp[i].ali != null ){
+                    $("#bus").append(`
+                  <option value="` + resp[i].cod + `">` + resp[i].ali + `-Lista ` + resp[i].lis + `</option>`);
+                }else{
+                  $("#bus").append(`
                 <option value="` + resp[i].cod + `">` + resp[i].nom + `-Lista ` + resp[i].lis + `</option>`);
+                }
+                
               };
 
 

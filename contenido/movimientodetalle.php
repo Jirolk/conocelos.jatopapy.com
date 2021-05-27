@@ -44,7 +44,8 @@
         </div>';
       $sq = "SELECT * FROM candidatos c
             join candidatura cc on c.codCand = cc.codCand
-            where codMov= ".$fila['codMov']." AND c.codCand=1" ;
+            where codMov= ".$fila['codMov']." AND c.codCand=1 
+            order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       $row_cnt = $re->num_rows;
       if($row_cnt==0) {
@@ -73,7 +74,9 @@
                           </div>
                             <div class="col-sm-8 align-items-center">
                               <div class="row align-items-center">
-                                <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                                <p class=" text-left font-weight-bold"> ';
+                                echo isset($fil['alias']) ? $fil['alias'] :  $fil["nomApe"]; 
+                                echo'</p>
                               </div>
                               <div class="row align-items-center">
                                 <h6 class="text-left font-weight-bold">'.$fil['descripcion'].' </h6>
@@ -107,7 +110,8 @@
       </div>';
       $sq = "SELECT * FROM candidatos c
         join candidatura cc on c.codCand = cc.codCand
-        where codMov= ".$fila['codMov']." AND c.codCand=2" ;
+        where codMov= ".$fila['codMov']." AND c.codCand=2
+        order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       echo '<div class="row">';
       foreach($re as $fil){
@@ -126,7 +130,9 @@
                         </div>
                           <div class="col-sm-8 align-items-center">
                             <div class="row align-items-center">
-                              <p class=" text-left font-weight-bold"> '.$fil['nomApe'].'</p>
+                              <p class=" text-left font-weight-bold"> ';
+                              echo isset($fil['alias']) ? $fil['alias'] :  $fil["nomApe"]; 
+                              echo'</p>
                             </div>
                             <div class="row align-items-center">
                               <h6 class=" text-left font-weight-bold">'.$fil['descripcion'].' </h6>

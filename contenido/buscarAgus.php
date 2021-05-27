@@ -12,7 +12,8 @@ $sql = "SELECT * FROM candidatos ORDER BY nomApe ASC" ;
             $elementos[] = array(
                 'cod' => $row['ci'],
                 'nom' => $row['nomApe'],
-                'lis' => $row['codMov']
+                'lis' => $row['codMov'],
+                'ali' => $row['alias'],
             );
         }
         cerrarBD($conex);
