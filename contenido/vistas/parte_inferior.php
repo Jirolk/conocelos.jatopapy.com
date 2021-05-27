@@ -31,10 +31,10 @@
         </a>
         <!-- <div>
               <div class="copyright text-center text-dark my-auto"> -->
-        <span> - </span>
+        <!-- <span> - </span>
         <a class="copyright text-center  text-dark" href="privacidad.php"><span>Politica de Cookies</span></a>
         <hr><br><a class="btn badge badge-secondary text-center  " href="../contenido/movimientos.php"><span>Ver Perfiles</span></a>
-        <a class=" btn badge badge-secondary text-center " href="../contenido/comparador.php"><span>Comparar Perfiles</span></a>
+        <a class=" btn badge badge-secondary text-center " href="../contenido/comparador.php"><span>Comparar Perfiles</span></a> -->
       </div>
     </div>
   </div>
