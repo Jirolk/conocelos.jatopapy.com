@@ -89,13 +89,13 @@ function contactanos() {
 
                 title: 'Ups!',
 
-                text: 'Puede volver a elejir de nuevo',
+                text: 'Puede seguir navegando por la página',
 
                 icon: 'error'
 
             }).then(function() {
 
-                vaciarCheck();
+
 
             });
 

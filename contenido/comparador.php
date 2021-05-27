@@ -7,7 +7,7 @@ require_once "vistas/parte_superior.php";
 
 <DIv class="container text-center ">
   <h1 class="text-dark font-weight-bold">Comparador de Perfiles</h1>
-  <h6 class="mt-2">Elija dos candidatos para comparar perfiles, puede buscar por nombres o en busqueda avanzada podrá hacer una busqueda por partido, movimiento y nombre.</h6>
+  <h6 class="mt-2">Elija dos candidatos para comparar perfiles, puedes visualizar sus datos personales y los cuestionarios que nos respondieron, solo busque el nombre de su candidato <b>favorito</b>. <br> Primeramente Elija en la opcipon de abajo, Intendente Municipal o Junta Municipal </h6>
 </DIv>
 <div class=" container text-center ">
   <label for="tipoCand" class="mt-3 font-weight-bold">Tipo de Candidatura</label>
@@ -40,6 +40,6 @@ require_once "vistas/parte_superior.php";
 
 
 
-<script src="../contenido/jsComparador/main.js?v4"></script>
+<script src="../contenido/jsComparador/main.js?v6"></script>
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 <?php require_once "vistas/parte_inferior.php"; ?>

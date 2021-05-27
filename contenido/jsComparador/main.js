@@ -18,12 +18,20 @@ function habilitar(value) {
             </div>
         </div>
         <br><hr>
+        
+        <button class="btn btn-info mt-2 mb-2 font-weight-bold" onclick="comparar();">Comparar</button>
+        <hr><br>
 
-        <button class="btn mt-5 mb-5 text-white" style="background: rgb(185, 127, 51);color:white;" onclick="comparar();">Comparar</button>
+        
         `;
         consulta(sele.options[sele.selectedIndex].value);
         $("#buscador1").select2();
         $("#buscador2").select2();
+
+        // <a id = "busqueAva" class = "btn text-success"
+        // onclick = "busqueAva();"> busqueda avanzada <b> <i class = "fa fa-angle-double-down" > < /b></i > < /a>
+
+
 
     } else if (sele.options[sele.selectedIndex].value == 0) {
         document.getElementById("CampoBusqueda").innerHTML = "<label for='fec1'class='mt-5 text-danger'>Favor de Elegir una opción</label>";
@@ -92,38 +100,38 @@ function comparar() {
 }
 
 
-function busqueAva() {
-    // alert(c);
-    if (c == 0) {
-        document.getElementById("busqueAva").innerHTML = `<a id = "busqueAva" class="btn text-success" onclick=" ">busqueda avanzada <b><i class="fa fa-angle-double-up "></b></i></a>`;
-        desplegarBusqueda();
-        c = 1;
-    } else {
-        document.getElementById("busqueAva").innerHTML = `<a id="busqueAva" class="btn text-success" onclick="">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>`;
-        habilitar();
-        c = 0;
-    }
+// function busqueAva() {
+//     // alert(c);
+//     if (c == 0) {
+//         document.getElementById("busqueAva").innerHTML = `<a id = "busqueAva" class="btn text-success" onclick=" ">busqueda avanzada <b><i class="fa fa-angle-double-up "></b></i></a>`;
+//         desplegarBusqueda();
+//         c = 1;
+//     } else {
+//         document.getElementById("busqueAva").innerHTML = `<a id="busqueAva" class="btn text-success" onclick="">busqueda avanzada <b><i class="fa fa-angle-double-down"></b></i></a>`;
+//         habilitar();
+//         c = 0;
+//     }
 
-}
+// }
 
-function desplegarBusqueda() {
+// function desplegarBusqueda() {
 
-    document.getElementById("CampoBusqueda").innerHTML = `
-    <div class="row mt-3">
-        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-            
-        <input type="text">
-            <br>
-        </div>
-        <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
-        <input type="text">
-        <br>
-        </div>
-    </div>
-    <br><hr>
-    <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-up"></b></i></a>
-    <hr><br>
+//     document.getElementById("CampoBusqueda").innerHTML = `
+//     <div class="row mt-3">
+//         <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
 
-    <button class="btn mt-5 mb-5 text-white" style="background: rgb(185, 127, 51);color:white;" onclick="comparar();">Comparar</button>
-    `;
-}
+//         <input type="text">
+//             <br>
+//         </div>
+//         <div class="col col-md-6 mt-3"> Nombre del Candidato <br>
+//         <input type="text">
+//         <br>
+//         </div>
+//     </div>
+//     <br><hr>
+//     <a id="busqueAva" class="btn text-success" onclick="busqueAva();">busqueda avanzada <b><i class="fa fa-angle-double-up"></b></i></a>
+//     <hr><br>
+
+//     <button class="btn btn-info mt-5 mb-5" onclick="comparar();">Comparar</button>
+//     `;
+// }

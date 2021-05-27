@@ -14,10 +14,11 @@
     <div class="container my-auto">
       <ul>
         <li class="text-center font-weight-bold text-dark">
-          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propueta electoral, <a class="btn badge badge-info text-white" style="background: rgb(185, 127, 51);" onclick="contactanos();">Contacta con Nosotros! <img src="../img/wtp.png" width="20" height="20" alt="wtp"></a>
+          Si te gustaria Formar parte de nuestra Base de datos y que la ciudadanía te conozca con tu propuesta electoral, <a class="btn badge badge-info text-white mb-2 mt-2" onclick="contactanos();">Contacta con Nosotros! <img src="../img/wtp.png" width="20" height="20" alt="wtp"></a>
 
         </li>
       </ul>
+      <hr>
       <div class="copyright text-center text-dark my-auto">
         <span>Copyright &copy; AIRES 2021</span>
       </div>
@@ -30,6 +31,10 @@
         </a>
         <!-- <div>
               <div class="copyright text-center text-dark my-auto"> -->
+        <span> - </span>
+        <a class="copyright text-center  text-dark" href="privacidad.php"><span>Politica de Cookies</span></a>
+        <hr><br><a class="btn badge badge-secondary text-center  " href="../contenido/movimientos.php"><span>Ver Perfiles</span></a>
+        <a class=" btn badge badge-secondary text-center " href="../contenido/comparador.php"><span>Comparar Perfiles</span></a>
       </div>
     </div>
   </div>
@@ -76,7 +81,7 @@
 <script src="../contenido/jsComparador/select2.min.js"></script>
 <script src="../js/alertify.min.js"></script>
 <script src="../js/sweetalert2@9.js"></script>
-<script src="../js/contactanos.js"></script>
+<script src="../js/contactanos.js?v2"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#sidebarCollapse').on('click', function() {
