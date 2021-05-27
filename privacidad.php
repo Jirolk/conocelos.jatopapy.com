@@ -40,9 +40,8 @@
 <p align="justify">"AIRES" no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p>
 <p align="justify">"AIRES" Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>.<br></p>
    
-</div>
 
-</div>
+
 
 <!-- FIN DEL CONTENIDO PRINCIPAL -->
 
