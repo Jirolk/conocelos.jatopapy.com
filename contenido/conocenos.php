@@ -46,3 +46,4 @@
     </div>
   </div>
 </div>
+<?php require_once "vistas/parte_inferior.php"; ?>
