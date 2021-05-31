@@ -210,9 +210,12 @@
           </ul>
         </div>
         <div class=" col d-flex justify-content-center ">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2Z9jrKAzS8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <iframe class="d-none d-sm-block" width="100%" height="100%" src="https://www.youtube.com/embed/2Z9jrKAzS8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <div class="">
+          </div> -->
+          <div class="d-block d-sm-none d-md-none">
+            <iframe width="330" height="300" src="https://www.youtube.com/embed/2Z9jrKAzS8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
