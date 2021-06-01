@@ -10,8 +10,6 @@
   <title>CONOCELOS</title>
 
 
-
-
 </head>
 <?php require_once "vistas/parte_superior.php"; ?>
 <!-- INICIO DEL "CONOCENOS" -->
@@ -21,13 +19,13 @@
 </DIv>-->
 
 <div class="container-fluid ">
-  <div id="datPersDet" class="row">
+  <div id="conocenos" class="row">
     <div class="col">
       <div class="align-items-center ">
         <h1 class="text-dark text-center font-weight-bold ">CONÓCENOS</h1>
       </div>
       <div class=" mb-2  ">
-        <div class=" card py-2 r2 align-items-center">
+        <div class=" card py-2 r2 align-items-center ">
           <ul>
             <li>
               <p class="text-dark p-0 text-justify font-weight">Somos estudiantes del Quinto Año de la carrera de Ingeniería en informática empresarial de la Universidad Nacional de Concepción.</p>
@@ -38,7 +36,7 @@
               <p class="text-dark p-0 text-justify font-weight-bold">3)	Emy Contreras</p>
               <p class="text-dark p-0 text-justify font-weight-bold">4)	Sandro Castillo</p>
               <p class="text-dark p-0 text-justify font-weight-bold">5)	Isabel Cuevas </p>
-              <img style="width: 500px; height: 500px;" class="rounded mx-auto d-block" src="../img/fotoGrupal.jpg" alt="Cargando imagen...">
+              <img style="width: 50%; height: 50%;" class="rounded mx-auto d-block" src="../img/fotoGrupal.jpg" alt="Cargando imagen...">
             </li>
           </ul>
         </div>
