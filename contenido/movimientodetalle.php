@@ -8,7 +8,7 @@
     require_once("../servicios/conexion.php");
     $conex = conexion();
     $id = $_GET["id"];
-    $sql = "SELECT * FROM movimientos where codMov=".$id;
+    $sql = "SELECT * FROM movimientos where codMov='".$id."'";
     $res = mysqli_query($conex, $sql);
     foreach ($res as $fila) {
       echo '
@@ -44,7 +44,7 @@
         </div>';
       $sq = "SELECT * FROM candidatos c
             join candidatura cc on c.codCand = cc.codCand
-            where codMov= ".$fila['codMov']." AND c.codCand=1 
+            where codMov= '".$fila['codMov']."' AND c.codCand=1 
             order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       $row_cnt = $re->num_rows;
@@ -110,7 +110,7 @@
       </div>';
       $sq = "SELECT * FROM candidatos c
         join candidatura cc on c.codCand = cc.codCand
-        where codMov= ".$fila['codMov']." AND c.codCand=2
+        where codMov= '".$fila['codMov']."' AND c.codCand=2
         order by c.orden" ;
       $re = mysqli_query($conex, $sq);
       echo '<div class="row">';
