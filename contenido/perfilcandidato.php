@@ -270,7 +270,14 @@ require_once "vistas/parte_superior.php";
                           </div>
                         </li>
                         <li>
-                          <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['descripcion'] . " - Orden N° - " . $fila['orden'] . '</p>
+                          <p class="text-uppercase text-dark p-1 text-center font-weight">' . $fila['descripcion'];
+                          if ($fila['codCand'] == 2) {
+                           
+                           
+                            echo " - Orden N° - " . $fila['orden'] ;
+                           
+                          }
+                          echo '</p>
                         </li>';
         $cons = "SELECT * FROM redessociales WHERE codDetalle =" . $f['codDetalle'];
         $resp = mysqli_query($conex, $cons);

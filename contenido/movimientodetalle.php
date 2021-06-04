@@ -81,9 +81,9 @@
                               <div class="row align-items-center">
                                 <h6 class="text-left font-weight-bold">'.$fil['descripcion'].' </h6>
                               </div>
-                              <div class="row align-items-center">
-                                <h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
-                              </div>
+                              <div class="row align-items-center">';
+                                //<h6 class=" text-left font-weight-bold">Orden: '.$fil['orden'].'</h6>
+                                echo '</div>
                                           
                             </div>
                       </div>
