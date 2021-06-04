@@ -80,6 +80,7 @@
   <script src="js/botones/buttons.print.min.js"></script>
   <script src="js/botones/pdfmake.min.js"></script>
   <script src="js/botones/vfs_fonts.js"></script>
+  <script src="js/contactanos.js?v2"></script>
   <script type="text/javascript" src="js/lightslider.js"></script>
   <script type="text/javascript">
         $(document).ready(function () {
