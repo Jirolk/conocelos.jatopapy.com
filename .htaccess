@@ -1,3 +1,25 @@
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://conocelos.jatopapy.com/$1 [R=301,L]
+
 Options All -Indexes
 ErrorDocument 404 /conocelos.jatopapy.com/restricciones/404.html
 ErrorDocument 403 /conocelos.jatopapy.com/restricciones/403.html
+
+#<IfModule mod_headers.c>
+#	Header set X-XSS-Protection "1; mode=block"
+#	Header set X-Frame-Options "SAMEORIGIN"
+#	Header set X-Content-Type-Options "nosniff"
+#	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+#	Header set Content-Security-Policy "
+#	default-src https://conocelos.jatopapy.com; 
+#	font-src    self; 
+#	img-src     self; 
+#	script-src  self; 
+#	style-src   self;"
+
+#	Header set Referrer-Policy "same-origin"	
+#	Header set Feature-Policy "geolocation 'self' https://conocelos.jatopapy.com";
+#	Header set Permissions-Policy: geolocation=(self https://conocelos.jatopapy.com";
+#</IfModule>
