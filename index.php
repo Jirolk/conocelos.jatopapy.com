@@ -147,6 +147,14 @@
         }
         echo '</li>';
       }
+      if (strcasecmp($fi['redSocial'], "LINKEDIN") == 0) {
+        echo '
+                          
+                          <a  href="' . $fi['url'] . '" target="_blank">
+                          <i class="h3 fab fa-linkedin" style="color: black;"></i>
+                          </a>
+                          ';
+      }
     }
     cerrarBD($cons);
     echo ' </ul>

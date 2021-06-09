@@ -323,6 +323,14 @@ require_once "vistas/parte_superior.php";
                               </a>
                               ';
             }
+            if (strcasecmp($fi['redSocial'], "LINKEDIN") == 0) {
+              echo '
+                                
+                                <a  href="' . $fi['url'] . '" target="_blank">
+                                <i class="h3 fab fa-linkedin-square " style="color: black;"></i>
+                                </a>
+                                ';
+            }
           }
         }
         echo '</P>';
